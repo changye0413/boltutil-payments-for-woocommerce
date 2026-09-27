@@ -1,0 +1,574 @@
+.woocommerce_page_wc-settings table.form-table {
+    display: block;
+    width: min(1080px, 100%);
+    max-width: 1080px;
+    margin: 0;
+    border-spacing: 0;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody {
+    display: block;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr.boltutil-guide-row {
+    display: block;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr.boltutil-guide-row > td {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+    align-items: start;
+    width: 100%;
+    padding: 20px 32px;
+    border-right: 1px solid #2b2b31;
+    border-left: 1px solid #2b2b31;
+    background: #101013;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) > th,
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) > td {
+    display: block;
+    box-sizing: border-box;
+    width: auto !important;
+    min-width: 0;
+    padding: 0 !important;
+    background: transparent;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) > th {
+    color: #f7f7f8;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:nth-last-child(2) {
+    border-bottom: 1px solid #2b2b31 !important;
+    border-radius: 0 0 16px 16px;
+    padding-bottom: 30px !important;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr.boltutil-settings-heading {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 32px 25px;
+    border: 1px solid #2b2b31;
+    border-radius: 16px 16px 0 0;
+    background: #101013;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr.boltutil-settings-heading > td {
+    display: block;
+    padding: 0 !important;
+}
+
+.boltutil-settings-heading h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 22px;
+}
+
+.boltutil-settings-heading p {
+    margin: 5px 0 0;
+    color: #aeb4bf;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) > th label {
+    color: #f7f7f8;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) input[type="text"],
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) input[type="password"],
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) textarea,
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) .select2-selection {
+    width: min(680px, 100%) !important;
+    max-width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 9px 13px;
+    border: 1px solid #42434a;
+    border-radius: 10px;
+    background: #1d1d22;
+    color: #fff;
+    box-shadow: none;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) textarea {
+    min-height: 88px;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) input:focus,
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) textarea:focus,
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) .select2-selection:focus {
+    border-color: #8ca4ff;
+    outline: 2px solid #8ca4ff;
+    outline-offset: 2px;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) input[type="checkbox"] {
+    border-color: #757984;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) .select2-selection__choice {
+    border-color: #4a4c55;
+    background: #303039;
+    color: #f5f6f8;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) .select2-container {
+    width: min(680px, 100%) !important;
+    max-width: 100%;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) .select2-search__field {
+    width: auto !important;
+    min-width: 80px;
+    min-height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) > td label,
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) .select2-selection__rendered {
+    color: #f7f7f8;
+}
+
+.woocommerce_page_wc-settings .woocommerce-save-button {
+    min-height: 42px;
+    padding: 0 22px;
+    border: 1px solid #111 !important;
+    border-radius: 9px;
+    background: #111 !important;
+    color: #fff !important;
+    font-weight: 750;
+}
+
+.woocommerce_page_wc-settings .woocommerce-save-button:hover,
+.woocommerce_page_wc-settings .woocommerce-save-button:focus {
+    background: #303034 !important;
+}
+
+.boltutil-guide-row > td {
+    padding: 8px 0 24px !important;
+}
+
+.boltutil-guide {
+    max-width: 1080px;
+    overflow: hidden;
+    border: 1px solid #dfe5ef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 14px 42px -34px rgba(15, 23, 42, .45);
+    color: #172033;
+}
+
+.boltutil-guide-hero {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 30px 34px;
+    background: #0b101c;
+    color: #fff;
+}
+
+.boltutil-guide-hero > div:not(.boltutil-resource-menu) {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.boltutil-resource-menu {
+    position: relative;
+    z-index: 5;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.boltutil-resource-menu summary {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid #4b5567;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 1;
+    list-style: none;
+}
+
+.boltutil-resource-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.boltutil-resource-menu summary:hover,
+.boltutil-resource-menu[open] summary {
+    background: #202b42;
+}
+
+.boltutil-resource-menu summary:focus-visible {
+    outline: 2px solid #9db9fa;
+    outline-offset: 3px;
+}
+
+.boltutil-resource-menu nav {
+    position: absolute;
+    top: calc(100% + 7px);
+    right: 0;
+    display: grid;
+    width: max-content;
+    min-width: 210px;
+    padding: 6px;
+    border: 1px solid #dce3ed;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .2);
+}
+
+.boltutil-resource-menu nav a {
+    padding: 10px 12px;
+    border-radius: 7px;
+    color: #172033;
+    text-decoration: none;
+}
+
+.boltutil-resource-menu nav a:hover,
+.boltutil-resource-menu nav a:focus-visible {
+    background: #edf3ff;
+    color: #184db1;
+}
+
+.boltutil-guide-mark {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.boltutil-guide-eyebrow {
+    color: #9db9fa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+.boltutil-guide h2,
+.boltutil-guide h3,
+.boltutil-guide p,
+.boltutil-guide ol {
+    margin: 0;
+}
+
+.boltutil-guide h2 {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.boltutil-guide-hero p {
+    max-width: 790px;
+    margin-top: 10px;
+    color: #c7cfdd;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.boltutil-guide-body {
+    padding: 28px 34px 30px;
+}
+
+.boltutil-guide-heading h3 {
+    color: #141b2b;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.boltutil-guide-heading p,
+.boltutil-guide-step p,
+.boltutil-guide-usage p,
+.boltutil-guide-note p {
+    margin-top: 5px;
+    color: #586273;
+    line-height: 1.6;
+}
+
+.boltutil-guide-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px 0 22px;
+    list-style: none;
+}
+
+.boltutil-guide-step {
+    display: flex;
+    gap: 13px;
+    min-width: 0;
+    margin: 0;
+    padding: 17px;
+    border: 1px solid #e8edf5;
+    border-radius: 12px;
+    background: #f8faff;
+}
+
+.boltutil-guide-number {
+    display: grid;
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+    border-radius: 8px;
+    background: #dce9ff;
+    color: #185bd4;
+    font-weight: 700;
+}
+
+.boltutil-guide-step strong,
+.boltutil-guide-usage strong {
+    display: block;
+    color: #172033;
+    font-size: 14px;
+}
+
+.boltutil-guide-step a,
+.boltutil-guide-help a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #185bd4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.boltutil-guide-step a:hover,
+.boltutil-guide-help a:hover {
+    color: #1045a9;
+    text-decoration: underline;
+}
+
+.boltutil-guide-webhook {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 17px;
+    border: 1px solid #dce5f3;
+    border-radius: 12px;
+    background: #f3f7ff;
+}
+
+.boltutil-guide-webhook > div {
+    min-width: 0;
+}
+
+.boltutil-guide-field-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #526075;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.boltutil-guide-webhook code {
+    display: block;
+    overflow-wrap: anywhere;
+    background: transparent;
+    color: #162b51;
+    font-size: 13px;
+    padding: 0;
+}
+
+.boltutil-guide-webhook .button {
+    flex: 0 0 auto;
+    border-color: #205ed3;
+    border-radius: 8px;
+    color: #185bd4;
+    font-weight: 600;
+}
+
+.boltutil-guide-statuses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.boltutil-guide-status {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.boltutil-guide-status.is-ready {
+    background: #e7f6ec;
+    color: #14632f;
+}
+
+.boltutil-guide-status.is-pending {
+    background: #f3f4f6;
+    color: #5f6877;
+}
+
+.boltutil-guide-small {
+    margin-top: 10px !important;
+    color: #697487;
+    font-size: 12px;
+}
+
+.boltutil-guide-quota {
+    margin-top: 18px;
+    padding: 16px 18px;
+    border: 1px solid #f1d6a5;
+    border-radius: 11px;
+    background: #fff9ee;
+}
+
+.boltutil-guide-quota strong {
+    color: #6e460b;
+}
+
+.boltutil-guide-quota p {
+    margin-top: 4px;
+    color: #745b37;
+    line-height: 1.6;
+}
+
+.boltutil-guide-quota a {
+    color: #8b5210;
+    font-weight: 600;
+}
+
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row) input[type="text"],
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row) textarea,
+.woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row) .wc-enhanced-select {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.boltutil-secret-input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 680px;
+}
+
+.boltutil-secret-input::placeholder {
+    color: #aeb4bf;
+    opacity: 1;
+}
+
+.boltutil-secret-state {
+    display: inline-block;
+    margin-top: 9px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #e7f6ec;
+    color: #14632f;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.boltutil-secret-state.is-pending {
+    background: #f2f3f5;
+    color: #5f6877;
+}
+
+.boltutil-secret-preview {
+    display: inline-block;
+    margin: 9px 0 0 10px;
+    padding: 4px 8px;
+    border: 1px solid #45464f;
+    border-radius: 8px;
+    background: #202127;
+    color: #e2e5ee;
+    font-size: 12px;
+    letter-spacing: .02em;
+    user-select: none;
+}
+
+.woocommerce_page_wc-settings table.form-table .description {
+    max-width: 620px;
+    margin-top: 9px;
+    color: #aeb4bf;
+    line-height: 1.55;
+}
+
+.boltutil-usage-guide {
+    margin-top: 12px;
+}
+
+.boltutil-guide-usage {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 26px;
+    padding: 22px 0;
+    list-style: none;
+}
+
+.boltutil-guide-usage li {
+    display: flex;
+    gap: 13px;
+    margin: 0;
+}
+
+.boltutil-guide-usage li > span {
+    color: #2c64d4;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.boltutil-guide-note {
+    padding: 17px;
+    border-left: 3px solid #2c64d4;
+    border-radius: 0 10px 10px 0;
+    background: #f5f8ff;
+}
+
+.boltutil-guide-help {
+    margin-top: 12px !important;
+}
+
+@media (max-width: 782px) {
+    .woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) {
+        gap: 8px;
+        padding: 17px 20px;
+    }
+
+    .woocommerce_page_wc-settings table.form-table > tbody > tr.boltutil-settings-heading {
+        padding: 20px;
+    }
+
+    .woocommerce_page_wc-settings table.form-table > tbody > tr:not(.boltutil-guide-row):not(.boltutil-settings-heading) > th {
+        padding-top: 0 !important;
+    }
+
+    .boltutil-guide-hero,
+    .boltutil-guide-body {
+        padding: 22px;
+    }
+
+    .boltutil-guide-steps,
+    .boltutil-guide-usage {
+        grid-template-columns: 1fr;
+    }
+
+    .boltutil-guide-webhook {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

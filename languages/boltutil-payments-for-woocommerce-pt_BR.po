@@ -1,0 +1,447 @@
+# BoltUtil Payments for WooCommerce translations.
+# Machine-assisted draft; native review recommended before directory submission.
+# Copyright (C) 2026 BoltUtil
+# This file is distributed under the same license as the BoltUtil Payments for WooCommerce package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BoltUtil Payments for WooCommerce 0.4.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-27 14:15+0800\n"
+"PO-Revision-Date: 2026-09-26 11:22+0800\n"
+"Last-Translator: BoltUtil (machine-assisted draft)\n"
+"Language-Team: pt_BR\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: boltutil-woocommerce.php:45
+msgid "View pricing and fees"
+msgstr "Ver preços e taxas"
+
+#: boltutil-woocommerce.php:46
+msgid "Learn more"
+msgstr "Saiba mais"
+
+#: boltutil-woocommerce.php:47
+msgid "View terms of service"
+msgstr "Ver termos de serviço"
+
+#: boltutil-woocommerce.php:48
+msgid "Contact support"
+msgstr "Contatar o suporte"
+
+#: boltutil-woocommerce.php:56 includes/class-boltutil-wc-gateway.php:189
+msgid "Payment settings"
+msgstr "Configurações de pagamento"
+
+#: includes/class-boltutil-wc-blocks.php:44
+#: includes/class-boltutil-wc-gateway.php:257
+msgid "Choose a USDT payment network"
+msgstr "Escolha uma rede de pagamento USDT"
+
+#: includes/class-boltutil-wc-blocks.php:45
+#: includes/class-boltutil-wc-gateway.php:263
+msgid "Selected"
+msgstr "Selecionado"
+
+#: includes/class-boltutil-wc-blocks.php:48
+#: includes/class-boltutil-wc-gateway.php:267
+msgid ""
+"You will be redirected to BoltUtil Checkout. Pay the exact amount to the "
+"address shown there; the order updates after on-chain confirmation."
+msgstr ""
+"Você será redirecionado para o Checkout BoltUtil. Pague o valor exato no "
+"endereço ali indicado; o pedido é atualizado após a confirmação na rede."
+
+#: includes/class-boltutil-wc-blocks.php:50
+#: includes/class-boltutil-wc-gateway.php:274
+#: includes/class-boltutil-wc-gateway.php:291
+msgid "Choose an available USDT network."
+msgstr "Escolha uma rede USDT disponível."
+
+#: includes/class-boltutil-wc-gateway.php:18
+msgid "USDT payments through BoltUtil hosted checkout."
+msgstr "Pagamentos USDT por meio de checkout hospedado BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:26
+msgid "Pay USDT with BoltUtil"
+msgstr "Pague USDT com BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:41
+msgid "Enable"
+msgstr "Habilitar"
+
+#: includes/class-boltutil-wc-gateway.php:41
+msgid "Enable BoltUtil USDT"
+msgstr "Ativar BoltUtil USDT"
+
+#: includes/class-boltutil-wc-gateway.php:42
+msgid "Checkout title"
+msgstr "Título do check-out"
+
+#: includes/class-boltutil-wc-gateway.php:42
+msgid "Merchant-defined label shown at checkout."
+msgstr "Etiqueta definida pelo comerciante exibida na finalização da compra."
+
+#: includes/class-boltutil-wc-gateway.php:43
+msgid "Checkout description"
+msgstr "Descrição do check-out"
+
+#: includes/class-boltutil-wc-gateway.php:43
+msgid "Pay USDT on the network you choose."
+msgstr "Pague USDT na rede que você escolher."
+
+#: includes/class-boltutil-wc-gateway.php:44
+msgid "BoltUtil API key (bt_live_)"
+msgstr "Chave de API BoltUtil (bt_live_)"
+
+#: includes/class-boltutil-wc-gateway.php:45
+msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
+msgstr "Use a chave API LIVE existente no painel do comerciante BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:46
+msgid "BoltUtil Webhook secret (whsec_)"
+msgstr "BoltUtil Segredo do webhook (whsec_)"
+
+#: includes/class-boltutil-wc-gateway.php:47
+msgid ""
+"Use the secret for this merchant's active Webhook. It signs API requests and "
+"verifies payment callbacks."
+msgstr ""
+"Use o segredo do Webhook ativo deste comerciante. Ele assina solicitações de "
+"API e verifica retornos de pagamento."
+
+#: includes/class-boltutil-wc-gateway.php:48
+msgid "Allowed USDT networks"
+msgstr "Redes USDT permitidas"
+
+#: includes/class-boltutil-wc-gateway.php:48
+msgid "Live checkout also checks active BoltUtil settlement wallets."
+msgstr ""
+"O checkout ao vivo também verifica carteiras de liquidação BoltUtil ativas."
+
+#: includes/class-boltutil-wc-gateway.php:64
+msgid "Choose a network, then pay USDT at BoltUtil Checkout."
+msgstr "Escolha uma rede e pague USDT no checkout BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:119
+msgid "Accept USDT with BoltUtil"
+msgstr "Aceite USDT com BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:122
+msgid ""
+"Customers place an order in your store and pay on the selected network at "
+"BoltUtil Hosted Checkout. Once confirmed on-chain, BoltUtil updates the "
+"WooCommerce order. Funds go directly to your configured wallet."
+msgstr ""
+"Os clientes fazem um pedido em sua loja e pagam na rede selecionada em "
+"BoltUtil Hosted Checkout. Uma vez confirmado na rede, BoltUtil atualiza o "
+"pedido WooCommerce. Os fundos vão diretamente para sua carteira configurada."
+
+#: includes/class-boltutil-wc-gateway.php:125
+#: includes/class-boltutil-wc-gateway.php:127
+msgid "More BoltUtil information"
+msgstr "Mais informações sobre o BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:135
+msgid "Before you begin"
+msgstr "Antes de começar"
+
+#: includes/class-boltutil-wc-gateway.php:136
+msgid ""
+"Complete these steps in order. Never enter a wallet private key or recovery "
+"phrase in this plugin."
+msgstr ""
+"Conclua estas etapas em ordem. Nunca insira uma chave privada de carteira ou "
+"frase de recuperação neste plugin."
+
+#: includes/class-boltutil-wc-gateway.php:138
+msgid "Create a LIVE API key"
+msgstr "Crie uma chave API AO VIVO"
+
+#: includes/class-boltutil-wc-gateway.php:139
+msgid ""
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
+"page. It identifies your merchant account."
+msgstr ""
+"Faça login em BoltUtil e crie uma chave começando com bt_live_ na página "
+"Chaves de API. Ele identifica sua conta de comerciante."
+
+#: includes/class-boltutil-wc-gateway.php:140
+msgid "Open API Keys"
+msgstr "Abrir chaves de API"
+
+#: includes/class-boltutil-wc-gateway.php:141
+msgid "Set up receiving wallets"
+msgstr "Configurar carteiras de recebimento"
+
+#: includes/class-boltutil-wc-gateway.php:142
+msgid ""
+"Add and activate a USDT receiving address for each network you accept. "
+"Checkout shows networks allowed here that also have active BoltUtil wallets."
+msgstr ""
+"Adicione e ative um endereço de recebimento USDT para cada rede que você "
+"aceitar. Checkout mostra redes permitidas aqui que também possuem carteiras "
+"BoltUtil ativas."
+
+#: includes/class-boltutil-wc-gateway.php:143
+msgid "Open Wallets"
+msgstr "Carteiras abertas"
+
+#: includes/class-boltutil-wc-gateway.php:144
+msgid "Set up the Webhook"
+msgstr "Configure o webhook"
+
+#: includes/class-boltutil-wc-gateway.php:145
+msgid ""
+"Save the URL below on the BoltUtil Webhooks page, then retain that "
+"configuration’s whsec_ secret. The URL must belong to this store."
+msgstr ""
+"Salve o URL abaixo na página BoltUtil Webhooks e mantenha o segredo whsec_ "
+"dessa configuração. A URL deve pertencer a esta loja."
+
+#: includes/class-boltutil-wc-gateway.php:146
+msgid "Open Webhooks"
+msgstr "Abra webhooks"
+
+#: includes/class-boltutil-wc-gateway.php:147
+msgid "Save and enable this gateway"
+msgstr "Salve e ative este gateway"
+
+#: includes/class-boltutil-wc-gateway.php:148
+msgid ""
+"Enter the API key and Webhook secret for the same merchant below, select "
+"networks, enable the gateway, and save. Your store currency must be USD."
+msgstr ""
+"Insira a chave de API e o segredo do Webhook para o mesmo comerciante "
+"abaixo, selecione as redes, habilite o gateway e salve. A moeda da sua loja "
+"deve ser USD."
+
+#: includes/class-boltutil-wc-gateway.php:150
+msgid "This store’s Webhook URL"
+msgstr "URL do Webhook desta loja"
+
+#: includes/class-boltutil-wc-gateway.php:151
+msgid "Copied"
+msgstr "Copiado"
+
+#: includes/class-boltutil-wc-gateway.php:152
+msgid "Copy URL"
+msgstr "Copiar URL"
+
+#: includes/class-boltutil-wc-gateway.php:154
+msgid "Store currency: USD"
+msgstr "Moeda da loja: USD"
+
+#: includes/class-boltutil-wc-gateway.php:154
+msgid "Set store currency to USD"
+msgstr "Defina a moeda da loja como USD"
+
+#: includes/class-boltutil-wc-gateway.php:155
+msgid "API key saved"
+msgstr "Chave de API salva"
+
+#: includes/class-boltutil-wc-gateway.php:155
+msgid "API key missing"
+msgstr "Chave de API ausente"
+
+#: includes/class-boltutil-wc-gateway.php:156
+msgid "Webhook secret saved"
+msgstr "Segredo do webhook salvo"
+
+#: includes/class-boltutil-wc-gateway.php:156
+msgid "Webhook secret missing"
+msgstr "Segredo do webhook ausente"
+
+#: includes/class-boltutil-wc-gateway.php:157
+msgid "Gateway enabled"
+msgstr "Gateway ativado"
+
+#: includes/class-boltutil-wc-gateway.php:157
+msgid "Gateway disabled"
+msgstr "Gateway desativado"
+
+#: includes/class-boltutil-wc-gateway.php:158
+msgid "Free plan: up to 30 orders created per day"
+msgstr "Plano gratuito: até 30 pedidos criados por dia"
+
+#: includes/class-boltutil-wc-gateway.php:160
+msgid ""
+"This counts BoltUtil orders created today, not completed payments. New "
+"payment orders are rejected after the limit is reached. Review plans and "
+"upgrade options in BoltUtil."
+msgstr ""
+"Isso conta os pedidos BoltUtil criados hoje, e não os pagamentos concluídos. "
+"Novas ordens de pagamento serão rejeitadas após o limite ser atingido. "
+"Revise os planos e opções de atualização em BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:161
+msgid "View plans ↗"
+msgstr "Ver planos ↗"
+
+#: includes/class-boltutil-wc-gateway.php:162
+msgid ""
+"These badges check local settings only. BoltUtil checks wallet availability "
+"during checkout."
+msgstr ""
+"Esses emblemas verificam apenas as configurações locais. BoltUtil verifica a "
+"disponibilidade da carteira durante a finalização da compra."
+
+#: includes/class-boltutil-wc-gateway.php:169
+msgid "How it works after setup"
+msgstr "Como funciona após a configuração"
+
+#: includes/class-boltutil-wc-gateway.php:171
+msgid "Customer places an order"
+msgstr "O cliente faz um pedido"
+
+#: includes/class-boltutil-wc-gateway.php:171
+msgid ""
+"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
+"to BoltUtil Checkout."
+msgstr ""
+"Para um pedido USD, o cliente escolhe BoltUtil USDT e uma rede e, em "
+"seguida, vai para o Checkout BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:172
+msgid "Pay the checkout amount"
+msgstr "Pague o valor exibido no checkout"
+
+#: includes/class-boltutil-wc-gateway.php:172
+msgid ""
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
+"expiry. The checkout amount is authoritative."
+msgstr ""
+"O checkout da BoltUtil mostra o valor exato em USDT, o endereço de "
+"recebimento, o código QR e o prazo de validade. Pague o valor exibido no "
+"checkout."
+
+#: includes/class-boltutil-wc-gateway.php:173
+msgid "Automatic update after confirmation"
+msgstr "Atualização automática após confirmação"
+
+#: includes/class-boltutil-wc-gateway.php:173
+msgid ""
+"After on-chain confirmation, BoltUtil sends a signed Webhook and the plugin "
+"updates the WooCommerce order. Returning to the store does not mark it paid."
+msgstr ""
+"Após a confirmação na blockchain, a BoltUtil envia um Webhook assinado e o "
+"plugin atualiza o pedido do WooCommerce. Voltar à loja não marca o pedido "
+"como pago."
+
+#: includes/class-boltutil-wc-gateway.php:174
+msgid "Recheck a pending order"
+msgstr "Verifique novamente um pedido pendente"
+
+#: includes/class-boltutil-wc-gateway.php:174
+msgid ""
+"If an order remains on hold, choose Recheck BoltUtil payment under Order "
+"actions in WooCommerce. Scheduled checks also run automatically."
+msgstr ""
+"Se um pedido permanecer suspenso, escolha Verificar novamente o pagamento "
+"BoltUtil em Ações do pedido em WooCommerce. As verificações agendadas também "
+"são executadas automaticamente."
+
+#: includes/class-boltutil-wc-gateway.php:179
+msgid "Current scope"
+msgstr "Escopo atual"
+
+#: includes/class-boltutil-wc-gateway.php:181
+msgid ""
+"USDT for USD stores only, on TRC20, ERC20, BEP20, Polygon, and Solana. The "
+"USD numeric total is the USDT invoice basis; this version does not lock a "
+"live exchange rate. On-chain transfers are real payments, so check order "
+"creation and redirect without sending funds first."
+msgstr ""
+"Apenas para lojas em USD que aceitam USDT nas redes TRC20, ERC20, BEP20, "
+"Polygon e Solana. O valor numérico total em USD é a base da fatura em USDT; "
+"esta versão não fixa uma taxa de câmbio em tempo real. Transferências na "
+"blockchain são pagamentos reais: primeiro teste a criação do pedido e o "
+"redirecionamento sem enviar fundos."
+
+#: includes/class-boltutil-wc-gateway.php:183
+msgid "Read BoltUtil API docs ↗"
+msgstr "Leia a documentação da API BoltUtil ↗"
+
+#: includes/class-boltutil-wc-gateway.php:191
+msgid ""
+"Enter your merchant credentials, choose supported networks, then save. Saved "
+"secrets appear only as masked hints."
+msgstr ""
+"Insira as credenciais do comerciante, escolha as redes compatíveis e salve. "
+"Os segredos salvos são exibidos apenas de forma mascarada."
+
+#: includes/class-boltutil-wc-gateway.php:204
+msgid "Saved (masked)"
+msgstr "Salvo (mascarado)"
+
+#: includes/class-boltutil-wc-gateway.php:204
+msgid "Not configured"
+msgstr "Não configurado"
+
+#: includes/class-boltutil-wc-gateway.php:206
+msgid ""
+"This field clears after saving. Leave it blank to keep the saved secret, or "
+"enter a new value to replace it."
+msgstr ""
+"Este campo é limpo após salvar. Deixe em branco para manter o segredo salvo "
+"ou insira um novo valor para substituí-lo."
+
+#: includes/class-boltutil-wc-gateway.php:283
+msgid "BoltUtil currently supports USD orders only."
+msgstr "BoltUtil atualmente suporta apenas pedidos USD."
+
+#: includes/class-boltutil-wc-gateway.php:347
+msgid "Awaiting confirmed USDT payment from BoltUtil."
+msgstr "Aguardando pagamento USDT confirmado de BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:362
+msgid "BoltUtil payment could not be created. Please try again."
+msgstr ""
+"Não foi possível criar o pagamento BoltUtil. Por favor, tente novamente."
+
+#: includes/class-boltutil-wc-gateway.php:400
+msgid "Recheck BoltUtil payment"
+msgstr "Verifique novamente o pagamento BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:409
+msgid "Payment ID"
+msgstr "ID de pagamento"
+
+#: includes/class-boltutil-wc-gateway.php:410
+msgid "Mode"
+msgstr "Modo"
+
+#: includes/class-boltutil-wc-gateway.php:411
+msgid "Network"
+msgstr "Rede"
+
+#: includes/class-boltutil-wc-gateway.php:412
+msgid "Invoice amount (USD)"
+msgstr "Valor da fatura (USD)"
+
+#: includes/class-boltutil-wc-gateway.php:413
+msgid "Payable amount (USDT)"
+msgstr "Valor a pagar (USDT)"
+
+#: includes/class-boltutil-wc-gateway.php:442
+#: includes/class-boltutil-wc-webhook.php:93
+#, php-format
+msgid "BoltUtil payment status: %s."
+msgstr "Status do pagamento BoltUtil: %s."
+
+#: includes/class-boltutil-wc-gateway.php:472
+#: includes/class-boltutil-wc-webhook.php:88
+msgid "BoltUtil confirmed this USDT payment."
+msgstr "BoltUtil confirmou este pagamento USDT."
+
+#~ msgid "BoltUtil API origin"
+#~ msgstr "Origem da API BoltUtil"
+
+#~ msgid ""
+#~ "LIVE payments only. Requires an enabled BoltUtil Payment API and active "
+#~ "settlement wallets."
+#~ msgstr ""
+#~ "Apenas pagamentos AO VIVO. Requer uma API de pagamento BoltUtil "
+#~ "habilitada e carteiras de liquidação ativas."

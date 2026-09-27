@@ -1,0 +1,446 @@
+# BoltUtil Payments for WooCommerce translations.
+# Machine-assisted draft; native review recommended before directory submission.
+# Copyright (C) 2026 BoltUtil
+# This file is distributed under the same license as the BoltUtil Payments for WooCommerce package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BoltUtil Payments for WooCommerce 0.4.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-27 14:15+0800\n"
+"PO-Revision-Date: 2026-09-26 11:22+0800\n"
+"Last-Translator: BoltUtil (machine-assisted draft)\n"
+"Language-Team: vi\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: boltutil-woocommerce.php:45
+msgid "View pricing and fees"
+msgstr "Xem giá và phí"
+
+#: boltutil-woocommerce.php:46
+msgid "Learn more"
+msgstr "Tìm hiểu thêm"
+
+#: boltutil-woocommerce.php:47
+msgid "View terms of service"
+msgstr "Xem điều khoản dịch vụ"
+
+#: boltutil-woocommerce.php:48
+msgid "Contact support"
+msgstr "Liên hệ hỗ trợ"
+
+#: boltutil-woocommerce.php:56 includes/class-boltutil-wc-gateway.php:189
+msgid "Payment settings"
+msgstr "Cài đặt thanh toán"
+
+#: includes/class-boltutil-wc-blocks.php:44
+#: includes/class-boltutil-wc-gateway.php:257
+msgid "Choose a USDT payment network"
+msgstr "Chọn mạng thanh toán USDT"
+
+#: includes/class-boltutil-wc-blocks.php:45
+#: includes/class-boltutil-wc-gateway.php:263
+msgid "Selected"
+msgstr "Đã chọn"
+
+#: includes/class-boltutil-wc-blocks.php:48
+#: includes/class-boltutil-wc-gateway.php:267
+msgid ""
+"You will be redirected to BoltUtil Checkout. Pay the exact amount to the "
+"address shown there; the order updates after on-chain confirmation."
+msgstr ""
+"Bạn sẽ được chuyển hướng đến BoltUtil Checkout. Trả số tiền chính xác đến "
+"địa chỉ hiển thị ở đó; lệnh cập nhật sau khi xác nhận trên chuỗi."
+
+#: includes/class-boltutil-wc-blocks.php:50
+#: includes/class-boltutil-wc-gateway.php:274
+#: includes/class-boltutil-wc-gateway.php:291
+msgid "Choose an available USDT network."
+msgstr "Chọn mạng USDT có sẵn."
+
+#: includes/class-boltutil-wc-gateway.php:18
+msgid "USDT payments through BoltUtil hosted checkout."
+msgstr "Thanh toán USDT thông qua thanh toán được lưu trữ trên máy BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:26
+msgid "Pay USDT with BoltUtil"
+msgstr "Thanh toán USDT bằng BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:41
+msgid "Enable"
+msgstr "Kích hoạt"
+
+#: includes/class-boltutil-wc-gateway.php:41
+msgid "Enable BoltUtil USDT"
+msgstr "Kích hoạt BoltUtil USDT"
+
+#: includes/class-boltutil-wc-gateway.php:42
+msgid "Checkout title"
+msgstr "Tiêu đề thanh toán"
+
+#: includes/class-boltutil-wc-gateway.php:42
+msgid "Merchant-defined label shown at checkout."
+msgstr "Nhãn do người bán xác định hiển thị khi thanh toán."
+
+#: includes/class-boltutil-wc-gateway.php:43
+msgid "Checkout description"
+msgstr "Mô tả thanh toán"
+
+#: includes/class-boltutil-wc-gateway.php:43
+msgid "Pay USDT on the network you choose."
+msgstr "Thanh toán USDT trên mạng bạn chọn."
+
+#: includes/class-boltutil-wc-gateway.php:44
+msgid "BoltUtil API key (bt_live_)"
+msgstr "Khóa API BoltUtil (bt_live_)"
+
+#: includes/class-boltutil-wc-gateway.php:45
+msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
+msgstr ""
+"Sử dụng khóa API TRỰC TIẾP hiện có từ bảng điều khiển người bán BoltUtil của "
+"bạn."
+
+#: includes/class-boltutil-wc-gateway.php:46
+msgid "BoltUtil Webhook secret (whsec_)"
+msgstr "Bí mật Webhook BoltUtil (whsec_)"
+
+#: includes/class-boltutil-wc-gateway.php:47
+msgid ""
+"Use the secret for this merchant's active Webhook. It signs API requests and "
+"verifies payment callbacks."
+msgstr ""
+"Sử dụng bí mật cho Webhook đang hoạt động của người bán này. Nó ký các yêu "
+"cầu API và xác minh các lệnh gọi lại thanh toán."
+
+#: includes/class-boltutil-wc-gateway.php:48
+msgid "Allowed USDT networks"
+msgstr "Mạng USDT được phép"
+
+#: includes/class-boltutil-wc-gateway.php:48
+msgid "Live checkout also checks active BoltUtil settlement wallets."
+msgstr ""
+"Thanh toán trực tiếp cũng kiểm tra các ví thanh toán BoltUtil đang hoạt động."
+
+#: includes/class-boltutil-wc-gateway.php:64
+msgid "Choose a network, then pay USDT at BoltUtil Checkout."
+msgstr "Chọn một mạng, sau đó thanh toán USDT tại BoltUtil Checkout."
+
+#: includes/class-boltutil-wc-gateway.php:119
+msgid "Accept USDT with BoltUtil"
+msgstr "Chấp nhận USDT với BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:122
+msgid ""
+"Customers place an order in your store and pay on the selected network at "
+"BoltUtil Hosted Checkout. Once confirmed on-chain, BoltUtil updates the "
+"WooCommerce order. Funds go directly to your configured wallet."
+msgstr ""
+"Khách hàng đặt hàng tại cửa hàng của bạn và thanh toán trên mạng đã chọn tại "
+"BoltUtil Hosted Checkout. Sau khi được xác nhận trên chuỗi, BoltUtil sẽ cập "
+"nhật đơn hàng WooCommerce. Tiền sẽ chuyển trực tiếp vào ví đã định cấu hình "
+"của bạn."
+
+#: includes/class-boltutil-wc-gateway.php:125
+#: includes/class-boltutil-wc-gateway.php:127
+msgid "More BoltUtil information"
+msgstr "Thông tin thêm về BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:135
+msgid "Before you begin"
+msgstr "Trước khi bạn bắt đầu"
+
+#: includes/class-boltutil-wc-gateway.php:136
+msgid ""
+"Complete these steps in order. Never enter a wallet private key or recovery "
+"phrase in this plugin."
+msgstr ""
+"Hoàn thành các bước này theo thứ tự. Không bao giờ nhập khóa riêng hoặc cụm "
+"từ khôi phục ví trong plugin này."
+
+#: includes/class-boltutil-wc-gateway.php:138
+msgid "Create a LIVE API key"
+msgstr "Tạo khóa API TRỰC TIẾP"
+
+#: includes/class-boltutil-wc-gateway.php:139
+msgid ""
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
+"page. It identifies your merchant account."
+msgstr ""
+"Đăng nhập vào BoltUtil và tạo khóa bắt đầu bằng bt_live_ trên trang Khóa "
+"API. Nó xác định tài khoản người bán của bạn."
+
+#: includes/class-boltutil-wc-gateway.php:140
+msgid "Open API Keys"
+msgstr "Mở khóa API"
+
+#: includes/class-boltutil-wc-gateway.php:141
+msgid "Set up receiving wallets"
+msgstr "Thiết lập ví nhận"
+
+#: includes/class-boltutil-wc-gateway.php:142
+msgid ""
+"Add and activate a USDT receiving address for each network you accept. "
+"Checkout shows networks allowed here that also have active BoltUtil wallets."
+msgstr ""
+"Thêm và kích hoạt địa chỉ nhận USDT cho mỗi mạng bạn chấp nhận. Thanh toán "
+"hiển thị các mạng được phép ở đây cũng có ví BoltUtil đang hoạt động."
+
+#: includes/class-boltutil-wc-gateway.php:143
+msgid "Open Wallets"
+msgstr "Mở ví"
+
+#: includes/class-boltutil-wc-gateway.php:144
+msgid "Set up the Webhook"
+msgstr "Thiết lập Webhook"
+
+#: includes/class-boltutil-wc-gateway.php:145
+msgid ""
+"Save the URL below on the BoltUtil Webhooks page, then retain that "
+"configuration’s whsec_ secret. The URL must belong to this store."
+msgstr ""
+"Lưu URL bên dưới trên trang Webhooks BoltUtil, sau đó giữ lại bí mật whsec_ "
+"của cấu hình đó. URL phải thuộc về cửa hàng này."
+
+#: includes/class-boltutil-wc-gateway.php:146
+msgid "Open Webhooks"
+msgstr "Mở Webhook"
+
+#: includes/class-boltutil-wc-gateway.php:147
+msgid "Save and enable this gateway"
+msgstr "Lưu và kích hoạt cổng này"
+
+#: includes/class-boltutil-wc-gateway.php:148
+msgid ""
+"Enter the API key and Webhook secret for the same merchant below, select "
+"networks, enable the gateway, and save. Your store currency must be USD."
+msgstr ""
+"Nhập khóa API và bí mật Webhook cho cùng một người bán ở bên dưới, chọn "
+"mạng, bật cổng và lưu. Đơn vị tiền tệ trong cửa hàng của bạn phải là USD."
+
+#: includes/class-boltutil-wc-gateway.php:150
+msgid "This store’s Webhook URL"
+msgstr "URL Webhook của cửa hàng này"
+
+#: includes/class-boltutil-wc-gateway.php:151
+msgid "Copied"
+msgstr "Đã sao chép"
+
+#: includes/class-boltutil-wc-gateway.php:152
+msgid "Copy URL"
+msgstr "Sao chép URL"
+
+#: includes/class-boltutil-wc-gateway.php:154
+msgid "Store currency: USD"
+msgstr "Tiền tệ lưu trữ: USD"
+
+#: includes/class-boltutil-wc-gateway.php:154
+msgid "Set store currency to USD"
+msgstr "Đặt tiền tệ của cửa hàng thành USD"
+
+#: includes/class-boltutil-wc-gateway.php:155
+msgid "API key saved"
+msgstr "Đã lưu khóa API"
+
+#: includes/class-boltutil-wc-gateway.php:155
+msgid "API key missing"
+msgstr "Thiếu khóa API"
+
+#: includes/class-boltutil-wc-gateway.php:156
+msgid "Webhook secret saved"
+msgstr "Đã lưu bí mật webhook"
+
+#: includes/class-boltutil-wc-gateway.php:156
+msgid "Webhook secret missing"
+msgstr "Bí mật webhook bị thiếu"
+
+#: includes/class-boltutil-wc-gateway.php:157
+msgid "Gateway enabled"
+msgstr "Đã bật cổng"
+
+#: includes/class-boltutil-wc-gateway.php:157
+msgid "Gateway disabled"
+msgstr "Cổng bị vô hiệu hóa"
+
+#: includes/class-boltutil-wc-gateway.php:158
+msgid "Free plan: up to 30 orders created per day"
+msgstr "Gói miễn phí: tối đa 30 đơn hàng được tạo mỗi ngày"
+
+#: includes/class-boltutil-wc-gateway.php:160
+msgid ""
+"This counts BoltUtil orders created today, not completed payments. New "
+"payment orders are rejected after the limit is reached. Review plans and "
+"upgrade options in BoltUtil."
+msgstr ""
+"Điều này tính các đơn đặt hàng BoltUtil được tạo ngày hôm nay, chưa hoàn "
+"thành thanh toán. Lệnh thanh toán mới bị từ chối sau khi đạt đến giới hạn. "
+"Xem lại các gói và tùy chọn nâng cấp trong BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:161
+msgid "View plans ↗"
+msgstr "Xem kế hoạch ↗"
+
+#: includes/class-boltutil-wc-gateway.php:162
+msgid ""
+"These badges check local settings only. BoltUtil checks wallet availability "
+"during checkout."
+msgstr ""
+"Những huy hiệu này chỉ kiểm tra cài đặt cục bộ. BoltUtil kiểm tra tính khả "
+"dụng của ví trong quá trình thanh toán."
+
+#: includes/class-boltutil-wc-gateway.php:169
+msgid "How it works after setup"
+msgstr "Cách hoạt động sau khi thiết lập"
+
+#: includes/class-boltutil-wc-gateway.php:171
+msgid "Customer places an order"
+msgstr "Khách hàng đặt hàng"
+
+#: includes/class-boltutil-wc-gateway.php:171
+msgid ""
+"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
+"to BoltUtil Checkout."
+msgstr ""
+"Đối với đơn đặt hàng USD, khách hàng chọn BoltUtil USDT và mạng, sau đó truy "
+"cập BoltUtil Checkout."
+
+#: includes/class-boltutil-wc-gateway.php:172
+msgid "Pay the checkout amount"
+msgstr "Thanh toán đúng số tiền trên trang thanh toán"
+
+#: includes/class-boltutil-wc-gateway.php:172
+msgid ""
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
+"expiry. The checkout amount is authoritative."
+msgstr ""
+"Trang thanh toán BoltUtil hiển thị số USDT chính xác, địa chỉ nhận, mã QR và "
+"thời hạn thanh toán. Hãy thanh toán đúng số tiền hiển thị trên trang này."
+
+#: includes/class-boltutil-wc-gateway.php:173
+msgid "Automatic update after confirmation"
+msgstr "Tự động cập nhật sau khi xác nhận"
+
+#: includes/class-boltutil-wc-gateway.php:173
+msgid ""
+"After on-chain confirmation, BoltUtil sends a signed Webhook and the plugin "
+"updates the WooCommerce order. Returning to the store does not mark it paid."
+msgstr ""
+"Sau khi giao dịch được xác nhận trên chuỗi, BoltUtil gửi Webhook đã ký và "
+"plugin cập nhật đơn hàng WooCommerce. Việc quay lại cửa hàng không có nghĩa "
+"là đơn hàng đã được thanh toán."
+
+#: includes/class-boltutil-wc-gateway.php:174
+msgid "Recheck a pending order"
+msgstr "Kiểm tra lại lệnh đang chờ xử lý"
+
+#: includes/class-boltutil-wc-gateway.php:174
+msgid ""
+"If an order remains on hold, choose Recheck BoltUtil payment under Order "
+"actions in WooCommerce. Scheduled checks also run automatically."
+msgstr ""
+"Nếu đơn hàng vẫn bị tạm dừng, hãy chọn Kiểm tra lại khoản thanh toán "
+"BoltUtil trong Hành động đặt hàng trong WooCommerce. Kiểm tra theo lịch "
+"trình cũng chạy tự động."
+
+#: includes/class-boltutil-wc-gateway.php:179
+msgid "Current scope"
+msgstr "phạm vi hiện tại"
+
+#: includes/class-boltutil-wc-gateway.php:181
+msgid ""
+"USDT for USD stores only, on TRC20, ERC20, BEP20, Polygon, and Solana. The "
+"USD numeric total is the USDT invoice basis; this version does not lock a "
+"live exchange rate. On-chain transfers are real payments, so check order "
+"creation and redirect without sending funds first."
+msgstr ""
+"Chỉ dành cho cửa hàng dùng USD và nhận USDT trên TRC20, ERC20, BEP20, "
+"Polygon hoặc Solana. Tổng giá trị số bằng USD là cơ sở lập hóa đơn USDT; "
+"phiên bản này không cố định tỷ giá theo thời gian thực. Chuyển tiền trên "
+"chuỗi là thanh toán thật, vì vậy trước tiên hãy kiểm tra việc tạo đơn hàng "
+"và chuyển hướng mà không gửi tiền."
+
+#: includes/class-boltutil-wc-gateway.php:183
+msgid "Read BoltUtil API docs ↗"
+msgstr "Đọc tài liệu API BoltUtil ↗"
+
+#: includes/class-boltutil-wc-gateway.php:191
+msgid ""
+"Enter your merchant credentials, choose supported networks, then save. Saved "
+"secrets appear only as masked hints."
+msgstr ""
+"Nhập thông tin xác thực của người bán, chọn mạng được hỗ trợ rồi lưu. Khóa "
+"đã lưu chỉ hiển thị dưới dạng che bớt."
+
+#: includes/class-boltutil-wc-gateway.php:204
+msgid "Saved (masked)"
+msgstr "Đã lưu (đã che bớt)"
+
+#: includes/class-boltutil-wc-gateway.php:204
+msgid "Not configured"
+msgstr "Chưa được định cấu hình"
+
+#: includes/class-boltutil-wc-gateway.php:206
+msgid ""
+"This field clears after saving. Leave it blank to keep the saved secret, or "
+"enter a new value to replace it."
+msgstr ""
+"Trường này sẽ xóa sau khi lưu. Để trống để giữ bí mật đã lưu hoặc nhập giá "
+"trị mới để thay thế."
+
+#: includes/class-boltutil-wc-gateway.php:283
+msgid "BoltUtil currently supports USD orders only."
+msgstr "BoltUtil hiện chỉ hỗ trợ các đơn hàng USD."
+
+#: includes/class-boltutil-wc-gateway.php:347
+msgid "Awaiting confirmed USDT payment from BoltUtil."
+msgstr "Đang chờ thanh toán USDT được xác nhận từ BoltUtil."
+
+#: includes/class-boltutil-wc-gateway.php:362
+msgid "BoltUtil payment could not be created. Please try again."
+msgstr "Không thể tạo thanh toán BoltUtil. Vui lòng thử lại."
+
+#: includes/class-boltutil-wc-gateway.php:400
+msgid "Recheck BoltUtil payment"
+msgstr "Kiểm tra lại thanh toán BoltUtil"
+
+#: includes/class-boltutil-wc-gateway.php:409
+msgid "Payment ID"
+msgstr "ID thanh toán"
+
+#: includes/class-boltutil-wc-gateway.php:410
+msgid "Mode"
+msgstr "Chế độ"
+
+#: includes/class-boltutil-wc-gateway.php:411
+msgid "Network"
+msgstr "Mạng"
+
+#: includes/class-boltutil-wc-gateway.php:412
+msgid "Invoice amount (USD)"
+msgstr "Số tiền hóa đơn (USD)"
+
+#: includes/class-boltutil-wc-gateway.php:413
+msgid "Payable amount (USDT)"
+msgstr "Số tiền phải trả (USDT)"
+
+#: includes/class-boltutil-wc-gateway.php:442
+#: includes/class-boltutil-wc-webhook.php:93
+#, php-format
+msgid "BoltUtil payment status: %s."
+msgstr "Trạng thái thanh toán BoltUtil: %s."
+
+#: includes/class-boltutil-wc-gateway.php:472
+#: includes/class-boltutil-wc-webhook.php:88
+msgid "BoltUtil confirmed this USDT payment."
+msgstr "BoltUtil đã xác nhận khoản thanh toán USDT này."
+
+#~ msgid "BoltUtil API origin"
+#~ msgstr "Nguồn gốc API BoltUtil"
+
+#~ msgid ""
+#~ "LIVE payments only. Requires an enabled BoltUtil Payment API and active "
+#~ "settlement wallets."
+#~ msgstr ""
+#~ "Chỉ thanh toán TRỰC TIẾP. Yêu cầu API thanh toán BoltUtil được kích hoạt "
+#~ "và ví thanh toán đang hoạt động."
