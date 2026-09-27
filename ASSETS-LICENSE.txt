@@ -1,0 +1,24 @@
+BoltUtil Payments for WooCommerce asset notice
+
+assets/boltutil-official-mark.svg is the BoltUtil brand mark maintained in
+the BoltUtil frontend source. Copyright BoltUtil. This copy is distributed
+with the plugin under GPLv2 or later.
+
+The six SVG files below are from spothq/cryptocurrency-icons, commit
+1a63530be6e374711a8554f31b17e4cb92c25fa5. That project's icon
+collection is released under CC0 1.0 Universal. The complete upstream
+license is included in CRYPTO-ICONS-CC0-LICENSE.txt. Source:
+https://github.com/spothq/cryptocurrency-icons/tree/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color
+
+  assets/chains/tron.svg       svg/color/trx.svg
+  assets/chains/ethereum.svg   svg/color/eth.svg
+  assets/chains/bnb-chain.svg  svg/color/bnb.svg
+  assets/chains/polygon.svg    svg/color/matic.svg
+  assets/chains/solana.svg     svg/color/sol.svg
+  assets/tokens/usdt.svg       svg/color/usdt.svg
+
+These marks identify payment networks and USDT. BoltUtil does not claim
+ownership of the corresponding names or trademarks, and their appearance
+does not imply endorsement by those networks or token issuers. CC0 covers
+the icon collection's copyright claims; trademark rights remain with their
+respective owners.
