@@ -23,7 +23,7 @@ release_dir="$(mktemp -d "${TMPDIR:-/tmp}/boltutil-wc-release.XXXXXX")"
 trap 'rm -rf "$release_dir"' EXIT
 mkdir -p "$release_dir/$release_slug"
 cp "$main_file" "$release_dir/$release_slug/$release_slug.php"
-cp "$readme_file" "$plugin_dir/ASSETS-LICENSE.txt" "$plugin_dir/CRYPTO-ICONS-CC0-LICENSE.txt" "$release_dir/$release_slug/"
+cp "$readme_file" "$plugin_dir/LICENSE" "$plugin_dir/ASSETS-LICENSE.txt" "$plugin_dir/CRYPTO-ICONS-CC0-LICENSE.txt" "$release_dir/$release_slug/"
 cp -R "$plugin_dir/includes" "$plugin_dir/assets" "$plugin_dir/languages" "$release_dir/$release_slug/"
 # Editors can leave backup catalogs beside the real PO files. They are not
 # runtime assets and Plugin Check rejects their trailing-tilde filenames.
