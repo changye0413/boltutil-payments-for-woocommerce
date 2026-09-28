@@ -1,11 +1,14 @@
 <?php
 /**
  * Plugin Name: BoltUtil Payments for WooCommerce
+ * Plugin URI: https://boltutil.com/woocommerce
  * Description: Accept USDT through BoltUtil hosted checkout on supported networks.
- * Version: 0.4.18
+ * Version: 0.4.21
  * Requires at least: 6.5
  * Requires Plugins: woocommerce
  * Requires PHP: 7.4
+ * WC requires at least: 11.1
+ * WC tested up to: 11.1
  * Author: BoltUtil
  * Author URI: https://boltutil.com/
  * License: GPLv2 or later
@@ -16,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOLTUTIL_WC_VERSION', '0.4.18' );
+define( 'BOLTUTIL_WC_VERSION', '0.4.21' );
 define( 'BOLTUTIL_WC_FILE', __FILE__ );
 define( 'BOLTUTIL_WC_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -104,6 +107,9 @@ function boltutil_wc_install() {
 add_action( 'before_woocommerce_init', function () {
     if ( class_exists( '\\Automattic\\WooCommerce\\Utilities\\FeaturesUtil' ) ) {
         \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', BOLTUTIL_WC_FILE, true );
+        // The gateway registers a WooCommerce Blocks payment method below and
+        // uses WooCommerce's Store API payment data during Checkout Blocks.
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', BOLTUTIL_WC_FILE, true );
     }
 } );
 

@@ -4,7 +4,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 0.4.18
+Stable tag: 0.4.21
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,19 @@ Use the WordPress.org support forum for plugin setup questions. For BoltUtil acc
 
 == Changelog ==
 
+= 0.4.21 =
+
+* Log a safe WooCommerce warning when a payment status check cannot be verified, so merchants can investigate orders that remain On hold.
+
+= 0.4.20 =
+
+* Continue scheduled status checks for unpaid orders until BoltUtil reports a verified final status. The previous check mistakenly treated its own running Action Scheduler task as a pending follow-up.
+
+= 0.4.19 =
+
+* Declare tested WooCommerce 11.1 compatibility for HPOS and Cart and Checkout Blocks.
+* Prepare the WordPress.org listing and release checks. Payment creation, monitoring, and Webhook behavior are unchanged.
+
 = 0.4.18 =
 
 * Publish source documentation and the GPL license, with comments explaining API signing, retries, decimal comparison, and Webhook verification. Payment behavior is unchanged.
@@ -120,3 +133,9 @@ Use the WordPress.org support forum for plugin setup questions. For BoltUtil acc
 * Kept the existing WooCommerce gateway ID and payment behavior unchanged.
 * Replaced bundled chain and token artwork with text badges for clear distribution rights.
 * Made English interface strings available to standard WordPress translation tools.
+
+== Upgrade Notice ==
+
+= 0.4.19 =
+
+This release adds WooCommerce compatibility metadata and directory assets. Payment behavior is unchanged. Keep the API key and matching Webhook secret configured when upgrading.

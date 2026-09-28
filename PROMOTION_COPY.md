@@ -19,3 +19,9 @@ BoltUtil 的 WooCommerce USDT 插件现已开源。USD 店铺可提供 TRON、Et
 Requirements: WordPress 6.5+, PHP 7.4+, WooCommerce, HTTPS, a USD store, a LIVE BoltUtil API key, a matching active Webhook secret, and configured receiving wallets. Download `boltutil-payments-for-woocommerce-0.4.18.zip`, upload it under **Plugins → Add New → Upload Plugin**, and follow the [setup guide](README.md#configure-in-five-steps).
 
 Order creation and Hosted Checkout redirect have been checked on a test store. A real WooCommerce-originated blockchain payment with a production completion Webhook has not yet been verified. Do not claim that end-to-end acceptance is complete.
+
+## Draft directory introduction for the 0.4.19 candidate
+
+Accept USDT in a USD WooCommerce store through BoltUtil Hosted Checkout. Customers choose TRON, Ethereum, BNB Smart Chain, Polygon PoS, or Solana, then pay the exact amount shown by BoltUtil to a receiving wallet configured in their merchant account. The plugin verifies signed payment events and checks merchant-scoped payment status before completing orders. The merchant needs a LIVE BoltUtil API key, active Webhook, and receiving wallet. The BoltUtil free plan allows up to 30 newly created orders per server day; terms, privacy, and other pricing are linked in the plugin listing.
+
+Do not publish this copy as a WordPress.org availability announcement until the real-payment acceptance and directory approval are complete.
