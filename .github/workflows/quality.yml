@@ -1,0 +1,55 @@
+name: Validate plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.4', '8.3']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - name: Syntax and signed Webhook fixtures
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in boltutil-woocommerce.php includes/*.php tests/*.php; do php -l "$file"; done
+          php tests/webhook-fixtures.php
+          php tests/reconcile-schedule-fixtures.php
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript and translations
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq gettext
+          for file in assets/*.js; do node --check "$file"; done
+          for file in languages/*.po; do msgfmt --check -o /dev/null "$file"; done
+      - name: Package and inspect distribution
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash tools/build-release.sh --preview
+          version="$(sed -n 's/^ \* Version: //p' boltutil-woocommerce.php | head -1)"
+          archive="../boltutil-payments-for-woocommerce-${version}-preview.zip"
+          unzip -tq "$archive"
+          unzip -Z1 "$archive" | grep -q '^boltutil-payments-for-woocommerce/LICENSE$'
+          if unzip -Z1 "$archive" | grep -Eq '(^|/)(tests|tools|wordpress-org-assets|\.git|\.github)/'; then
+            echo 'Development files found in installable ZIP' >&2
+            exit 1
+          fi
