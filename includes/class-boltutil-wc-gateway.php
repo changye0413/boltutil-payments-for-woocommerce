@@ -470,6 +470,9 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             if ( ! self::matches_order( $order, $payment, $order->get_meta( '_boltutil_network', true ),
                 $order->get_meta( '_boltutil_mode', true ), self::external_id( $order ) ) ||
                 ! self::decimal_equal( $order->get_meta( '_boltutil_amount', true ), $payment['amount'] ?? '' ) ) {
+                // Keep the order unpaid. A mismatch needs merchant review and
+                // must not be silently converted into a successful payment.
+                self::log_reconcile_issue( $order_id, 'Payment details did not match the WooCommerce order.' );
                 return;
             }
             if ( 'COMPLETED' === ( $payment['status'] ?? '' ) ) {
@@ -483,15 +486,41 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
                 self::record_terminal_status( $order, $payment['status'] ?? '' );
             }
         } catch ( Throwable $error ) {
+            // API errors can be temporary or caused by a changed merchant key.
+            // Only a known HTTP status is retained; exception text can contain
+            // request data supplied by another WordPress component.
+            $detail = preg_match( '/^BoltUtil rejected the payment request \(HTTP ([0-9]{3})\)\.$/', $error->getMessage(), $matches )
+                ? 'BoltUtil API returned HTTP ' . $matches[1] . '.' : 'BoltUtil API lookup failed.';
+            self::log_reconcile_issue( $order_id, $detail );
             self::schedule_reconcile( $order_id, 600 );
+        }
+    }
+
+    private static function log_reconcile_issue( $order_id, $detail ) {
+        if ( function_exists( 'wc_get_logger' ) ) {
+            wc_get_logger()->warning(
+                'Payment status recheck for WooCommerce order ' . absint( $order_id ) . ': ' . sanitize_text_field( $detail ),
+                array( 'source' => 'boltutil-woocommerce' )
+            );
         }
     }
 
     private static function schedule_reconcile( $order_id, $delay ) {
         $args = array( (int) $order_id );
-        if ( function_exists( 'as_schedule_single_action' ) &&
-            function_exists( 'as_next_scheduled_action' ) &&
-            ! as_next_scheduled_action( 'boltutil_wc_reconcile_order', $args, 'boltutil' ) ) {
+        if ( ! function_exists( 'as_schedule_single_action' ) || ! function_exists( 'as_get_scheduled_actions' ) ) {
+            return;
+        }
+        // The current action is still "in progress" while this callback runs.
+        // as_next_scheduled_action() counts it as scheduled and would suppress
+        // every follow-up poll. Only a separate pending action prevents another.
+        $pending = as_get_scheduled_actions( array(
+            'hook'     => 'boltutil_wc_reconcile_order',
+            'args'     => $args,
+            'group'    => 'boltutil',
+            'status'   => 'pending',
+            'per_page' => 1,
+        ), 'ids' );
+        if ( empty( $pending ) ) {
             as_schedule_single_action( time() + $delay, 'boltutil_wc_reconcile_order', $args, 'boltutil' );
         }
     }
