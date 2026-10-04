@@ -29,7 +29,7 @@ cp -R "$plugin_dir/includes" "$plugin_dir/assets" "$plugin_dir/languages" "$rele
 # runtime assets and Plugin Check rejects their trailing-tilde filenames.
 find "$release_dir/$release_slug/languages" -type f -name '*~' -delete
 
-# A public package may contain only the six pinned CC0 chain/token SVGs.
+# A public package may contain the pinned CC0 icons and original GPL network illustrations.
 if find "$release_dir/$release_slug/assets" -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \) | grep -q .; then
     printf 'Unlicensed raster asset found in release package.\n' >&2
     exit 1
@@ -45,7 +45,10 @@ if [[ "$mode" == "--preview" ]]; then
 fi
 archive="$project_dir/$release_slug-$version$suffix.zip"
 temporary_archive="$release_dir/$release_slug-$version.zip"
-( cd "$release_dir" && zip -q -r "$temporary_archive" "$release_slug" )
+# Fixed UTC timestamps, sorted entries and no platform-specific attributes make
+# the same runtime files produce the same ZIP locally and on GitHub Actions.
+( export TZ=UTC; find "$release_dir/$release_slug" -exec touch -t 200001010000 {} + )
+( cd "$release_dir" && LC_ALL=C find "$release_slug" -print | LC_ALL=C sort | zip -X -q "$temporary_archive" -@ )
 unzip -tq "$temporary_archive"
 mv -f "$temporary_archive" "$archive"
 shasum -a 256 "$archive"
