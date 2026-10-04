@@ -1,7 +1,23 @@
-**Early release.** Install this ZIP via **WordPress → Plugins → Add New → Upload Plugin**. It provides USDT checkout on five networks, BoltUtil Hosted Checkout redirection, signed Webhook verification, and merchant-scoped payment status checks.
+# v0.5.2 — USDT, USDC and Base
 
-Version 0.4.21 fixes scheduled reconciliation for unpaid orders: a running check now queues its next check until BoltUtil returns a verified final status. Failed status lookups write a safe WooCommerce log warning. A payment that cannot be verified remains unpaid for merchant review; the plugin does not infer failure from elapsed time or an API error.
+Install `boltutil-payments-for-woocommerce-0.5.2.zip` via **WordPress → Plugins → Add New → Upload Plugin**. The GitHub source archives are not the installable plugin package.
 
-Requirements: WordPress 6.5+, PHP 7.4+, WooCommerce 11.1+, HTTPS, a USD store, a LIVE BoltUtil API key, a matching active Webhook secret, and configured receiving wallets. See the [setup guide](https://github.com/changye0413/boltutil-payments-for-woocommerce#configure-in-five-steps).
+## Changes
 
-Order creation, Hosted Checkout redirect, and repeated scheduled checks were verified on a test store. Seven older unpaid orders moved to Failed only after BoltUtil returned `EXPIRED`; three older orders returned HTTP 404 under the current merchant credentials and remain On hold for review. A real WooCommerce-originated blockchain payment with a production completion Webhook has not yet been verified end to end. Test with a small amount before normal sales.
+- Add merchant-controlled USDT/USDC selection and service-authorized asset/network routes in Classic Checkout and Checkout Blocks.
+- Add Base native USDC and explicitly labeled Bridged USDT.
+- Add native USDC on Ethereum, Polygon PoS and Solana, and explicitly labeled Binance-Peg USDC on BNB Smart Chain.
+- Preserve USDT-only defaults on upgrades and reject unsupported or inactive routes.
+- Verify stored token/network identity during Webhook handling and payment reconciliation; keep decimal amounts as strings.
+- Include Base/USDC artwork with license notices and update multilingual configuration guidance.
+- Retain repeated scheduled payment checks, manual rechecks and verified expiry handling.
+
+## Setup and compatibility
+
+Requires WordPress 6.5+, PHP 7.4+, WooCommerce 11.1+, HTTPS, USD store currency, a LIVE BoltUtil API key, a matching active Webhook and configured receiving wallets. Update the BoltUtil service to its multi-asset version and enable each tested route before offering it. Installing this ZIP does not activate network monitoring or USDC automatically.
+
+Read the [setup guide](https://github.com/changye0413/boltutil-payments-for-woocommerce#configure-in-five-steps). Pay the exact token amount on BoltUtil Hosted Checkout; network fees are separate.
+
+**Early release:** local fixtures cover signed Webhooks, reconciliation scheduling and asset/network isolation. Previous test-store checks covered order creation and redirect behavior. A real multi-asset WooCommerce payment followed by a production completion Webhook has not yet been verified end to end. Complete small-amount acceptance tests before normal sales or WordPress.org submission.
+
+The release includes `SHA256SUMS.txt` for download integrity verification.
