@@ -59,7 +59,7 @@ final class BoltUtil_WC_Webhook {
         }
         if ( $order->get_meta( '_boltutil_network', true ) !== ( $data['network'] ?? '' ) ||
             ! BoltUtil_WC_Gateway::decimal_equal( $order->get_meta( '_boltutil_amount', true ), $data['amount'] ?? '' ) ||
-            'USDT' !== ( $data['token'] ?? ( $data['currency'] ?? '' ) ) ) {
+            ( $order->get_meta( '_boltutil_token', true ) ?: 'USDT' ) !== ( $data['token'] ?? ( $data['currency'] ?? '' ) ) ) {
             return new WP_Error( 'boltutil_payment_mismatch', 'Webhook payment fields mismatch.', array( 'status' => 422 ) );
         }
 
@@ -89,7 +89,7 @@ final class BoltUtil_WC_Webhook {
             if ( 'payment.completed' === $event['type'] && ! $order->is_paid() ) {
                 $txid = isset( $payment['txHash'] ) && is_string( $payment['txHash'] ) ? sanitize_text_field( $payment['txHash'] ) : '';
                 $order->payment_complete( $txid );
-                $order->add_order_note( boltutil_wc_text( 'BoltUtil 已确认这笔 USDT 付款。', __( 'BoltUtil confirmed this USDT payment.', 'boltutil-payments-for-woocommerce' ) ) );
+                $order->add_order_note( boltutil_wc_text( 'BoltUtil 已确认这笔付款。', __( 'BoltUtil confirmed this payment.', 'boltutil-payments-for-woocommerce' ) ) );
                 $order->save();
             } elseif ( 'payment.completed' !== $event['type'] && ! $order->is_paid() &&
                 ! BoltUtil_WC_Gateway::record_terminal_status( $order, $payment['status'] ?? '' ) ) {

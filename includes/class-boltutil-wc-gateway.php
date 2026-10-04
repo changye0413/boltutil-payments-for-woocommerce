@@ -11,20 +11,21 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
         'BEP20'   => 'BNB Smart Chain (BEP20)',
         'POLYGON' => 'Polygon',
         'SOLANA'  => 'Solana',
+        'BASE'    => 'Base',
     );
 
     public function __construct() {
         $this->id                 = 'boltutil_usdt';
-        $this->method_title       = 'BoltUtil USDT';
-        $this->method_description = $this->guide_text( '通过 BoltUtil 收银台接收 USDT。', __( 'USDT payments through BoltUtil hosted checkout.', 'boltutil-payments-for-woocommerce' ) );
+        $this->method_title       = 'BoltUtil Payments';
+        $this->method_description = $this->guide_text( '通过 BoltUtil 收银台接收稳定币。', __( 'Stablecoin payments through BoltUtil hosted checkout.', 'boltutil-payments-for-woocommerce' ) );
         $this->icon               = plugins_url( 'assets/boltutil-official-mark.svg', BOLTUTIL_WC_FILE );
         $this->has_fields         = true;
         $this->supports           = array( 'products' );
         $this->init_form_fields();
         $this->init_settings();
         $saved_title       = $this->get_option( 'title', 'USDT via BoltUtil' );
-        $this->title       = 'USDT via BoltUtil' === $saved_title
-            ? $this->guide_text( '使用 BoltUtil 支付 USDT', __( 'Pay USDT with BoltUtil', 'boltutil-payments-for-woocommerce' ) ) : $saved_title;
+        $this->title       = in_array( $saved_title, array( 'USDT via BoltUtil', 'Pay with BoltUtil' ), true )
+            ? $this->guide_text( '使用 BoltUtil 付款', __( 'Pay with BoltUtil', 'boltutil-payments-for-woocommerce' ) ) : $saved_title;
         $this->description = $this->get_option( 'description', '' );
         if ( ! self::$hooks_registered ) {
             add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
@@ -39,14 +40,15 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
         $this->form_fields = array(
             'setup_guide' => array( 'type' => 'boltutil_setup_guide' ),
             'settings_heading' => array( 'type' => 'boltutil_settings_heading' ),
-            'enabled' => array( 'title' => $this->guide_text( '启用', __( 'Enable', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'checkbox', 'label' => $this->guide_text( '启用 BoltUtil USDT', __( 'Enable BoltUtil USDT', 'boltutil-payments-for-woocommerce' ) ), 'default' => 'no' ),
-            'title' => array( 'title' => $this->guide_text( '结账显示名称', __( 'Checkout title', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'text', 'default' => 'USDT via BoltUtil', 'description' => $this->guide_text( '此名称由商户自定义，将显示在结账页。', __( 'Merchant-defined label shown at checkout.', 'boltutil-payments-for-woocommerce' ) ) ),
-            'description' => array( 'title' => $this->guide_text( '结账说明', __( 'Checkout description', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'textarea', 'default' => $this->guide_text( '选择网络后，前往 BoltUtil 收银台支付 USDT。', __( 'Pay USDT on the network you choose.', 'boltutil-payments-for-woocommerce' ) ) ),
+            'enabled' => array( 'title' => $this->guide_text( '启用', __( 'Enable', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'checkbox', 'label' => $this->guide_text( '启用 BoltUtil Payments', __( 'Enable BoltUtil Payments', 'boltutil-payments-for-woocommerce' ) ), 'default' => 'no' ),
+            'title' => array( 'title' => $this->guide_text( '结账显示名称', __( 'Checkout title', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'text', 'default' => 'Pay with BoltUtil', 'description' => $this->guide_text( '此名称由商户自定义，将显示在结账页。', __( 'Merchant-defined label shown at checkout.', 'boltutil-payments-for-woocommerce' ) ) ),
+            'description' => array( 'title' => $this->guide_text( '结账说明', __( 'Checkout description', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'textarea', 'default' => $this->guide_text( '选择币种和网络后，前往 BoltUtil 收银台付款。', __( 'Choose a stablecoin and network, then pay at BoltUtil Checkout.', 'boltutil-payments-for-woocommerce' ) ) ),
             'live_api_key' => $this->secret_field( $this->guide_text( 'BoltUtil API Key（bt_live_）', __( 'BoltUtil API key (bt_live_)', 'boltutil-payments-for-woocommerce' ) ),
                 $this->guide_text( '填写 BoltUtil 商户后台生成的 LIVE API Key。', __( 'Use the existing LIVE API key from your BoltUtil merchant dashboard.', 'boltutil-payments-for-woocommerce' ) ) ),
             'live_webhook_secret' => $this->secret_field( $this->guide_text( 'BoltUtil Webhook 密钥（whsec_）', __( 'BoltUtil Webhook secret (whsec_)', 'boltutil-payments-for-woocommerce' ) ),
                 $this->guide_text( '填写同一商户已启用 Webhook 的密钥。它用于签名 API 请求及验证支付回调。', __( 'Use the secret for this merchant\'s active Webhook. It signs API requests and verifies payment callbacks.', 'boltutil-payments-for-woocommerce' ) ) ),
-            'networks' => array( 'title' => $this->guide_text( '允许的 USDT 网络', __( 'Allowed USDT networks', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'multiselect', 'class' => 'wc-enhanced-select', 'options' => self::NETWORKS, 'default' => array_keys( self::NETWORKS ), 'description' => $this->guide_text( '结账时还会检查 BoltUtil 中是否有已启用的钱包。', __( 'Live checkout also checks active BoltUtil settlement wallets.', 'boltutil-payments-for-woocommerce' ) ) ),
+            'tokens' => array( 'title' => __( 'Accepted stablecoins', 'boltutil-payments-for-woocommerce' ), 'type' => 'multiselect', 'class' => 'wc-enhanced-select', 'options' => array( 'USDT' => 'USDT', 'USDC' => 'USDC' ), 'default' => array( 'USDT' ), 'description' => __( 'Only active network and asset combinations returned by BoltUtil are offered at checkout.', 'boltutil-payments-for-woocommerce' ) ),
+            'networks' => array( 'title' => $this->guide_text( '允许的支付网络', __( 'Allowed payment networks', 'boltutil-payments-for-woocommerce' ) ), 'type' => 'multiselect', 'class' => 'wc-enhanced-select', 'options' => self::NETWORKS, 'default' => array_keys( self::NETWORKS ), 'description' => $this->guide_text( '结账时还会检查 BoltUtil 中是否有已启用的钱包。', __( 'Live checkout also checks active BoltUtil settlement wallets.', 'boltutil-payments-for-woocommerce' ) ) ),
             'usage_guide' => array( 'type' => 'boltutil_usage_guide' ),
         );
     }
@@ -61,8 +63,8 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
 
     public function checkout_description() {
         $description = $this->description;
-        if ( 'Pay USDT on the network you choose.' === $description || '选择网络后，前往 BoltUtil 收银台支付 USDT。' === $description ) {
-            return $this->guide_text( '选择网络后，前往 BoltUtil 收银台支付 USDT。', __( 'Choose a network, then pay USDT at BoltUtil Checkout.', 'boltutil-payments-for-woocommerce' ) );
+        if ( 'Pay USDT on the network you choose.' === $description || '选择网络后，前往 BoltUtil 收银台支付 USDT。' === $description || 'Choose a stablecoin and network, then pay at BoltUtil Checkout.' === $description || '选择币种和网络后，前往 BoltUtil 收银台付款。' === $description ) {
+            return $this->guide_text( '选择币种和网络后，前往 BoltUtil 收银台付款。', __( 'Choose a stablecoin and network, then pay at BoltUtil Checkout.', 'boltutil-payments-for-woocommerce' ) );
         }
         return $description;
     }
@@ -74,6 +76,7 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             'BEP20' => array( 'BNB Smart Chain (BEP20)', 'BEP20' ),
             'POLYGON' => array( 'Polygon PoS', 'POLYGON' ),
             'SOLANA' => array( 'Solana', 'SOLANA' ),
+            'BASE' => array( 'Base', 'BASE' ),
         );
         return isset( $labels[ $code ] ) ? $labels[ $code ] : array( $code, $code );
     }
@@ -85,13 +88,21 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             'BEP20' => 'bnb-chain.svg',
             'POLYGON' => 'polygon.svg',
             'SOLANA' => 'solana.svg',
+            'BASE' => 'base.svg',
         );
         return isset( $icons[ $code ] )
             ? plugins_url( 'assets/chains/' . $icons[ $code ], BOLTUTIL_WC_FILE ) : '';
     }
 
-    public static function token_icon_url() {
-        return plugins_url( 'assets/tokens/usdt.svg', BOLTUTIL_WC_FILE );
+    /** Keep API symbols stable while distinguishing BNB Chain's mapped representation. */
+    public static function token_label( $token, $network ) {
+        if ( 'USDC' === $token && 'BEP20' === $network ) return 'Binance-Peg USDC';
+        if ( 'USDT' === $token && 'BASE' === $network ) return 'Bridged USDT';
+        return $token;
+    }
+
+    public static function token_icon_url( $token = 'USDT' ) {
+        return plugins_url( 'assets/tokens/' . ( 'USDC' === $token ? 'usdc' : 'usdt' ) . '.svg', BOLTUTIL_WC_FILE );
     }
 
     private function guide_step( $number, $title, $description, $url = '', $link_label = '' ) {
@@ -117,7 +128,7 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
         $html = '<tr class="boltutil-guide-row"><td colspan="2"><div class="boltutil-guide">';
         $html .= '<div class="boltutil-guide-hero"><img class="boltutil-guide-mark" src="' . esc_url( plugins_url( 'assets/boltutil-official-mark.svg', BOLTUTIL_WC_FILE ) ) . '" alt="" aria-hidden="true" />' .
             '<div><span class="boltutil-guide-eyebrow">BOLTUTIL · WOOCOMMERCE</span>' .
-            '<h2>' . esc_html( $this->guide_text( '用 BoltUtil 接收 USDT', __( 'Accept USDT with BoltUtil', 'boltutil-payments-for-woocommerce' ) ) ) . '</h2>' .
+            '<h2>' . esc_html( $this->guide_text( '用 BoltUtil 接收稳定币', __( 'Accept stablecoins with BoltUtil', 'boltutil-payments-for-woocommerce' ) ) ) . '</h2>' .
             '<p>' . esc_html( $this->guide_text(
                 '顾客在店铺下单并选择支付网络后，会跳转到 BoltUtil 收银台。链上付款确认后，BoltUtil 通知 WooCommerce 更新订单。资金直接进入你在 BoltUtil 配置的收款钱包。',
                 __( 'Customers place an order in your store and pay on the selected network at BoltUtil Hosted Checkout. Once confirmed on-chain, BoltUtil updates the WooCommerce order. Funds go directly to your configured wallet.', 'boltutil-payments-for-woocommerce' )
@@ -140,7 +151,7 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             $this->guide_text( '登录 BoltUtil，在「API 密钥」页面生成 bt_live_ 开头的密钥。它用于识别这家商户。', __( 'Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys page. It identifies your merchant account.', 'boltutil-payments-for-woocommerce' ) ),
             'https://boltutil.com/dashboard/api-keys', $this->guide_text( '打开 API 密钥', __( 'Open API Keys', 'boltutil-payments-for-woocommerce' ) ) );
         $html .= $this->guide_step( '2', $this->guide_text( '配置收款钱包', __( 'Set up receiving wallets', 'boltutil-payments-for-woocommerce' ) ),
-            $this->guide_text( '在「钱包」中为要接收的网络添加并启用 USDT 收款地址。结账时只显示插件允许且 BoltUtil 已启用钱包的网络。', __( 'Add and activate a USDT receiving address for each network you accept. Checkout shows networks allowed here that also have active BoltUtil wallets.', 'boltutil-payments-for-woocommerce' ) ),
+            $this->guide_text( '为每条收款网络添加并启用钱包。结账时仅提供已启用的钱包及币种组合。', __( 'Add and activate a receiving wallet for each accepted network.', 'boltutil-payments-for-woocommerce' ) ),
             'https://boltutil.com/dashboard/wallets', $this->guide_text( '打开钱包', __( 'Open Wallets', 'boltutil-payments-for-woocommerce' ) ) );
         $html .= $this->guide_step( '3', $this->guide_text( '设置 Webhook', __( 'Set up the Webhook', 'boltutil-payments-for-woocommerce' ) ),
             $this->guide_text( '在 BoltUtil「Webhooks」中保存下方地址，并保存该配置的 whsec_ 回调密钥。地址必须属于当前店铺。', __( 'Save the URL below on the BoltUtil Webhooks page, then retain that configuration’s whsec_ secret. The URL must belong to this store.', 'boltutil-payments-for-woocommerce' ) ),
@@ -169,8 +180,8 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
         $html = '<tr class="boltutil-guide-row"><td colspan="2"><div class="boltutil-guide boltutil-usage-guide"><div class="boltutil-guide-body">' .
             '<div class="boltutil-guide-heading"><h3>' . esc_html( $this->guide_text( '启用后如何使用', __( 'How it works after setup', 'boltutil-payments-for-woocommerce' ) ) ) . '</h3></div><ol class="boltutil-guide-usage">';
         $items = array(
-            array( '01', $this->guide_text( '顾客下单', __( 'Customer places an order', 'boltutil-payments-for-woocommerce' ) ), $this->guide_text( '顾客在 USD 订单中选择 BoltUtil USDT 及网络，随后跳转到 BoltUtil 收银台。', __( 'For a USD order, the customer chooses BoltUtil USDT and a network, then goes to BoltUtil Checkout.', 'boltutil-payments-for-woocommerce' ) ) ),
-            array( '02', $this->guide_text( '按收银台金额付款', __( 'Pay the checkout amount', 'boltutil-payments-for-woocommerce' ) ), $this->guide_text( '收银台显示该笔订单的准确 USDT 金额、收款地址、二维码和到期时间。不要用 WooCommerce 订单金额代替收银台实际应付金额。', __( 'Hosted Checkout shows the exact USDT amount, receiving address, QR code, and expiry. The checkout amount is authoritative.', 'boltutil-payments-for-woocommerce' ) ) ),
+            array( '01', $this->guide_text( '顾客下单', __( 'Customer places an order', 'boltutil-payments-for-woocommerce' ) ), $this->guide_text( '顾客选择币种和网络后，前往 BoltUtil 收银台。', __( 'The customer chooses a stablecoin and network, then opens BoltUtil Checkout.', 'boltutil-payments-for-woocommerce' ) ) ),
+            array( '02', $this->guide_text( '按收银台金额付款', __( 'Pay the checkout amount', 'boltutil-payments-for-woocommerce' ) ), $this->guide_text( '收银台显示准确的应付金额、币种、网络、收款地址、二维码和到期时间。', __( 'Hosted Checkout shows the exact amount, asset, network, address, QR code, and expiry.', 'boltutil-payments-for-woocommerce' ) ) ),
             array( '03', $this->guide_text( '确认后自动更新', __( 'Automatic update after confirmation', 'boltutil-payments-for-woocommerce' ) ), $this->guide_text( 'BoltUtil 确认链上付款后发送签名 Webhook；插件验证后更新 WooCommerce 订单。返回商店并不代表已经付款。', __( 'After on-chain confirmation, BoltUtil sends a signed Webhook and the plugin updates the WooCommerce order. Returning to the store does not mark it paid.', 'boltutil-payments-for-woocommerce' ) ) ),
             array( '04', $this->guide_text( '需要时手动同步', __( 'Recheck a pending order', 'boltutil-payments-for-woocommerce' ) ), $this->guide_text( '若订单长时间处于待付款状态，可在 WooCommerce 订单详情的「订单操作」中选择「同步 BoltUtil 支付状态」。插件也会定时自动查询。', __( 'If an order remains on hold, choose Recheck BoltUtil payment under Order actions in WooCommerce. Scheduled checks also run automatically.', 'boltutil-payments-for-woocommerce' ) ) ),
         );
@@ -178,8 +189,8 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             $html .= '<li><span>' . esc_html( $item[0] ) . '</span><div><strong>' . esc_html( $item[1] ) . '</strong><p>' . esc_html( $item[2] ) . '</p></div></li>';
         }
         $html .= '</ol><div class="boltutil-guide-note"><strong>' . esc_html( $this->guide_text( '当前支持范围', __( 'Current scope', 'boltutil-payments-for-woocommerce' ) ) ) . '</strong><p>' .
-            esc_html( $this->guide_text( '仅支持 USD 店铺使用 USDT，支持 TRC20、ERC20、BEP20、Polygon、Solana。USD 数字金额作为 USDT 计价基础；本版本不提供实时汇率锁定。链上转账是真实付款，请先用不转账的订单检查配置和跳转。',
-                __( 'USDT for USD stores only, on TRC20, ERC20, BEP20, Polygon, and Solana. The USD numeric total is the USDT invoice basis; this version does not lock a live exchange rate. On-chain transfers are real payments, so check order creation and redirect without sending funds first.', 'boltutil-payments-for-woocommerce' ) ) ) .
+            esc_html( $this->guide_text( '仅支持 USD 店铺。USD 数字金额作为稳定币计价基础，不锁定实时汇率。请按收银台显示的币种、网络和准确金额付款。',
+                __( 'USD totals are the numeric stablecoin invoice basis; no live exchange rate is locked. Always pay the exact asset, network and amount shown at checkout.', 'boltutil-payments-for-woocommerce' ) ) ) .
             '</p></div><p class="boltutil-guide-help"><a href="' . esc_url( 'https://boltutil.com/developer-docs' ) . '" target="_blank" rel="noopener noreferrer">' .
             esc_html( $this->guide_text( '查看 BoltUtil API 文档 ↗', __( 'Read BoltUtil API docs ↗', 'boltutil-payments-for-woocommerce' ) ) ) . '</a></p></div></div></td></tr>';
         return $html;
@@ -232,35 +243,54 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
     }
 
     public function available_networks() {
+        return array_values( array_unique( array_column( $this->available_routes(), 'network' ) ) );
+    }
+
+    /** Intersect server capabilities with merchant settings. Never invent coin/network combinations. */
+    public function available_routes() {
         $allowed = (array) $this->get_option( 'networks', array_keys( self::NETWORKS ) );
-        $allowed = array_values( array_intersect( array_keys( self::NETWORKS ), $allowed ) );
+        $tokens = (array) $this->get_option( 'tokens', array( 'USDT' ) );
         try {
-            $settings = $this->settings;
-            $api      = new BoltUtil_WC_API( $settings );
-            $cache_key = 'boltutil_networks_' . md5( wp_json_encode( array( BoltUtil_WC_API::API_ORIGIN, $settings['live_api_key'] ?? '' ) ) );
-            $active = get_transient( $cache_key );
+            $api = new BoltUtil_WC_API( $this->settings );
+            $key = 'boltutil_routes_' . md5( wp_json_encode( array( $this->settings['live_api_key'] ?? '', $this->settings['live_webhook_secret'] ?? '' ) ) );
+            $active = get_transient( $key );
             if ( false === $active ) {
-                $active = $api->networks();
-                if ( ! is_array( $active ) ) {
-                    return array();
-                }
-                set_transient( $cache_key, $active, MINUTE_IN_SECONDS );
+                $active = $api->capabilities();
+                if ( ! isset( $active['routes'] ) || ! is_array( $active['routes'] ) ) { return array(); }
+                set_transient( $key, $active, MINUTE_IN_SECONDS );
             }
-            return array_values( array_intersect( $allowed, $active ) );
-        } catch ( Throwable $error ) {
-            return array();
+            $routes = array();
+            foreach ( $active['routes'] ?? array() as $route ) {
+                $token = $route['token'] ?? ''; $network = $route['network'] ?? '';
+                if ( in_array( $token, array( 'USDT', 'USDC' ), true ) && in_array( $token, $tokens, true ) &&
+                    isset( self::NETWORKS[ $network ] ) && in_array( $network, $allowed, true ) ) {
+                    $routes[ $token . ':' . $network ] = array( 'token' => $token, 'network' => $network );
+                }
+            }
+            return $routes;
+        } catch ( Throwable $error ) { return array(); }
+    }
+
+    private function selected_route() {
+        $route = isset( $_POST['boltutil_route'] ) ? sanitize_text_field( wp_unslash( $_POST['boltutil_route'] ) ) : '';
+        if ( '' === $route ) {
+            $network = isset( $_POST['boltutil_network'] ) ? sanitize_text_field( wp_unslash( $_POST['boltutil_network'] ) ) : '';
+            $token = isset( $_POST['boltutil_token'] ) ? sanitize_text_field( wp_unslash( $_POST['boltutil_token'] ) ) : 'USDT';
+            $route = $token . ':' . $network;
         }
+        return $this->available_routes()[ $route ] ?? null;
     }
 
     public function payment_fields() {
-        $networks = $this->available_networks();
+        $routes = $this->available_routes();
         echo '<div class="boltutil-payment-panel"><p class="boltutil-payment-description">' . esc_html( $this->checkout_description() ) . '</p>';
-        echo '<fieldset class="boltutil-network-fieldset"><legend>' . esc_html( $this->guide_text( '选择 USDT 支付网络', __( 'Choose a USDT payment network', 'boltutil-payments-for-woocommerce' ) ) ) . '</legend><div class="boltutil-network-list">';
-        foreach ( $networks as $code ) {
+        echo '<fieldset class="boltutil-network-fieldset"><legend>' . esc_html( $this->guide_text( '选择币种和支付网络', __( 'Choose a stablecoin and payment network', 'boltutil-payments-for-woocommerce' ) ) ) . '</legend><div class="boltutil-network-list">';
+        foreach ( $routes as $route_id => $route ) {
+            $code = $route['network']; $token = $route['token'];
             $labels = self::network_labels( $code );
-            echo '<label class="boltutil-network-option"><input type="radio" name="boltutil_network" value="' . esc_attr( $code ) . '" ' . checked( $code, $networks[0] ?? '', false ) . ' />';
-            echo '<span class="boltutil-network-art" aria-hidden="true"><span class="boltutil-chain-badge network-' . esc_attr( strtolower( $code ) ) . '"><img src="' . esc_url( self::network_icon_url( $code ) ) . '" alt="" loading="lazy" /></span><span class="boltutil-token-badge"><img src="' . esc_url( self::token_icon_url() ) . '" alt="" loading="lazy" /></span></span>';
-            echo '<span class="boltutil-network-copy"><strong>' . esc_html( $labels[0] ) . '</strong><small>' . esc_html( $labels[1] ) . '</small></span><span class="boltutil-network-arrow" aria-hidden="true">→</span>';
+            echo '<label class="boltutil-network-option"><input type="radio" name="boltutil_route" value="' . esc_attr( $route_id ) . '" ' . checked( $route_id, array_key_first( $routes ), false ) . ' />';
+            echo '<span class="boltutil-network-art" aria-hidden="true"><span class="boltutil-chain-badge network-' . esc_attr( strtolower( $code ) ) . '"><img src="' . esc_url( self::network_icon_url( $code ) ) . '" alt="" loading="lazy" /></span><span class="boltutil-token-badge"><img src="' . esc_url( self::token_icon_url( $token ) ) . '" alt="" loading="lazy" /></span></span>';
+            echo '<span class="boltutil-network-copy"><strong>' . esc_html( $labels[0] ) . '</strong><small>' . esc_html( self::token_label( $token, $code ) . ' · ' . $labels[1] ) . '</small></span><span class="boltutil-network-arrow" aria-hidden="true">→</span>';
             echo '<span class="boltutil-network-selected" aria-hidden="true">✓ ' . esc_html( $this->guide_text( '已选择', __( 'Selected', 'boltutil-payments-for-woocommerce' ) ) ) . '</span></label>';
         }
         echo '</div></fieldset><p class="boltutil-payment-note">' . esc_html( $this->guide_text(
@@ -270,9 +300,11 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
     }
 
     public function validate_fields() {
-        $network = isset( $_POST['boltutil_network'] ) ? sanitize_text_field( wp_unslash( $_POST['boltutil_network'] ) ) : '';
-        if ( ! in_array( $network, $this->available_networks(), true ) ) {
-            wc_add_notice( $this->guide_text( '请选择可用的 USDT 网络。', __( 'Choose an available USDT network.', 'boltutil-payments-for-woocommerce' ) ), 'error' );
+        $route = $this->selected_route();
+        $network = $route['network'] ?? '';
+        $token = $route['token'] ?? '';
+        if ( ! $route ) {
+            wc_add_notice( $this->guide_text( '请选择可用的币种和网络。', __( 'Choose an available stablecoin and network.', 'boltutil-payments-for-woocommerce' ) ), 'error' );
             return false;
         }
         return true;
@@ -289,9 +321,11 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
         if ( $order->is_paid() ) {
             return array( 'result' => 'success', 'redirect' => $this->get_return_url( $order ) );
         }
-        $network = isset( $_POST['boltutil_network'] ) ? sanitize_text_field( wp_unslash( $_POST['boltutil_network'] ) ) : '';
-        if ( ! in_array( $network, $this->available_networks(), true ) ) {
-            wc_add_notice( $this->guide_text( '请选择可用的 USDT 网络。', __( 'Choose an available USDT network.', 'boltutil-payments-for-woocommerce' ) ), 'error' );
+        $route = $this->selected_route();
+        $network = $route['network'] ?? '';
+        $token = $route['token'] ?? '';
+        if ( ! $route ) {
+            wc_add_notice( $this->guide_text( '请选择可用的币种和网络。', __( 'Choose an available stablecoin and network.', 'boltutil-payments-for-woocommerce' ) ), 'error' );
             return array( 'result' => 'failure' );
         }
 
@@ -310,7 +344,7 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
                 $payload = array(
                     'amount' => $amount,
                     'currency' => 'USD',
-                    'token' => 'USDT',
+                    'token' => $token,
                     'network' => $network,
                     'externalOrderId' => $external_id,
                     'successUrl' => $this->get_return_url( $order ),
@@ -324,7 +358,7 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
                     $payment = $api->find_payment( $external_id );
                 }
             }
-            if ( ! self::matches_order( $order, $payment, $network, $mode, $external_id ) ) {
+            if ( ! self::matches_order( $order, $payment, $network, $mode, $external_id, $token ) ) {
                 throw new RuntimeException( 'BoltUtil returned a payment that cannot be used for this order.' );
             }
             if ( 'COMPLETED' === ( $payment['status'] ?? '' ) && $existing_id ) {
@@ -342,12 +376,13 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             $order->update_meta_data( '_boltutil_external_id', $external_id );
             $order->update_meta_data( '_boltutil_mode', $mode );
             $order->update_meta_data( '_boltutil_network', $network );
+            $order->update_meta_data( '_boltutil_token', $token );
             $order->update_meta_data( '_boltutil_amount', (string) $payment['amount'] );
             $order->update_meta_data( '_boltutil_invoice_amount', (string) $payment['invoiceAmount'] );
             $order->update_meta_data( '_boltutil_checkout_url', $payment['checkoutUrl'] );
             $order->save();
             if ( ! $order->has_status( 'on-hold' ) ) {
-                $order->update_status( 'on-hold', $this->guide_text( '等待 BoltUtil 确认 USDT 付款。', __( 'Awaiting confirmed USDT payment from BoltUtil.', 'boltutil-payments-for-woocommerce' ) ) );
+                $order->update_status( 'on-hold', $this->guide_text( '等待 BoltUtil 确认付款。', __( 'Awaiting confirmed payment from BoltUtil.', 'boltutil-payments-for-woocommerce' ) ) );
             }
             if ( function_exists( 'WC' ) && WC()->cart ) {
                 WC()->cart->empty_cart();
@@ -385,13 +420,13 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             str_pad( $left[1] ?? '', 6, '0' ) === str_pad( $right[1] ?? '', 6, '0' );
     }
 
-    public static function matches_order( $order, $payment, $network, $mode, $external_id ) {
+    public static function matches_order( $order, $payment, $network, $mode, $external_id, $token = null ) {
         // A payment lookup must match the Woo order before redirect or update.
         return is_array( $payment ) &&
             preg_match( '/^[a-f0-9]{32}$/i', $payment['paymentId'] ?? '' ) &&
             $external_id === ( $payment['externalOrderId'] ?? '' ) &&
             $network === ( $payment['network'] ?? '' ) &&
-            'USDT' === ( $payment['token'] ?? '' ) &&
+            ( $order->get_meta( '_boltutil_token', true ) ?: ( $token ?: 'USDT' ) ) === ( $payment['token'] ?? '' ) &&
             'USD' === ( $payment['invoiceCurrency'] ?? '' ) &&
             self::decimal_equal( $order->get_total( 'edit' ), $payment['invoiceAmount'] ?? '' ) &&
             ( ! $order->get_meta( '_boltutil_payment_id', true ) || $order->get_meta( '_boltutil_payment_id', true ) === $payment['paymentId'] ) &&
@@ -416,9 +451,9 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             $this->guide_text( '模式', __( 'Mode', 'boltutil-payments-for-woocommerce' ) ) => '_boltutil_mode',
             $this->guide_text( '网络', __( 'Network', 'boltutil-payments-for-woocommerce' ) ) => '_boltutil_network',
             $this->guide_text( '账单金额（USD）', __( 'Invoice amount (USD)', 'boltutil-payments-for-woocommerce' ) ) => '_boltutil_invoice_amount',
-            $this->guide_text( '应付金额（USDT）', __( 'Payable amount (USDT)', 'boltutil-payments-for-woocommerce' ) ) => '_boltutil_amount',
+            $this->guide_text( '应付金额', __( 'Payable amount', 'boltutil-payments-for-woocommerce' ) ) => '_boltutil_amount',
         );
-        echo '<div class="boltutil-order-details"><h3>BoltUtil USDT</h3>';
+        echo '<div class="boltutil-order-details"><h3>BoltUtil</h3><p>' . esc_html( $order->get_meta( '_boltutil_token', true ) ?: 'USDT' ) . '</p>';
         foreach ( $fields as $label => $key ) {
             $value = $order->get_meta( $key, true );
             if ( '' !== (string) $value ) {
@@ -478,7 +513,7 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             if ( 'COMPLETED' === ( $payment['status'] ?? '' ) ) {
                 $txid = isset( $payment['txHash'] ) && is_string( $payment['txHash'] ) ? sanitize_text_field( $payment['txHash'] ) : '';
                 $order->payment_complete( $txid );
-                $order->add_order_note( $gateway->guide_text( 'BoltUtil 已确认这笔 USDT 付款。', __( 'BoltUtil confirmed this USDT payment.', 'boltutil-payments-for-woocommerce' ) ) );
+                $order->add_order_note( $gateway->guide_text( 'BoltUtil 已确认这笔付款。', __( 'BoltUtil confirmed this payment.', 'boltutil-payments-for-woocommerce' ) ) );
                 $order->save();
             } elseif ( 'PENDING' === ( $payment['status'] ?? '' ) || 'CONFIRMING' === ( $payment['status'] ?? '' ) ) {
                 self::schedule_reconcile( $order_id, 300 );

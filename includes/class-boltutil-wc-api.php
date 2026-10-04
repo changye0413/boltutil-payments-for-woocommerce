@@ -26,6 +26,20 @@ final class BoltUtil_WC_API {
         }
     }
 
+    public function capabilities() {
+        try {
+            return $this->request( 'GET', '/api/v1/payments/capabilities' );
+        } catch ( RuntimeException $error ) {
+            // Only an older server without the endpoint may fall back to USDT.
+            if ( 404 !== $error->getCode() ) { throw $error; }
+            $routes = array();
+            foreach ( $this->networks() as $network ) {
+                $routes[] = array( 'token' => 'USDT', 'network' => $network, 'decimals' => 6 );
+            }
+            return array( 'schemaVersion' => 1, 'routes' => $routes );
+        }
+    }
+
     public function networks() {
         return $this->request( 'GET', '/api/v1/payments/networks' );
     }
@@ -79,7 +93,7 @@ final class BoltUtil_WC_API {
         $status = wp_remote_retrieve_response_code( $response );
         $json   = json_decode( wp_remote_retrieve_body( $response ), true );
         if ( $status < 200 || $status >= 300 || ! is_array( $json ) || 200 !== (int) ( $json['code'] ?? 0 ) ) {
-            throw new RuntimeException( 'BoltUtil rejected the payment request (HTTP ' . (int) $status . ').' );
+            throw new RuntimeException( 'BoltUtil rejected the payment request (HTTP ' . (int) $status . ').', (int) $status );
         }
         if ( ! isset( $json['data'] ) || ! is_array( $json['data'] ) ) {
             throw new RuntimeException( 'BoltUtil returned an invalid response.' );
