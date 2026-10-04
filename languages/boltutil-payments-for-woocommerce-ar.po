@@ -106,11 +106,11 @@ msgstr "سر خطاف الويب BoltUtil (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and "
-"verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests and"
+" verifies payment callbacks."
 msgstr ""
-"استخدم سر Webhook النشط لهذا التاجر. يقوم بتوقيع طلبات واجهة برمجة التطبيقات "
-"(API) والتحقق من عمليات الاسترجاعات الخاصة بالدفع."
+"استخدم سر Webhook النشط لهذا التاجر. يقوم بتوقيع طلبات واجهة برمجة التطبيقات"
+" (API) والتحقق من عمليات الاسترجاعات الخاصة بالدفع."
 
 #: includes/class-boltutil-wc-gateway.php:48
 msgid "Allowed USDT networks"
@@ -135,8 +135,8 @@ msgid ""
 "WooCommerce order. Funds go directly to your configured wallet."
 msgstr ""
 "يقدم العملاء طلبًا في متجرك ويدفعون على الشبكة المحددة في BoltUtil Hosted "
-"Checkout. بمجرد التأكيد على السلسلة، يقوم BoltUtil بتحديث ترتيب WooCommerce. "
-"تذهب الأموال مباشرة إلى محفظتك التي تم تكوينها."
+"Checkout. بمجرد التأكيد على السلسلة، يقوم BoltUtil بتحديث ترتيب WooCommerce."
+" تذهب الأموال مباشرة إلى محفظتك التي تم تكوينها."
 
 #: includes/class-boltutil-wc-gateway.php:125
 #: includes/class-boltutil-wc-gateway.php:127
@@ -161,8 +161,8 @@ msgstr "قم بإنشاء مفتاح LIVE API"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
-"page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
+" page. It identifies your merchant account."
 msgstr ""
 "قم بتسجيل الدخول إلى BoltUtil وقم بإنشاء مفتاح يبدأ بـ bt_live_ في صفحة "
 "مفاتيح API. إنه يحدد حساب التاجر الخاص بك."
@@ -270,8 +270,8 @@ msgid ""
 "upgrade options in BoltUtil."
 msgstr ""
 "يؤدي هذا إلى احتساب طلبات BoltUtil التي تم إنشاؤها اليوم، وليس الدفعات "
-"المكتملة. يتم رفض أوامر الدفع الجديدة بعد الوصول إلى الحد الأقصى. قم بمراجعة "
-"الخطط وخيارات الترقية في BoltUtil."
+"المكتملة. يتم رفض أوامر الدفع الجديدة بعد الوصول إلى الحد الأقصى. قم بمراجعة"
+" الخطط وخيارات الترقية في BoltUtil."
 
 #: includes/class-boltutil-wc-gateway.php:161
 msgid "View plans ↗"
@@ -295,8 +295,8 @@ msgstr "يقدم العميل طلبًا"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
-"to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
+" to BoltUtil Checkout."
 msgstr ""
 "بالنسبة لطلب USD، يختار العميل BoltUtil USDT وشبكة، ثم ينتقل إلى BoltUtil "
 "Checkout."
@@ -307,8 +307,8 @@ msgstr "ادفع المبلغ المعروض في صفحة الدفع"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
-"expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
+" expiry. The checkout amount is authoritative."
 msgstr ""
 "تعرض صفحة الدفع في BoltUtil مبلغ USDT الدقيق وعنوان الاستلام ورمز QR ووقت "
 "انتهاء الصلاحية. ادفع المبلغ المعروض في صفحة الدفع."
@@ -349,8 +349,8 @@ msgid ""
 "creation and redirect without sending funds first."
 msgstr ""
 "يدعم دفع USDT للمتاجر التي تستخدم USD فقط، على شبكات TRC20 وERC20 وBEP20 "
-"وPolygon وSolana. يُستخدم إجمالي الطلب الرقمي بعملة USD أساسًا لفاتورة USDT؛ "
-"ولا يثبّت هذا الإصدار سعر الصرف المباشر. التحويلات على السلسلة مدفوعات "
+"وPolygon وSolana. يُستخدم إجمالي الطلب الرقمي بعملة USD أساسًا لفاتورة USDT؛"
+" ولا يثبّت هذا الإصدار سعر الصرف المباشر. التحويلات على السلسلة مدفوعات "
 "حقيقية، لذا اختبر إنشاء الطلب وإعادة التوجيه أولًا دون إرسال أموال."
 
 #: includes/class-boltutil-wc-gateway.php:183
@@ -359,8 +359,8 @@ msgstr "اقرأ مستندات BoltUtil API ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved "
-"secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. Saved"
+" secrets appear only as masked hints."
 msgstr ""
 "أدخل بيانات اعتماد التاجر، واختر الشبكات المدعومة، ثم احفظ. تظهر المفاتيح "
 "المحفوظة بشكل مخفي جزئيًا فقط."
@@ -427,6 +427,74 @@ msgstr "حالة الدفع BoltUtil: %s."
 #: includes/class-boltutil-wc-webhook.php:88
 msgid "BoltUtil confirmed this USDT payment."
 msgstr "أكد BoltUtil دفعة USDT هذه."
+
+msgid "Stablecoin payments through BoltUtil hosted checkout."
+msgstr "دفعات USDT / USDC من خلال الخروج المستضاف BoltUtil."
+
+msgid "Enable BoltUtil Payments"
+msgstr "تمكين BoltUtil USDT / USDC"
+
+msgid "Accept stablecoins with BoltUtil"
+msgstr "اقبل USDT / USDC مع BoltUtil"
+
+msgid "Awaiting confirmed payment from BoltUtil."
+msgstr "في انتظار الدفع المؤكد لـ USDT / USDC من BoltUtil."
+
+msgid "BoltUtil confirmed this payment."
+msgstr "أكد BoltUtil دفعة USDT / USDC هذه."
+
+msgid "Payable amount"
+msgstr "المبلغ المستحق"
+
+msgid "Add and activate a receiving wallet for each accepted network."
+msgstr ""
+"قم بإضافة وتنشيط عنوان استلام USDT / USDC لكل شبكة تقبلها. يعرض Checkout "
+"الشبكات المسموح بها هنا والتي تحتوي أيضًا على محافظ BoltUtil النشطة."
+
+msgid ""
+"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgstr ""
+"بالنسبة لطلب USD، يختار العميل BoltUtil USDT / USDC وشبكة، ثم ينتقل إلى "
+"BoltUtil Checkout."
+
+msgid ""
+"Hosted Checkout shows the exact amount, asset, network, address, QR code, "
+"and expiry."
+msgstr ""
+"تعرض صفحة الدفع في BoltUtil مبلغ USDT / USDC الدقيق وعنوان الاستلام ورمز QR "
+"ووقت انتهاء الصلاحية. ادفع المبلغ المعروض في صفحة الدفع."
+
+msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
+msgstr "اختر شبكة، ثم ادفع USDT / USDC عند BoltUtil Checkout."
+
+msgid "Pay with BoltUtil"
+msgstr "الدفع عبر BoltUtil"
+
+msgid "Accepted stablecoins"
+msgstr "العملات المستقرة المقبولة"
+
+msgid "Choose a stablecoin and payment network"
+msgstr "اختر العملة المستقرة وشبكة الدفع"
+
+msgid "Allowed payment networks"
+msgstr "شبكات الدفع المسموح بها"
+
+msgid "Choose an available stablecoin and network."
+msgstr "اختر عملة مستقرة وشبكة متاحة."
+
+msgid ""
+"Only active network and asset combinations returned by BoltUtil are offered "
+"at checkout."
+msgstr ""
+"تظهر عند الدفع فقط مجموعات العملات والشبكات النشطة التي يوفرها BoltUtil."
+
+msgid ""
+"USD totals are the numeric stablecoin invoice basis; no live exchange rate "
+"is locked. Always pay the exact asset, network and amount shown at checkout."
+msgstr ""
+"المجموع بالدولار هو الأساس الرقمي لمبلغ الفاتورة بالعملة المستقرة؛ لا يتم "
+"تثبيت سعر صرف مباشر. ادفع بالعملة والشبكة والمبلغ الدقيق الظاهر في صفحة "
+"الدفع."
 
 #~ msgid "BoltUtil API origin"
 #~ msgstr "أصل BoltUtil API"

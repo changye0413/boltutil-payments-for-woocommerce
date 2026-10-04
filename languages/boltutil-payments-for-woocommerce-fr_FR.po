@@ -109,8 +109,8 @@ msgstr "Code secret du webhook BoltUtil (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and "
-"verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests and"
+" verifies payment callbacks."
 msgstr ""
 "Utilisez le secret du Webhook actif de ce marchand. Il signe les requêtes "
 "API et vérifie les rappels de paiement."
@@ -167,8 +167,8 @@ msgstr "Créer une clé API LIVE"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
-"page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
+" page. It identifies your merchant account."
 msgstr ""
 "Connectez-vous à BoltUtil et créez une clé commençant par bt_live_ sur la "
 "page Clés API. Il identifie votre compte marchand."
@@ -186,9 +186,9 @@ msgid ""
 "Add and activate a USDT receiving address for each network you accept. "
 "Checkout shows networks allowed here that also have active BoltUtil wallets."
 msgstr ""
-"Ajoutez et activez une adresse de réception USDT pour chaque réseau que vous "
-"acceptez. Le paiement montre les réseaux autorisés ici qui ont également des "
-"portefeuilles BoltUtil actifs."
+"Ajoutez et activez une adresse de réception USDT pour chaque réseau que vous"
+" acceptez. Le paiement montre les réseaux autorisés ici qui ont également "
+"des portefeuilles BoltUtil actifs."
 
 #: includes/class-boltutil-wc-gateway.php:143
 msgid "Open Wallets"
@@ -221,8 +221,8 @@ msgid ""
 "networks, enable the gateway, and save. Your store currency must be USD."
 msgstr ""
 "Saisissez ci-dessous la clé API et le secret Webhook du même commerçant, "
-"sélectionnez les réseaux, activez la passerelle et enregistrez. La devise de "
-"votre magasin doit être USD."
+"sélectionnez les réseaux, activez la passerelle et enregistrez. La devise de"
+" votre magasin doit être USD."
 
 #: includes/class-boltutil-wc-gateway.php:150
 msgid "This store’s Webhook URL"
@@ -304,8 +304,8 @@ msgstr "Le client passe une commande"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
-"to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
+" to BoltUtil Checkout."
 msgstr ""
 "Pour une commande USD, le client choisit BoltUtil USDT et un réseau, puis "
 "passe à la caisse BoltUtil."
@@ -316,8 +316,8 @@ msgstr "Payer le montant affiché sur la page de paiement"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
-"expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
+" expiry. The checkout amount is authoritative."
 msgstr ""
 "La page de paiement BoltUtil affiche le montant exact en USDT, l’adresse de "
 "réception, le code QR et la date d’expiration. Payez le montant affiché sur "
@@ -345,8 +345,8 @@ msgid ""
 "If an order remains on hold, choose Recheck BoltUtil payment under Order "
 "actions in WooCommerce. Scheduled checks also run automatically."
 msgstr ""
-"Si une commande reste en attente, choisissez Revérifier le paiement BoltUtil "
-"sous Actions de commande dans WooCommerce. Les contrôles programmés "
+"Si une commande reste en attente, choisissez Revérifier le paiement BoltUtil"
+" sous Actions de commande dans WooCommerce. Les contrôles programmés "
 "s'exécutent également automatiquement."
 
 #: includes/class-boltutil-wc-gateway.php:179
@@ -362,8 +362,8 @@ msgid ""
 msgstr ""
 "Réservé aux boutiques en USD acceptant l’USDT sur TRC20, ERC20, BEP20, "
 "Polygon et Solana. Le montant numérique total en USD sert de base à la "
-"facture en USDT ; cette version ne verrouille pas le taux de change en temps "
-"réel. Les transferts sur la blockchain sont de vrais paiements : vérifiez "
+"facture en USDT ; cette version ne verrouille pas le taux de change en temps"
+" réel. Les transferts sur la blockchain sont de vrais paiements : vérifiez "
 "d’abord la création de commande et la redirection sans envoyer de fonds."
 
 #: includes/class-boltutil-wc-gateway.php:183
@@ -372,8 +372,8 @@ msgstr "Lire la documentation de l'API BoltUtil ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved "
-"secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. Saved"
+" secrets appear only as masked hints."
 msgstr ""
 "Saisissez les identifiants du marchand, choisissez les réseaux pris en "
 "charge, puis enregistrez. Les secrets enregistrés ne s’affichent que sous "
@@ -441,6 +441,77 @@ msgstr "Statut de paiement BoltUtil : %s."
 #: includes/class-boltutil-wc-webhook.php:88
 msgid "BoltUtil confirmed this USDT payment."
 msgstr "BoltUtil a confirmé ce paiement USDT."
+
+msgid "Stablecoin payments through BoltUtil hosted checkout."
+msgstr "Paiements USDT / USDC via la caisse hébergée BoltUtil."
+
+msgid "Enable BoltUtil Payments"
+msgstr "Activer BoltUtil USDT / USDC"
+
+msgid "Accept stablecoins with BoltUtil"
+msgstr "Acceptez USDT / USDC avec BoltUtil"
+
+msgid "Awaiting confirmed payment from BoltUtil."
+msgstr "En attente du paiement USDT / USDC confirmé par BoltUtil."
+
+msgid "BoltUtil confirmed this payment."
+msgstr "BoltUtil a confirmé ce paiement USDT / USDC."
+
+msgid "Payable amount"
+msgstr "Montant à payer"
+
+msgid "Add and activate a receiving wallet for each accepted network."
+msgstr ""
+"Ajoutez et activez une adresse de réception USDT / USDC pour chaque réseau "
+"que vous acceptez. Le paiement montre les réseaux autorisés ici qui ont "
+"également des portefeuilles BoltUtil actifs."
+
+msgid ""
+"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgstr ""
+"Pour une commande USD, le client choisit BoltUtil USDT / USDC et un réseau, "
+"puis passe à la caisse BoltUtil."
+
+msgid ""
+"Hosted Checkout shows the exact amount, asset, network, address, QR code, "
+"and expiry."
+msgstr ""
+"La page de paiement BoltUtil affiche le montant exact en USDT / USDC, "
+"l’adresse de réception, le code QR et la date d’expiration. Payez le montant"
+" affiché sur cette page."
+
+msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
+msgstr "Choisissez un réseau, puis payez USDT / USDC à la caisse BoltUtil."
+
+msgid "Pay with BoltUtil"
+msgstr "Payer avec BoltUtil"
+
+msgid "Accepted stablecoins"
+msgstr "Stablecoins acceptés"
+
+msgid "Choose a stablecoin and payment network"
+msgstr "Choisissez un stablecoin et un réseau"
+
+msgid "Allowed payment networks"
+msgstr "Réseaux de paiement autorisés"
+
+msgid "Choose an available stablecoin and network."
+msgstr "Choisissez un stablecoin et un réseau disponibles."
+
+msgid ""
+"Only active network and asset combinations returned by BoltUtil are offered "
+"at checkout."
+msgstr ""
+"Seules les combinaisons actives de monnaie et de réseau renvoyées par "
+"BoltUtil sont proposées."
+
+msgid ""
+"USD totals are the numeric stablecoin invoice basis; no live exchange rate "
+"is locked. Always pay the exact asset, network and amount shown at checkout."
+msgstr ""
+"Le total en USD constitue la base numérique de la facture en stablecoin ; "
+"aucun taux de change en temps réel n’est fixé. Payez avec la monnaie, le "
+"réseau et le montant exacts affichés."
 
 #~ msgid "BoltUtil API origin"
 #~ msgstr "Origine de l'API BoltUtil"

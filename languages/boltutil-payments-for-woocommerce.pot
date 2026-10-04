@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the BoltUtil Payments for WooCommerce package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: BoltUtil Payments for WooCommerce 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-27 14:15+0800\n"
+"POT-Creation-Date: 2026-10-04 11:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,377 +17,379 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: boltutil-woocommerce.php:45
+#: boltutil-woocommerce.php:48
 msgid "View pricing and fees"
 msgstr ""
 
-#: boltutil-woocommerce.php:46
+#: boltutil-woocommerce.php:49
 msgid "Learn more"
 msgstr ""
 
-#: boltutil-woocommerce.php:47
+#: boltutil-woocommerce.php:50
 msgid "View terms of service"
 msgstr ""
 
-#: boltutil-woocommerce.php:48
+#: boltutil-woocommerce.php:51
 msgid "Contact support"
 msgstr ""
 
-#: boltutil-woocommerce.php:56 includes/class-boltutil-wc-gateway.php:189
+#: boltutil-woocommerce.php:59 includes/class-boltutil-wc-gateway.php:191
 msgid "Payment settings"
 msgstr ""
 
-#: includes/class-boltutil-wc-blocks.php:44
-#: includes/class-boltutil-wc-gateway.php:257
-msgid "Choose a USDT payment network"
+#: includes/class-boltutil-wc-blocks.php:48
+#: includes/class-boltutil-wc-gateway.php:277
+msgid "Choose a stablecoin and payment network"
 msgstr ""
 
-#: includes/class-boltutil-wc-blocks.php:45
-#: includes/class-boltutil-wc-gateway.php:263
+#: includes/class-boltutil-wc-blocks.php:49
+#: includes/class-boltutil-wc-gateway.php:284
 msgid "Selected"
 msgstr ""
 
-#: includes/class-boltutil-wc-blocks.php:48
-#: includes/class-boltutil-wc-gateway.php:267
+#: includes/class-boltutil-wc-blocks.php:52
+#: includes/class-boltutil-wc-gateway.php:288
 msgid ""
 "You will be redirected to BoltUtil Checkout. Pay the exact amount to the "
 "address shown there; the order updates after on-chain confirmation."
 msgstr ""
 
-#: includes/class-boltutil-wc-blocks.php:50
-#: includes/class-boltutil-wc-gateway.php:274
-#: includes/class-boltutil-wc-gateway.php:291
-msgid "Choose an available USDT network."
+#: includes/class-boltutil-wc-blocks.php:54
+#: includes/class-boltutil-wc-gateway.php:297
+#: includes/class-boltutil-wc-gateway.php:318
+msgid "Choose an available stablecoin and network."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:18
-msgid "USDT payments through BoltUtil hosted checkout."
+#: includes/class-boltutil-wc-gateway.php:19
+msgid "Stablecoin payments through BoltUtil hosted checkout."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:26
-msgid "Pay USDT with BoltUtil"
+#: includes/class-boltutil-wc-gateway.php:27
+msgid "Pay with BoltUtil"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:41
+#: includes/class-boltutil-wc-gateway.php:42
 msgid "Enable"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:41
-msgid "Enable BoltUtil USDT"
+#: includes/class-boltutil-wc-gateway.php:42
+msgid "Enable BoltUtil Payments"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:42
+#: includes/class-boltutil-wc-gateway.php:43
 msgid "Checkout title"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:42
+#: includes/class-boltutil-wc-gateway.php:43
 msgid "Merchant-defined label shown at checkout."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:43
+#: includes/class-boltutil-wc-gateway.php:44
 msgid "Checkout description"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:43
-msgid "Pay USDT on the network you choose."
-msgstr ""
-
 #: includes/class-boltutil-wc-gateway.php:44
-msgid "BoltUtil API key (bt_live_)"
+#: includes/class-boltutil-wc-gateway.php:66
+msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:45
-msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
+msgid "BoltUtil API key (bt_live_)"
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:46
-msgid "BoltUtil Webhook secret (whsec_)"
+msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:47
+msgid "BoltUtil Webhook secret (whsec_)"
+msgstr ""
+
+#: includes/class-boltutil-wc-gateway.php:48
 msgid ""
 "Use the secret for this merchant's active Webhook. It signs API requests and "
 "verifies payment callbacks."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:48
-msgid "Allowed USDT networks"
+#: includes/class-boltutil-wc-gateway.php:49
+msgid "Accepted stablecoins"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:48
+#: includes/class-boltutil-wc-gateway.php:49
+msgid ""
+"Only active network and asset combinations returned by BoltUtil are offered "
+"at checkout."
+msgstr ""
+
+#: includes/class-boltutil-wc-gateway.php:50
+msgid "Allowed payment networks"
+msgstr ""
+
+#: includes/class-boltutil-wc-gateway.php:50
 msgid "Live checkout also checks active BoltUtil settlement wallets."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:64
-msgid "Choose a network, then pay USDT at BoltUtil Checkout."
+#: includes/class-boltutil-wc-gateway.php:121
+msgid "Accept stablecoins with BoltUtil"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:119
-msgid "Accept USDT with BoltUtil"
-msgstr ""
-
-#: includes/class-boltutil-wc-gateway.php:122
+#: includes/class-boltutil-wc-gateway.php:124
 msgid ""
 "Customers place an order in your store and pay on the selected network at "
 "BoltUtil Hosted Checkout. Once confirmed on-chain, BoltUtil updates the "
 "WooCommerce order. Funds go directly to your configured wallet."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:125
 #: includes/class-boltutil-wc-gateway.php:127
+#: includes/class-boltutil-wc-gateway.php:129
 msgid "More BoltUtil information"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:135
+#: includes/class-boltutil-wc-gateway.php:137
 msgid "Before you begin"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:136
+#: includes/class-boltutil-wc-gateway.php:138
 msgid ""
 "Complete these steps in order. Never enter a wallet private key or recovery "
 "phrase in this plugin."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:138
+#: includes/class-boltutil-wc-gateway.php:140
 msgid "Create a LIVE API key"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:139
+#: includes/class-boltutil-wc-gateway.php:141
 msgid ""
 "Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
 "page. It identifies your merchant account."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:140
+#: includes/class-boltutil-wc-gateway.php:142
 msgid "Open API Keys"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:141
+#: includes/class-boltutil-wc-gateway.php:143
 msgid "Set up receiving wallets"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:142
-msgid ""
-"Add and activate a USDT receiving address for each network you accept. "
-"Checkout shows networks allowed here that also have active BoltUtil wallets."
-msgstr ""
-
-#: includes/class-boltutil-wc-gateway.php:143
-msgid "Open Wallets"
-msgstr ""
-
 #: includes/class-boltutil-wc-gateway.php:144
-msgid "Set up the Webhook"
+msgid "Add and activate a receiving wallet for each accepted network."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:145
+msgid "Open Wallets"
+msgstr ""
+
+#: includes/class-boltutil-wc-gateway.php:146
+msgid "Set up the Webhook"
+msgstr ""
+
+#: includes/class-boltutil-wc-gateway.php:147
 msgid ""
 "Save the URL below on the BoltUtil Webhooks page, then retain that "
 "configuration’s whsec_ secret. The URL must belong to this store."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:146
+#: includes/class-boltutil-wc-gateway.php:148
 msgid "Open Webhooks"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:147
+#: includes/class-boltutil-wc-gateway.php:149
 msgid "Save and enable this gateway"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:148
+#: includes/class-boltutil-wc-gateway.php:150
 msgid ""
 "Enter the API key and Webhook secret for the same merchant below, select "
 "networks, enable the gateway, and save. Your store currency must be USD."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:150
+#: includes/class-boltutil-wc-gateway.php:152
 msgid "This store’s Webhook URL"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:151
+#: includes/class-boltutil-wc-gateway.php:153
 msgid "Copied"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:152
+#: includes/class-boltutil-wc-gateway.php:154
 msgid "Copy URL"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:154
+#: includes/class-boltutil-wc-gateway.php:156
 msgid "Store currency: USD"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:154
+#: includes/class-boltutil-wc-gateway.php:156
 msgid "Set store currency to USD"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:155
+#: includes/class-boltutil-wc-gateway.php:157
 msgid "API key saved"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:155
+#: includes/class-boltutil-wc-gateway.php:157
 msgid "API key missing"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:156
+#: includes/class-boltutil-wc-gateway.php:158
 msgid "Webhook secret saved"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:156
+#: includes/class-boltutil-wc-gateway.php:158
 msgid "Webhook secret missing"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:157
+#: includes/class-boltutil-wc-gateway.php:159
 msgid "Gateway enabled"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:157
+#: includes/class-boltutil-wc-gateway.php:159
 msgid "Gateway disabled"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:158
+#: includes/class-boltutil-wc-gateway.php:160
 msgid "Free plan: up to 30 orders created per day"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:160
+#: includes/class-boltutil-wc-gateway.php:162
 msgid ""
 "This counts BoltUtil orders created today, not completed payments. New "
 "payment orders are rejected after the limit is reached. Review plans and "
 "upgrade options in BoltUtil."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:161
+#: includes/class-boltutil-wc-gateway.php:163
 msgid "View plans ↗"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:162
+#: includes/class-boltutil-wc-gateway.php:164
 msgid ""
 "These badges check local settings only. BoltUtil checks wallet availability "
 "during checkout."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:169
+#: includes/class-boltutil-wc-gateway.php:171
 msgid "How it works after setup"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:171
+#: includes/class-boltutil-wc-gateway.php:173
 msgid "Customer places an order"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:171
+#: includes/class-boltutil-wc-gateway.php:173
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
-"to BoltUtil Checkout."
+"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:172
+#: includes/class-boltutil-wc-gateway.php:174
 msgid "Pay the checkout amount"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:172
+#: includes/class-boltutil-wc-gateway.php:174
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
-"expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact amount, asset, network, address, QR code, "
+"and expiry."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:173
+#: includes/class-boltutil-wc-gateway.php:175
 msgid "Automatic update after confirmation"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:173
+#: includes/class-boltutil-wc-gateway.php:175
 msgid ""
 "After on-chain confirmation, BoltUtil sends a signed Webhook and the plugin "
 "updates the WooCommerce order. Returning to the store does not mark it paid."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:174
+#: includes/class-boltutil-wc-gateway.php:176
 msgid "Recheck a pending order"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:174
+#: includes/class-boltutil-wc-gateway.php:176
 msgid ""
 "If an order remains on hold, choose Recheck BoltUtil payment under Order "
 "actions in WooCommerce. Scheduled checks also run automatically."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:179
+#: includes/class-boltutil-wc-gateway.php:181
 msgid "Current scope"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:181
+#: includes/class-boltutil-wc-gateway.php:183
 msgid ""
-"USDT for USD stores only, on TRC20, ERC20, BEP20, Polygon, and Solana. The "
-"USD numeric total is the USDT invoice basis; this version does not lock a "
-"live exchange rate. On-chain transfers are real payments, so check order "
-"creation and redirect without sending funds first."
+"USD totals are the numeric stablecoin invoice basis; no live exchange rate "
+"is locked. Always pay the exact asset, network and amount shown at checkout."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:183
+#: includes/class-boltutil-wc-gateway.php:185
 msgid "Read BoltUtil API docs ↗"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:191
+#: includes/class-boltutil-wc-gateway.php:193
 msgid ""
 "Enter your merchant credentials, choose supported networks, then save. Saved "
 "secrets appear only as masked hints."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:204
+#: includes/class-boltutil-wc-gateway.php:206
 msgid "Saved (masked)"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:204
+#: includes/class-boltutil-wc-gateway.php:206
 msgid "Not configured"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:206
+#: includes/class-boltutil-wc-gateway.php:208
 msgid ""
 "This field clears after saving. Leave it blank to keep the saved secret, or "
 "enter a new value to replace it."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:283
+#: includes/class-boltutil-wc-gateway.php:308
 msgid "BoltUtil currently supports USD orders only."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:347
-msgid "Awaiting confirmed USDT payment from BoltUtil."
+#: includes/class-boltutil-wc-gateway.php:375
+msgid "Awaiting confirmed payment from BoltUtil."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:362
+#: includes/class-boltutil-wc-gateway.php:390
 msgid "BoltUtil payment could not be created. Please try again."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:400
+#: includes/class-boltutil-wc-gateway.php:431
 msgid "Recheck BoltUtil payment"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:409
+#: includes/class-boltutil-wc-gateway.php:440
 msgid "Payment ID"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:410
+#: includes/class-boltutil-wc-gateway.php:441
 msgid "Mode"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:411
+#: includes/class-boltutil-wc-gateway.php:442
 msgid "Network"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:412
+#: includes/class-boltutil-wc-gateway.php:443
 msgid "Invoice amount (USD)"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:413
-msgid "Payable amount (USDT)"
+#: includes/class-boltutil-wc-gateway.php:444
+msgid "Payable amount"
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:442
-#: includes/class-boltutil-wc-webhook.php:93
+#: includes/class-boltutil-wc-gateway.php:473
+#: includes/class-boltutil-wc-webhook.php:97
 #, php-format
 msgid "BoltUtil payment status: %s."
 msgstr ""
 
-#: includes/class-boltutil-wc-gateway.php:472
-#: includes/class-boltutil-wc-webhook.php:88
-msgid "BoltUtil confirmed this USDT payment."
+#: includes/class-boltutil-wc-gateway.php:506
+#: includes/class-boltutil-wc-webhook.php:92
+msgid "BoltUtil confirmed this payment."
 msgstr ""

@@ -109,8 +109,8 @@ msgstr "BoltUtil Secreto de webhook (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and "
-"verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests and"
+" verifies payment callbacks."
 msgstr ""
 "Utilice el secreto para el Webhook activo de este comerciante. Firma "
 "solicitudes de API y verifica las devoluciones de llamadas de pago."
@@ -167,8 +167,8 @@ msgstr "Crear una clave API EN VIVO"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
-"page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
+" page. It identifies your merchant account."
 msgstr ""
 "Inicie sesión en BoltUtil y cree una clave que comience con bt_live_ en la "
 "página Claves API. Identifica su cuenta mercantil."
@@ -204,7 +204,8 @@ msgid ""
 "configuration’s whsec_ secret. The URL must belong to this store."
 msgstr ""
 "Guarde la siguiente URL en la página de webhooks BoltUtil y luego conserve "
-"el secreto whsec_ de esa configuración. La URL debe pertenecer a esta tienda."
+"el secreto whsec_ de esa configuración. La URL debe pertenecer a esta "
+"tienda."
 
 #: includes/class-boltutil-wc-gateway.php:146
 msgid "Open Webhooks"
@@ -303,8 +304,8 @@ msgstr "El cliente hace un pedido"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
-"to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
+" to BoltUtil Checkout."
 msgstr ""
 "Para un pedido USD, el cliente elige BoltUtil USDT y una red, luego va a "
 "BoltUtil Pago."
@@ -315,8 +316,8 @@ msgstr "Paga el importe indicado en el pago"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
-"expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
+" expiry. The checkout amount is authoritative."
 msgstr ""
 "La página de pago de BoltUtil muestra el importe exacto en USDT, la "
 "dirección de recepción, el código QR y la fecha de vencimiento. Paga el "
@@ -362,8 +363,8 @@ msgstr ""
 "Solo para tiendas con moneda USD que acepten USDT en TRC20, ERC20, BEP20, "
 "Polygon o Solana. El total numérico en USD sirve de base para la factura en "
 "USDT; esta versión no fija un tipo de cambio en tiempo real. Las "
-"transferencias en cadena son pagos reales: comprueba primero la creación del "
-"pedido y la redirección sin enviar fondos."
+"transferencias en cadena son pagos reales: comprueba primero la creación del"
+" pedido y la redirección sin enviar fondos."
 
 #: includes/class-boltutil-wc-gateway.php:183
 msgid "Read BoltUtil API docs ↗"
@@ -371,8 +372,8 @@ msgstr "Lea los documentos de la API BoltUtil ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved "
-"secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. Saved"
+" secrets appear only as masked hints."
 msgstr ""
 "Introduzca las credenciales del comerciante, elija las redes compatibles y "
 "guarde. Los secretos guardados solo se muestran de forma enmascarada."
@@ -439,6 +440,77 @@ msgstr "Estado de pago BoltUtil: %s."
 #: includes/class-boltutil-wc-webhook.php:88
 msgid "BoltUtil confirmed this USDT payment."
 msgstr "BoltUtil confirmó este pago USDT."
+
+msgid "Stablecoin payments through BoltUtil hosted checkout."
+msgstr "Pagos USDT / USDC a través del pago alojado en BoltUtil."
+
+msgid "Enable BoltUtil Payments"
+msgstr "Habilitar BoltUtil USDT / USDC"
+
+msgid "Accept stablecoins with BoltUtil"
+msgstr "Acepte USDT / USDC con BoltUtil"
+
+msgid "Awaiting confirmed payment from BoltUtil."
+msgstr "A la espera del pago confirmado de USDT / USDC por parte de BoltUtil."
+
+msgid "BoltUtil confirmed this payment."
+msgstr "BoltUtil confirmó este pago USDT / USDC."
+
+msgid "Payable amount"
+msgstr "Importe a pagar"
+
+msgid "Add and activate a receiving wallet for each accepted network."
+msgstr ""
+"Agregue y active una dirección de recepción USDT / USDC para cada red que "
+"acepte. La compra muestra las redes permitidas aquí que también tienen "
+"billeteras BoltUtil activas."
+
+msgid ""
+"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgstr ""
+"Para un pedido USD, el cliente elige BoltUtil USDT / USDC y una red, luego "
+"va a BoltUtil Pago."
+
+msgid ""
+"Hosted Checkout shows the exact amount, asset, network, address, QR code, "
+"and expiry."
+msgstr ""
+"La página de pago de BoltUtil muestra el importe exacto en USDT / USDC, la "
+"dirección de recepción, el código QR y la fecha de vencimiento. Paga el "
+"importe indicado allí."
+
+msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
+msgstr "Elija una red y luego pague USDT / USDC en BoltUtil Checkout."
+
+msgid "Pay with BoltUtil"
+msgstr "Pagar con BoltUtil"
+
+msgid "Accepted stablecoins"
+msgstr "Monedas estables aceptadas"
+
+msgid "Choose a stablecoin and payment network"
+msgstr "Elige una moneda estable y una red"
+
+msgid "Allowed payment networks"
+msgstr "Redes de pago permitidas"
+
+msgid "Choose an available stablecoin and network."
+msgstr "Elige una moneda estable y una red disponibles."
+
+msgid ""
+"Only active network and asset combinations returned by BoltUtil are offered "
+"at checkout."
+msgstr ""
+"Solo se ofrecen las combinaciones activas de moneda y red que devuelve "
+"BoltUtil."
+
+msgid ""
+"USD totals are the numeric stablecoin invoice basis; no live exchange rate "
+"is locked. Always pay the exact asset, network and amount shown at checkout."
+msgstr ""
+"El total en USD es la base numérica del importe en monedas estables; no se "
+"fija un tipo de cambio en tiempo real. Paga la moneda, la red y el importe "
+"exactos que indica la página de pago."
 
 #~ msgid "BoltUtil API origin"
 #~ msgstr "Origen de la API BoltUtil"

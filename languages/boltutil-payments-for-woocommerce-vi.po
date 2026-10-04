@@ -99,8 +99,8 @@ msgstr "Khóa API BoltUtil (bt_live_)"
 #: includes/class-boltutil-wc-gateway.php:45
 msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
 msgstr ""
-"Sử dụng khóa API TRỰC TIẾP hiện có từ bảng điều khiển người bán BoltUtil của "
-"bạn."
+"Sử dụng khóa API TRỰC TIẾP hiện có từ bảng điều khiển người bán BoltUtil của"
+" bạn."
 
 #: includes/class-boltutil-wc-gateway.php:46
 msgid "BoltUtil Webhook secret (whsec_)"
@@ -108,8 +108,8 @@ msgstr "Bí mật Webhook BoltUtil (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and "
-"verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests and"
+" verifies payment callbacks."
 msgstr ""
 "Sử dụng bí mật cho Webhook đang hoạt động của người bán này. Nó ký các yêu "
 "cầu API và xác minh các lệnh gọi lại thanh toán."
@@ -121,7 +121,8 @@ msgstr "Mạng USDT được phép"
 #: includes/class-boltutil-wc-gateway.php:48
 msgid "Live checkout also checks active BoltUtil settlement wallets."
 msgstr ""
-"Thanh toán trực tiếp cũng kiểm tra các ví thanh toán BoltUtil đang hoạt động."
+"Thanh toán trực tiếp cũng kiểm tra các ví thanh toán BoltUtil đang hoạt "
+"động."
 
 #: includes/class-boltutil-wc-gateway.php:64
 msgid "Choose a network, then pay USDT at BoltUtil Checkout."
@@ -137,10 +138,10 @@ msgid ""
 "BoltUtil Hosted Checkout. Once confirmed on-chain, BoltUtil updates the "
 "WooCommerce order. Funds go directly to your configured wallet."
 msgstr ""
-"Khách hàng đặt hàng tại cửa hàng của bạn và thanh toán trên mạng đã chọn tại "
-"BoltUtil Hosted Checkout. Sau khi được xác nhận trên chuỗi, BoltUtil sẽ cập "
-"nhật đơn hàng WooCommerce. Tiền sẽ chuyển trực tiếp vào ví đã định cấu hình "
-"của bạn."
+"Khách hàng đặt hàng tại cửa hàng của bạn và thanh toán trên mạng đã chọn tại"
+" BoltUtil Hosted Checkout. Sau khi được xác nhận trên chuỗi, BoltUtil sẽ cập"
+" nhật đơn hàng WooCommerce. Tiền sẽ chuyển trực tiếp vào ví đã định cấu hình"
+" của bạn."
 
 #: includes/class-boltutil-wc-gateway.php:125
 #: includes/class-boltutil-wc-gateway.php:127
@@ -165,8 +166,8 @@ msgstr "Tạo khóa API TRỰC TIẾP"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
-"page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
+" page. It identifies your merchant account."
 msgstr ""
 "Đăng nhập vào BoltUtil và tạo khóa bắt đầu bằng bt_live_ trên trang Khóa "
 "API. Nó xác định tài khoản người bán của bạn."
@@ -299,11 +300,11 @@ msgstr "Khách hàng đặt hàng"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
-"to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
+" to BoltUtil Checkout."
 msgstr ""
-"Đối với đơn đặt hàng USD, khách hàng chọn BoltUtil USDT và mạng, sau đó truy "
-"cập BoltUtil Checkout."
+"Đối với đơn đặt hàng USD, khách hàng chọn BoltUtil USDT và mạng, sau đó truy"
+" cập BoltUtil Checkout."
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid "Pay the checkout amount"
@@ -311,11 +312,11 @@ msgstr "Thanh toán đúng số tiền trên trang thanh toán"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
-"expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
+" expiry. The checkout amount is authoritative."
 msgstr ""
-"Trang thanh toán BoltUtil hiển thị số USDT chính xác, địa chỉ nhận, mã QR và "
-"thời hạn thanh toán. Hãy thanh toán đúng số tiền hiển thị trên trang này."
+"Trang thanh toán BoltUtil hiển thị số USDT chính xác, địa chỉ nhận, mã QR và"
+" thời hạn thanh toán. Hãy thanh toán đúng số tiền hiển thị trên trang này."
 
 #: includes/class-boltutil-wc-gateway.php:173
 msgid "Automatic update after confirmation"
@@ -366,8 +367,8 @@ msgstr "Đọc tài liệu API BoltUtil ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved "
-"secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. Saved"
+" secrets appear only as masked hints."
 msgstr ""
 "Nhập thông tin xác thực của người bán, chọn mạng được hỗ trợ rồi lưu. Khóa "
 "đã lưu chỉ hiển thị dưới dạng che bớt."
@@ -435,6 +436,76 @@ msgstr "Trạng thái thanh toán BoltUtil: %s."
 msgid "BoltUtil confirmed this USDT payment."
 msgstr "BoltUtil đã xác nhận khoản thanh toán USDT này."
 
+msgid "Stablecoin payments through BoltUtil hosted checkout."
+msgstr ""
+"Thanh toán USDT / USDC thông qua thanh toán được lưu trữ trên máy BoltUtil."
+
+msgid "Enable BoltUtil Payments"
+msgstr "Kích hoạt BoltUtil USDT / USDC"
+
+msgid "Accept stablecoins with BoltUtil"
+msgstr "Chấp nhận USDT / USDC với BoltUtil"
+
+msgid "Awaiting confirmed payment from BoltUtil."
+msgstr "Đang chờ thanh toán USDT / USDC được xác nhận từ BoltUtil."
+
+msgid "BoltUtil confirmed this payment."
+msgstr "BoltUtil đã xác nhận khoản thanh toán USDT / USDC này."
+
+msgid "Payable amount"
+msgstr "Số tiền phải trả"
+
+msgid "Add and activate a receiving wallet for each accepted network."
+msgstr ""
+"Thêm và kích hoạt địa chỉ nhận USDT / USDC cho mỗi mạng bạn chấp nhận. Thanh"
+" toán hiển thị các mạng được phép ở đây cũng có ví BoltUtil đang hoạt động."
+
+msgid ""
+"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgstr ""
+"Đối với đơn đặt hàng USD, khách hàng chọn BoltUtil USDT / USDC và mạng, sau "
+"đó truy cập BoltUtil Checkout."
+
+msgid ""
+"Hosted Checkout shows the exact amount, asset, network, address, QR code, "
+"and expiry."
+msgstr ""
+"Trang thanh toán BoltUtil hiển thị số USDT / USDC chính xác, địa chỉ nhận, "
+"mã QR và thời hạn thanh toán. Hãy thanh toán đúng số tiền hiển thị trên "
+"trang này."
+
+msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
+msgstr "Chọn một mạng, sau đó thanh toán USDT / USDC tại BoltUtil Checkout."
+
+msgid "Pay with BoltUtil"
+msgstr "Thanh toán qua BoltUtil"
+
+msgid "Accepted stablecoins"
+msgstr "Stablecoin được chấp nhận"
+
+msgid "Choose a stablecoin and payment network"
+msgstr "Chọn stablecoin và mạng thanh toán"
+
+msgid "Allowed payment networks"
+msgstr "Mạng thanh toán được phép"
+
+msgid "Choose an available stablecoin and network."
+msgstr "Chọn stablecoin và mạng khả dụng."
+
+msgid ""
+"Only active network and asset combinations returned by BoltUtil are offered "
+"at checkout."
+msgstr ""
+"Trang thanh toán chỉ hiển thị các cặp đồng tiền và mạng đang hoạt động do "
+"BoltUtil cung cấp."
+
+msgid ""
+"USD totals are the numeric stablecoin invoice basis; no live exchange rate "
+"is locked. Always pay the exact asset, network and amount shown at checkout."
+msgstr ""
+"Tổng USD là cơ sở số tiền của hóa đơn stablecoin; không khóa tỷ giá theo "
+"thời gian thực. Thanh toán đúng đồng tiền, mạng và số tiền được hiển thị."
+
 #~ msgid "BoltUtil API origin"
 #~ msgstr "Nguồn gốc API BoltUtil"
 
@@ -442,5 +513,5 @@ msgstr "BoltUtil đã xác nhận khoản thanh toán USDT này."
 #~ "LIVE payments only. Requires an enabled BoltUtil Payment API and active "
 #~ "settlement wallets."
 #~ msgstr ""
-#~ "Chỉ thanh toán TRỰC TIẾP. Yêu cầu API thanh toán BoltUtil được kích hoạt "
-#~ "và ví thanh toán đang hoạt động."
+#~ "Chỉ thanh toán TRỰC TIẾP. Yêu cầu API thanh toán BoltUtil được kích hoạt và "
+#~ "ví thanh toán đang hoạt động."

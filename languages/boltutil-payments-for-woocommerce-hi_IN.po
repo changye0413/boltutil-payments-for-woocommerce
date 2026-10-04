@@ -51,8 +51,8 @@ msgid ""
 "You will be redirected to BoltUtil Checkout. Pay the exact amount to the "
 "address shown there; the order updates after on-chain confirmation."
 msgstr ""
-"आपको BoltUtil चेकआउट पर पुनः निर्देशित किया जाएगा। वहां दिखाए गए पते पर सटीक राशि "
-"का भुगतान करें; ऑन-चेन पुष्टि के बाद ऑर्डर अपडेट हो जाता है।"
+"आपको BoltUtil चेकआउट पर पुनः निर्देशित किया जाएगा। वहां दिखाए गए पते पर सटीक"
+" राशि का भुगतान करें; ऑन-चेन पुष्टि के बाद ऑर्डर अपडेट हो जाता है।"
 
 #: includes/class-boltutil-wc-blocks.php:50
 #: includes/class-boltutil-wc-gateway.php:274
@@ -98,7 +98,8 @@ msgstr "BoltUtil एपीआई कुंजी (bt_live_)"
 
 #: includes/class-boltutil-wc-gateway.php:45
 msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
-msgstr "अपने BoltUtil मर्चेंट डैशबोर्ड से मौजूदा LIVE API कुंजी का उपयोग करें।"
+msgstr ""
+"अपने BoltUtil मर्चेंट डैशबोर्ड से मौजूदा LIVE API कुंजी का उपयोग करें।"
 
 #: includes/class-boltutil-wc-gateway.php:46
 msgid "BoltUtil Webhook secret (whsec_)"
@@ -106,11 +107,11 @@ msgstr "BoltUtil वेबहुक रहस्य (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and "
-"verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests and"
+" verifies payment callbacks."
 msgstr ""
-"इस व्यापारी के सक्रिय वेबहुक के रहस्य का उपयोग करें। यह एपीआई अनुरोधों पर हस्ताक्षर करता "
-"है और भुगतान कॉलबैक को सत्यापित करता है।"
+"इस व्यापारी के सक्रिय वेबहुक के रहस्य का उपयोग करें। यह एपीआई अनुरोधों पर "
+"हस्ताक्षर करता है और भुगतान कॉलबैक को सत्यापित करता है।"
 
 #: includes/class-boltutil-wc-gateway.php:48
 msgid "Allowed USDT networks"
@@ -134,9 +135,10 @@ msgid ""
 "BoltUtil Hosted Checkout. Once confirmed on-chain, BoltUtil updates the "
 "WooCommerce order. Funds go directly to your configured wallet."
 msgstr ""
-"ग्राहक आपके स्टोर में ऑर्डर देते हैं और BoltUtil होस्टेड चेकआउट पर चयनित नेटवर्क पर भुगतान "
-"करते हैं। एक बार ऑन-चेन पुष्टि हो जाने पर, BoltUtil WooCommerce ऑर्डर को अपडेट कर देता "
-"है। फंड सीधे आपके कॉन्फ़िगर किए गए वॉलेट में जाते हैं।"
+"ग्राहक आपके स्टोर में ऑर्डर देते हैं और BoltUtil होस्टेड चेकआउट पर चयनित "
+"नेटवर्क पर भुगतान करते हैं। एक बार ऑन-चेन पुष्टि हो जाने पर, BoltUtil "
+"WooCommerce ऑर्डर को अपडेट कर देता है। फंड सीधे आपके कॉन्फ़िगर किए गए वॉलेट "
+"में जाते हैं।"
 
 #: includes/class-boltutil-wc-gateway.php:125
 #: includes/class-boltutil-wc-gateway.php:127
@@ -152,8 +154,8 @@ msgid ""
 "Complete these steps in order. Never enter a wallet private key or recovery "
 "phrase in this plugin."
 msgstr ""
-"इन चरणों को क्रम से पूरा करें. इस प्लगइन में कभी भी वॉलेट प्राइवेट कुंजी या पुनर्प्राप्ति "
-"वाक्यांश दर्ज न करें।"
+"इन चरणों को क्रम से पूरा करें. इस प्लगइन में कभी भी वॉलेट प्राइवेट कुंजी या "
+"पुनर्प्राप्ति वाक्यांश दर्ज न करें।"
 
 #: includes/class-boltutil-wc-gateway.php:138
 msgid "Create a LIVE API key"
@@ -161,11 +163,11 @@ msgstr "एक लाइव एपीआई कुंजी बनाएं"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
-"page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
+" page. It identifies your merchant account."
 msgstr ""
-"BoltUtil में साइन इन करें और एपीआई कुंजी पृष्ठ पर bt_live_ से शुरुआत करने वाली एक कुंजी "
-"बनाएं। यह आपके व्यापारी खाते की पहचान करता है."
+"BoltUtil में साइन इन करें और एपीआई कुंजी पृष्ठ पर bt_live_ से शुरुआत करने "
+"वाली एक कुंजी बनाएं। यह आपके व्यापारी खाते की पहचान करता है."
 
 #: includes/class-boltutil-wc-gateway.php:140
 msgid "Open API Keys"
@@ -180,9 +182,9 @@ msgid ""
 "Add and activate a USDT receiving address for each network you accept. "
 "Checkout shows networks allowed here that also have active BoltUtil wallets."
 msgstr ""
-"आपके द्वारा स्वीकार किए जाने वाले प्रत्येक नेटवर्क के लिए एक USDT प्राप्तकर्ता पता जोड़ें और "
-"सक्रिय करें। चेकआउट से पता चलता है कि यहां ऐसे नेटवर्क की अनुमति है जिनके पास सक्रिय "
-"BoltUtil वॉलेट भी हैं।"
+"आपके द्वारा स्वीकार किए जाने वाले प्रत्येक नेटवर्क के लिए एक USDT "
+"प्राप्तकर्ता पता जोड़ें और सक्रिय करें। चेकआउट से पता चलता है कि यहां ऐसे "
+"नेटवर्क की अनुमति है जिनके पास सक्रिय BoltUtil वॉलेट भी हैं।"
 
 #: includes/class-boltutil-wc-gateway.php:143
 msgid "Open Wallets"
@@ -197,8 +199,8 @@ msgid ""
 "Save the URL below on the BoltUtil Webhooks page, then retain that "
 "configuration’s whsec_ secret. The URL must belong to this store."
 msgstr ""
-"नीचे दिए गए URL को BoltUtil वेबहुक पृष्ठ पर सहेजें, फिर उस कॉन्फ़िगरेशन के whsec_ रहस्य "
-"को बनाए रखें। यूआरएल इस स्टोर से संबंधित होना चाहिए."
+"नीचे दिए गए URL को BoltUtil वेबहुक पृष्ठ पर सहेजें, फिर उस कॉन्फ़िगरेशन के "
+"whsec_ रहस्य को बनाए रखें। यूआरएल इस स्टोर से संबंधित होना चाहिए."
 
 #: includes/class-boltutil-wc-gateway.php:146
 msgid "Open Webhooks"
@@ -213,8 +215,8 @@ msgid ""
 "Enter the API key and Webhook secret for the same merchant below, select "
 "networks, enable the gateway, and save. Your store currency must be USD."
 msgstr ""
-"नीचे उसी व्यापारी के लिए एपीआई कुंजी और वेबहुक रहस्य दर्ज करें, नेटवर्क चुनें, गेटवे सक्षम करें "
-"और सहेजें। आपकी स्टोर मुद्रा USD होनी चाहिए।"
+"नीचे उसी व्यापारी के लिए एपीआई कुंजी और वेबहुक रहस्य दर्ज करें, नेटवर्क "
+"चुनें, गेटवे सक्षम करें और सहेजें। आपकी स्टोर मुद्रा USD होनी चाहिए।"
 
 #: includes/class-boltutil-wc-gateway.php:150
 msgid "This store’s Webhook URL"
@@ -270,9 +272,9 @@ msgid ""
 "payment orders are rejected after the limit is reached. Review plans and "
 "upgrade options in BoltUtil."
 msgstr ""
-"यह आज बनाए गए BoltUtil ऑर्डरों को गिनता है, न कि पूरे किए गए भुगतानों को। सीमा पूरी "
-"होने के बाद नए भुगतान आदेश अस्वीकार कर दिए जाते हैं। BoltUtil में योजनाओं और अपग्रेड "
-"विकल्पों की समीक्षा करें।"
+"यह आज बनाए गए BoltUtil ऑर्डरों को गिनता है, न कि पूरे किए गए भुगतानों को। "
+"सीमा पूरी होने के बाद नए भुगतान आदेश अस्वीकार कर दिए जाते हैं। BoltUtil में "
+"योजनाओं और अपग्रेड विकल्पों की समीक्षा करें।"
 
 #: includes/class-boltutil-wc-gateway.php:161
 msgid "View plans ↗"
@@ -283,8 +285,8 @@ msgid ""
 "These badges check local settings only. BoltUtil checks wallet availability "
 "during checkout."
 msgstr ""
-"ये बैज केवल स्थानीय सेटिंग्स की जाँच करते हैं। BoltUtil चेकआउट के दौरान वॉलेट की उपलब्धता "
-"की जाँच करता है।"
+"ये बैज केवल स्थानीय सेटिंग्स की जाँच करते हैं। BoltUtil चेकआउट के दौरान "
+"वॉलेट की उपलब्धता की जाँच करता है।"
 
 #: includes/class-boltutil-wc-gateway.php:169
 msgid "How it works after setup"
@@ -296,11 +298,11 @@ msgstr "ग्राहक ऑर्डर देता है"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes "
-"to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
+" to BoltUtil Checkout."
 msgstr ""
-"USD ऑर्डर के लिए, ग्राहक BoltUtil USDT और एक नेटवर्क चुनता है, फिर BoltUtil चेकआउट "
-"पर जाता है।"
+"USD ऑर्डर के लिए, ग्राहक BoltUtil USDT और एक नेटवर्क चुनता है, फिर BoltUtil "
+"चेकआउट पर जाता है।"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid "Pay the checkout amount"
@@ -308,11 +310,11 @@ msgstr "चेकआउट पेज पर दिखाई गई राशि 
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and "
-"expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
+" expiry. The checkout amount is authoritative."
 msgstr ""
-"BoltUtil चेकआउट पेज पर सटीक USDT राशि, प्राप्तकर्ता का पता, QR कोड और समाप्ति समय "
-"दिखता है। भुगतान के लिए उसी पेज पर दिखाई गई राशि को आधार मानें।"
+"BoltUtil चेकआउट पेज पर सटीक USDT राशि, प्राप्तकर्ता का पता, QR कोड और "
+"समाप्ति समय दिखता है। भुगतान के लिए उसी पेज पर दिखाई गई राशि को आधार मानें।"
 
 #: includes/class-boltutil-wc-gateway.php:173
 msgid "Automatic update after confirmation"
@@ -323,8 +325,9 @@ msgid ""
 "After on-chain confirmation, BoltUtil sends a signed Webhook and the plugin "
 "updates the WooCommerce order. Returning to the store does not mark it paid."
 msgstr ""
-"ऑन-चेन पुष्टि के बाद BoltUtil हस्ताक्षरित Webhook भेजता है और प्लगइन WooCommerce ऑर्डर "
-"अपडेट करता है। स्टोर पर लौटने मात्र से ऑर्डर को भुगतान किया हुआ नहीं माना जाता।"
+"ऑन-चेन पुष्टि के बाद BoltUtil हस्ताक्षरित Webhook भेजता है और प्लगइन "
+"WooCommerce ऑर्डर अपडेट करता है। स्टोर पर लौटने मात्र से ऑर्डर को भुगतान "
+"किया हुआ नहीं माना जाता।"
 
 #: includes/class-boltutil-wc-gateway.php:174
 msgid "Recheck a pending order"
@@ -335,8 +338,9 @@ msgid ""
 "If an order remains on hold, choose Recheck BoltUtil payment under Order "
 "actions in WooCommerce. Scheduled checks also run automatically."
 msgstr ""
-"यदि कोई ऑर्डर होल्ड पर रहता है, तो WooCommerce में ऑर्डर क्रियाओं के अंतर्गत BoltUtil "
-"भुगतान दोबारा जांचें चुनें। शेड्यूल की गई जाँचें भी स्वचालित रूप से चलती हैं."
+"यदि कोई ऑर्डर होल्ड पर रहता है, तो WooCommerce में ऑर्डर क्रियाओं के अंतर्गत"
+" BoltUtil भुगतान दोबारा जांचें चुनें। शेड्यूल की गई जाँचें भी स्वचालित रूप "
+"से चलती हैं."
 
 #: includes/class-boltutil-wc-gateway.php:179
 msgid "Current scope"
@@ -349,10 +353,10 @@ msgid ""
 "live exchange rate. On-chain transfers are real payments, so check order "
 "creation and redirect without sending funds first."
 msgstr ""
-"केवल USD मुद्रा वाले स्टोर के लिए TRC20, ERC20, BEP20, Polygon और Solana नेटवर्क पर "
-"USDT उपलब्ध है। USD में ऑर्डर का संख्यात्मक कुल USDT इनवॉइस का आधार है; यह संस्करण लाइव "
-"विनिमय दर लॉक नहीं करता। ऑन-चेन ट्रांसफ़र वास्तविक भुगतान हैं, इसलिए पहले धन भेजे बिना "
-"ऑर्डर बनना और रीडायरेक्ट होना जाँचें।"
+"केवल USD मुद्रा वाले स्टोर के लिए TRC20, ERC20, BEP20, Polygon और Solana "
+"नेटवर्क पर USDT उपलब्ध है। USD में ऑर्डर का संख्यात्मक कुल USDT इनवॉइस का "
+"आधार है; यह संस्करण लाइव विनिमय दर लॉक नहीं करता। ऑन-चेन ट्रांसफ़र वास्तविक "
+"भुगतान हैं, इसलिए पहले धन भेजे बिना ऑर्डर बनना और रीडायरेक्ट होना जाँचें।"
 
 #: includes/class-boltutil-wc-gateway.php:183
 msgid "Read BoltUtil API docs ↗"
@@ -360,11 +364,11 @@ msgstr "BoltUtil API दस्तावेज़ पढ़ें ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved "
-"secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. Saved"
+" secrets appear only as masked hints."
 msgstr ""
-"व्यापारी क्रेडेंशियल दर्ज करें, समर्थित नेटवर्क चुनें और सहेजें। सहेजी गई गोपनीय कुंजियाँ केवल छिपे "
-"हुए संकेत के रूप में दिखती हैं।"
+"व्यापारी क्रेडेंशियल दर्ज करें, समर्थित नेटवर्क चुनें और सहेजें। सहेजी गई "
+"गोपनीय कुंजियाँ केवल छिपे हुए संकेत के रूप में दिखती हैं।"
 
 #: includes/class-boltutil-wc-gateway.php:204
 msgid "Saved (masked)"
@@ -379,8 +383,8 @@ msgid ""
 "This field clears after saving. Leave it blank to keep the saved secret, or "
 "enter a new value to replace it."
 msgstr ""
-"सहेजने के बाद यह फ़ील्ड साफ़ हो जाती है. सहेजे गए रहस्य को बनाए रखने के लिए इसे खाली छोड़ "
-"दें, या इसे बदलने के लिए एक नया मान दर्ज करें।"
+"सहेजने के बाद यह फ़ील्ड साफ़ हो जाती है. सहेजे गए रहस्य को बनाए रखने के लिए "
+"इसे खाली छोड़ दें, या इसे बदलने के लिए एक नया मान दर्ज करें।"
 
 #: includes/class-boltutil-wc-gateway.php:283
 msgid "BoltUtil currently supports USD orders only."
@@ -428,6 +432,76 @@ msgstr "BoltUtil भुगतान स्थिति: %s."
 #: includes/class-boltutil-wc-webhook.php:88
 msgid "BoltUtil confirmed this USDT payment."
 msgstr "BoltUtil ने इस USDT भुगतान की पुष्टि की।"
+
+msgid "Stablecoin payments through BoltUtil hosted checkout."
+msgstr "USDT / USDC भुगतान BoltUtil द्वारा होस्ट किए गए चेकआउट के माध्यम से।"
+
+msgid "Enable BoltUtil Payments"
+msgstr "BoltUtil USDT / USDC सक्षम करें"
+
+msgid "Accept stablecoins with BoltUtil"
+msgstr "BoltUtil के साथ USDT / USDC स्वीकार करें"
+
+msgid "Awaiting confirmed payment from BoltUtil."
+msgstr "BoltUtil से पुष्टिकृत USDT / USDC भुगतान की प्रतीक्षा की जा रही है।"
+
+msgid "BoltUtil confirmed this payment."
+msgstr "BoltUtil ने इस USDT / USDC भुगतान की पुष्टि की।"
+
+msgid "Payable amount"
+msgstr "देय राशि"
+
+msgid "Add and activate a receiving wallet for each accepted network."
+msgstr ""
+"आपके द्वारा स्वीकार किए जाने वाले प्रत्येक नेटवर्क के लिए एक USDT / USDC "
+"प्राप्तकर्ता पता जोड़ें और सक्रिय करें। चेकआउट से पता चलता है कि यहां ऐसे "
+"नेटवर्क की अनुमति है जिनके पास सक्रिय BoltUtil वॉलेट भी हैं।"
+
+msgid ""
+"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgstr ""
+"USD ऑर्डर के लिए, ग्राहक BoltUtil USDT / USDC और एक नेटवर्क चुनता है, फिर "
+"BoltUtil चेकआउट पर जाता है।"
+
+msgid ""
+"Hosted Checkout shows the exact amount, asset, network, address, QR code, "
+"and expiry."
+msgstr ""
+"BoltUtil चेकआउट पेज पर सटीक USDT / USDC राशि, प्राप्तकर्ता का पता, QR कोड और"
+" समाप्ति समय दिखता है। भुगतान के लिए उसी पेज पर दिखाई गई राशि को आधार मानें।"
+
+msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
+msgstr "एक नेटवर्क चुनें, फिर BoltUtil चेकआउट पर USDT / USDC का भुगतान करें।"
+
+msgid "Pay with BoltUtil"
+msgstr "BoltUtil से भुगतान करें"
+
+msgid "Accepted stablecoins"
+msgstr "स्वीकृत स्टेबलकॉइन"
+
+msgid "Choose a stablecoin and payment network"
+msgstr "स्टेबलकॉइन और भुगतान नेटवर्क चुनें"
+
+msgid "Allowed payment networks"
+msgstr "अनुमत भुगतान नेटवर्क"
+
+msgid "Choose an available stablecoin and network."
+msgstr "उपलब्ध स्टेबलकॉइन और नेटवर्क चुनें।"
+
+msgid ""
+"Only active network and asset combinations returned by BoltUtil are offered "
+"at checkout."
+msgstr ""
+"भुगतान पृष्ठ पर केवल BoltUtil द्वारा प्रदान किए गए सक्रिय मुद्रा और नेटवर्क "
+"के संयोजन दिखाई देते हैं।"
+
+msgid ""
+"USD totals are the numeric stablecoin invoice basis; no live exchange rate "
+"is locked. Always pay the exact asset, network and amount shown at checkout."
+msgstr ""
+"USD कुल राशि स्टेबलकॉइन बिल का संख्यात्मक आधार है; वास्तविक समय की विनिमय दर"
+" तय नहीं की जाती। भुगतान पृष्ठ पर दिखाई गई मुद्रा, नेटवर्क और सटीक राशि का "
+"उपयोग करें।"
 
 #~ msgid "BoltUtil API origin"
 #~ msgstr "BoltUtil एपीआई मूल"
