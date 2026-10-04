@@ -27,6 +27,7 @@ jobs:
           for file in boltutil-woocommerce.php includes/*.php tests/*.php; do php -l "$file"; done
           php tests/webhook-fixtures.php
           php tests/reconcile-schedule-fixtures.php
+          php tests/multi-asset-fixtures.php
 
   package:
     runs-on: ubuntu-latest

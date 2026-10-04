@@ -4,33 +4,94 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      remove_superseded_releases:
+        description: 'After verifying v0.5.2, delete the v0.4.21 and v0.4.18 releases and ZIP assets (keep Git tags).'
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write
 
+concurrency:
+  group: plugin-release
+  cancel-in-progress: false
+
 jobs:
   package:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Check version and package
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+      - name: Validate PHP and payment fixtures
         shell: bash
         run: |
           set -euo pipefail
-          version="${GITHUB_REF_NAME#v}"
-          declared="$(sed -n 's/^ \* Version: //p' boltutil-woocommerce.php | head -1)"
-          test "$version" = "$declared"
+          for file in boltutil-woocommerce.php includes/*.php tests/*.php; do php -l "$file"; done
+          php tests/webhook-fixtures.php
+          php tests/reconcile-schedule-fixtures.php
+          php tests/multi-asset-fixtures.php
+      - name: Check version and package
+        id: package
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(sed -n 's/^ \* Version: //p' boltutil-woocommerce.php | head -1)"
+          if [[ "$GITHUB_REF_TYPE" == 'tag' ]]; then
+            test "${GITHUB_REF_NAME#v}" = "$version"
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
           bash tools/build-release.sh
-          unzip -tq "../boltutil-payments-for-woocommerce-${version}.zip"
-          sha256sum "../boltutil-payments-for-woocommerce-${version}.zip"
-      - name: Publish installable ZIP
+          archive="boltutil-payments-for-woocommerce-${version}.zip"
+          unzip -tq "../$archive"
+          if unzip -Z1 "../$archive" | grep -Eq '(^|/)(tests|tools|wordpress-org-assets|\.git|\.github)/'; then
+            echo 'Development files found in installable ZIP' >&2
+            exit 1
+          fi
+          ( cd .. && sha256sum "$archive" > SHA256SUMS.txt )
+      - name: Publish installable ZIP and verify download
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ steps.package.outputs.version }}
         run: |
           set -euo pipefail
-          version="${GITHUB_REF_NAME#v}"
-          gh release create "$GITHUB_REF_NAME" \
-            "../boltutil-payments-for-woocommerce-${version}.zip" \
-            --verify-tag --title "$GITHUB_REF_NAME" \
-            --notes-file .github/RELEASE_NOTES.md --prerelease
+          tag="v${VERSION}"
+          archive="boltutil-payments-for-woocommerce-${VERSION}.zip"
+          # Re-running the same workflow is safe. Never replace another commit's tag.
+          if gh release view "$tag" >/dev/null 2>&1; then
+            test "$(gh api "repos/$GH_REPO/git/ref/tags/$tag" --jq '.object.sha')" = "$GITHUB_SHA"
+            gh release upload "$tag" "../$archive" ../SHA256SUMS.txt --clobber
+            gh release edit "$tag" --title "$tag — USDT, USDC and Base" --notes-file .github/RELEASE_NOTES.md --prerelease
+          else
+            gh release create "$tag" "../$archive" ../SHA256SUMS.txt \
+              --target "$GITHUB_SHA" --title "$tag — USDT, USDC and Base" \
+              --notes-file .github/RELEASE_NOTES.md --prerelease
+          fi
+          downloaded="$(mktemp -d)"
+          trap 'rm -rf "$downloaded"' EXIT
+          gh release download "$tag" --dir "$downloaded" --pattern "$archive" --pattern SHA256SUMS.txt
+          ( cd "$downloaded" && sha256sum -c SHA256SUMS.txt )
+          cmp "../$archive" "$downloaded/$archive"
+      - name: Remove explicitly selected old releases
+        if: github.event_name == 'workflow_dispatch' && inputs.remove_superseded_releases
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ steps.package.outputs.version }}
+        run: |
+          set -euo pipefail
+          # One-time cleanup for this upgrade, only after the new ZIP was verified.
+          test "$VERSION" = '0.5.2'
+          for tag in v0.4.21 v0.4.18; do
+            if gh release view "$tag" >/dev/null 2>&1; then
+              gh release delete "$tag" --yes
+            fi
+          done
