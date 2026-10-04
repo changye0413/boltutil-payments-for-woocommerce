@@ -34,6 +34,10 @@ check(array_keys($gateway->available_routes())===array('USDT:TRC20'),'Upgrade de
 $gateway->settings=array('tokens'=>array('USDC'),'networks'=>array('ERC20'));
 check(array_keys($gateway->available_routes())===array('USDC:ERC20'),'Capabilities intersect token and network settings');
 $select=new ReflectionMethod($gateway,'selected_route');
+// PHP 7.4 needs explicit reflection access; PHP 8.1+ enables it by default.
+if ( PHP_VERSION_ID < 80100 ) {
+    $select->setAccessible(true);
+}
 $_POST=array('boltutil_route'=>'USDC:TRC20');
 check(null===$select->invoke($gateway),'Forged unsupported route rejected');
 $_POST=array('boltutil_route'=>'USDC:ERC20');
