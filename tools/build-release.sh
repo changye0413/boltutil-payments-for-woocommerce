@@ -47,7 +47,8 @@ archive="$project_dir/$release_slug-$version$suffix.zip"
 temporary_archive="$release_dir/$release_slug-$version.zip"
 # Fixed UTC timestamps, sorted entries and no platform-specific attributes make
 # the same runtime files produce the same ZIP locally and on GitHub Actions.
-( export TZ=UTC; find "$release_dir/$release_slug" -exec touch -t 200001010000 {} + )
+export TZ=UTC
+find "$release_dir/$release_slug" -exec touch -t 200001010000 {} +
 ( cd "$release_dir" && LC_ALL=C find "$release_slug" -print | LC_ALL=C sort | zip -X -q "$temporary_archive" -@ )
 unzip -tq "$temporary_archive"
 mv -f "$temporary_archive" "$archive"
