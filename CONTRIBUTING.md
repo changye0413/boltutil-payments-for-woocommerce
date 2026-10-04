@@ -14,6 +14,8 @@ Thanks for helping improve BoltUtil Payments for WooCommerce. Small, focused cha
 # Requires a PHP CLI.
 for file in boltutil-woocommerce.php includes/*.php tests/*.php; do php -l "$file"; done
 php tests/webhook-fixtures.php
+php tests/reconcile-schedule-fixtures.php
+php tests/multi-asset-fixtures.php
 
 # Requires Node.js and gettext.
 for file in assets/*.js; do node --check "$file"; done

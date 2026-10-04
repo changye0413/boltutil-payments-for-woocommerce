@@ -4,30 +4,30 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 0.4.21
+Stable tag: 0.5.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Accept USDT on five supported networks through BoltUtil Hosted Checkout. Funds go directly to the merchant's configured wallet.
+Accept USDT and supported USDC payments through BoltUtil Hosted Checkout. Funds go directly to the merchant's configured wallet.
 
 == Description ==
 
-BoltUtil connects WooCommerce to the BoltUtil payment service. Customers select a USDT network, place an order, and continue to BoltUtil Hosted Checkout. BoltUtil creates the payment, displays the receiving address and exact payable amount, monitors the network, and reports the confirmed result to WooCommerce. The plugin does not receive cryptocurrency or store wallet private keys or recovery phrases.
+BoltUtil connects WooCommerce to the BoltUtil payment service. Customers select a stablecoin and network, place an order, and continue to BoltUtil Hosted Checkout. BoltUtil creates the payment, displays the receiving address and exact payable amount, monitors the network, and reports the confirmed result to WooCommerce. The plugin does not receive cryptocurrency or store wallet private keys or recovery phrases.
 
-Current payment support is USDT on TRON (TRC20), Ethereum (ERC20), BNB Smart Chain (BEP20), Polygon PoS, and Solana. A merchant must enable the corresponding receiving wallet in BoltUtil. USDC, Base, and other assets or networks are planned, but are not supported by this release.
+USDT supports TRON (TRC20), Ethereum (ERC20), BNB Smart Chain (BEP20), Polygon PoS, and Solana. Native USDC supports Ethereum, Polygon PoS, and Solana; Binance-Peg USDC supports BNB Smart Chain (BEP20). These routes require activation by BoltUtil. Checkout offers only routes enabled in the service and plugin, with an active merchant receiving wallet. Existing installations default to USDT only. Base supports native USDC and Bridged USDT; other assets and networks are not supported.
 
-Only WooCommerce stores using USD are supported. The USD numeric order total is the USDT invoice basis; this release does not provide a live USD/USDT exchange-rate quote or lock. The exact USDT amount displayed on BoltUtil Hosted Checkout is the amount to pay. Network transaction fees are charged by the customer's wallet or network, separately from the invoice amount.
+Only WooCommerce stores using USD are supported. The USD numeric order total is the stablecoin invoice basis; this release does not provide a live exchange-rate quote or lock. The exact stablecoin amount displayed on BoltUtil Hosted Checkout is the amount to pay. Network transaction fees are charged by the customer's wallet or network, separately from the invoice amount.
 
 BoltUtil is an external service required for this plugin. Merchants must register a BoltUtil account, create a LIVE API key, configure receiving wallets and an active Webhook, and enter the key and Webhook secret in the gateway settings. The BoltUtil free plan permits up to 30 orders created per BoltUtil server day; this counts order creation, not successful payments. Other plans are described at https://boltutil.com/pricing . The service, rather than plugin code, enforces account limits.
 
-When a customer checks out, the plugin sends the order amount, USD currency, USDT token, selected network, a store-specific external order ID, the store's return URL, and a merchant reference to BoltUtil over HTTPS. It sends the merchant API key and a signed request; it does not send the customer's wallet private key. The plugin receives signed payment events and queries BoltUtil to verify status before completing a WooCommerce order. See https://boltutil.com/privacy and https://boltutil.com/terms for BoltUtil service policies. The merchant remains responsible for their store's own privacy notice and payment disclosures.
+When a customer checks out, the plugin sends the order amount, USD currency, selected USDT or USDC token, selected network, a store-specific external order ID, the store's return URL, and a merchant reference to BoltUtil over HTTPS. It sends the merchant API key and a signed request; it does not send the customer's wallet private key. The plugin receives signed payment events and queries BoltUtil to verify status before completing a WooCommerce order. See https://boltutil.com/privacy and https://boltutil.com/terms for BoltUtil service policies. The merchant remains responsible for their store's own privacy notice and payment disclosures.
 
 == Installation ==
 
 1. Install and activate WooCommerce, then install this plugin.
 2. Set the WooCommerce store currency to USD.
-3. In BoltUtil, create a LIVE API key, enable a USDT receiving wallet for each desired network, and create an active Webhook using the URL shown in WooCommerce > Settings > Payments > BoltUtil USDT.
-4. Enter the LIVE API key and the matching Webhook secret in the gateway settings. Select networks backed by active receiving wallets, enable the gateway, and save.
+3. In BoltUtil, create a LIVE API key, enable a receiving wallet for each desired network, and create an active Webhook using the URL shown in WooCommerce > Settings > Payments > BoltUtil Payments.
+4. Enter the LIVE API key and the matching Webhook secret in the gateway settings. Select stablecoins and networks backed by active receiving wallets, enable the gateway, and save.
 5. Place an unpaid order to check the network choice, BoltUtil redirect, amount, address, and return link. Returning to the store does not mark the order paid.
 
 == Frequently Asked Questions ==
@@ -46,7 +46,7 @@ Only after BoltUtil confirms payment and the plugin verifies the signed Webhook 
 
 = Can customers pay with USDC or on Base? =
 
-Not in this version. Those are planned for later releases after BoltUtil supports the full asset and network payment lifecycle. This plugin does not present planned routes as available payment choices.
+Native USDC on Ethereum, Polygon PoS and Solana, and Binance-Peg USDC on BNB Smart Chain (BEP20), are available only when the service activates the route and the merchant enables USDC in plugin settings. Base supports native USDC and Bridged USDT when the backend, receiving wallet and plugin settings enable the route. Base transfers are settled after L1 finality, so confirmation can take around 20 minutes. Planned or inactive routes are never offered.
 
 = Which languages are available? =
 
@@ -54,7 +54,7 @@ English is the fallback. The plugin includes translations for Simplified Chinese
 
 = What happens when a payment needs investigation? =
 
-The WooCommerce order displays the BoltUtil payment ID, network, invoice amount, and payable amount. An administrator can use the Recheck BoltUtil payment order action. Payment exceptions should also be reviewed in the BoltUtil merchant dashboard.
+The WooCommerce order displays the BoltUtil payment ID, stablecoin, network, invoice amount, and payable amount. An administrator can use the Recheck BoltUtil payment order action. Payment exceptions should also be reviewed in the BoltUtil merchant dashboard.
 
 = What happens if a payment expires or fails? =
 
@@ -65,6 +65,21 @@ When BoltUtil verifies an EXPIRED, FAILED, or CANCELLED payment, the plugin mark
 Use the WordPress.org support forum for plugin setup questions. For BoltUtil account, API, wallet, or payment issues, email support@boltutil.com. Do not include API keys, Webhook secrets, private keys, or recovery phrases in a support request.
 
 == Changelog ==
+
+= 0.5.2 =
+* Add service-enabled Base native USDC and Bridged USDT routes with explicit labels.
+* Add an original GPL generic network illustration for Base.
+
+= 0.5.1 =
+* Add service-enabled Binance-Peg USDC on BNB Smart Chain (BEP20) and explicit representation labels in classic and block checkout.
+* Preserve API symbols and USDT-only upgrade defaults.
+
+= 0.5.0 =
+* Add merchant-controlled stablecoin selection and server-authoritative network/asset routes.
+* Support native USDC on service-enabled Ethereum, Polygon PoS and Solana routes.
+* Preserve old USDT orders and settings; verify stored asset identity in Webhooks and reconciliation.
+* Add the CC0 USDC icon and update multilingual configuration guidance.
+
 
 = 0.4.21 =
 

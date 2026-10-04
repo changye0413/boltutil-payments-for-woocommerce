@@ -1,27 +1,23 @@
-# Release copy
+# Release copy — v0.5.2
 
 ## Repository description (English)
 
-USDT payments for WooCommerce through BoltUtil Hosted Checkout, with five networks, signed Webhooks, and merchant-scoped status checks.
+USDT and USDC payments for WooCommerce through BoltUtil Hosted Checkout, including Base, signed Webhooks and merchant-scoped status checks.
 
 ## Short announcement (English)
 
-BoltUtil Payments for WooCommerce is now open source. Offer USDT on TRON, Ethereum, BNB Smart Chain, Polygon PoS, and Solana in a USD store. Buyers choose a network in WooCommerce and pay on BoltUtil Hosted Checkout. The plugin verifies signed events and payment status before completing orders. Download the early release from GitHub; a real WooCommerce payment and production callback acceptance test is still pending.
+BoltUtil Payments for WooCommerce is open source. Version 0.5.2 adds USDC and Base alongside existing USDT networks. Buyers choose an enabled asset/network route in WooCommerce and pay on BoltUtil Hosted Checkout. The plugin verifies signed events and payment status before completing orders. Download the early release from GitHub; real multi-asset payment and production Webhook acceptance remain pending.
 
 ## 简短介绍（中文）
 
-BoltUtil 的 WooCommerce USDT 插件现已开源。USD 店铺可提供 TRON、Ethereum、BNB Smart Chain、Polygon PoS 和 Solana 五条网络；顾客选择网络后进入 BoltUtil 收银台。插件会校验签名回调并复查支付状态，再更新 WooCommerce 订单。当前提供早期版本下载，WooCommerce 发起的真实付款与生产回调闭环仍待验收。
+BoltUtil 的 WooCommerce 支付插件已开源。0.5.2 增加 USDC 与 Base 支持，保留原有 USDT 网络；顾客选择已启用的币种和网络后，进入 BoltUtil 收银台付款。插件校验签名回调并复查支付状态，再更新 WooCommerce 订单。当前提供早期版本下载，真实多币种付款与生产回调闭环仍待验收。
 
-## GitHub release notes for v0.4.18
+## Download and setup
 
-**Early release — test with care.** This ZIP installs BoltUtil USDT as a WooCommerce payment method. It supports classic checkout and Checkout Blocks, five USDT networks, Hosted Checkout redirection, signed Webhook verification, manual and scheduled status reconciliation, and 11 bundled translations. The network and USDT icons are CC0 assets with an included license notice. API requests are pinned to the official BoltUtil API origin.
+Download `boltutil-payments-for-woocommerce-0.5.2.zip` from the [release page](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.5.2), upload it under **WordPress → Plugins → Add New → Upload Plugin**, and follow the [setup guide](README.md#configure-in-five-steps).
 
-Requirements: WordPress 6.5+, PHP 7.4+, WooCommerce, HTTPS, a USD store, a LIVE BoltUtil API key, a matching active Webhook secret, and configured receiving wallets. Download `boltutil-payments-for-woocommerce-0.4.18.zip`, upload it under **Plugins → Add New → Upload Plugin**, and follow the [setup guide](README.md#configure-in-five-steps).
+Requirements: WordPress 6.5+, PHP 7.4+, WooCommerce 11.1+, HTTPS, a USD store, a LIVE BoltUtil API key, matching active Webhook and receiving wallets. Routes are offered only when allowed by the plugin and enabled by the BoltUtil service. Base USDT is Bridged USDT; BEP20 USDC is Binance-Peg USDC.
 
-Order creation and Hosted Checkout redirect have been checked on a test store. A real WooCommerce-originated blockchain payment with a production completion Webhook has not yet been verified. Do not claim that end-to-end acceptance is complete.
+The free plan permits up to 30 newly created BoltUtil orders per server day. Read the service pricing, privacy policy and terms before configuring the gateway. Pay the exact token amount shown at checkout; network fees are separate.
 
-## Draft directory introduction for the 0.4.19 candidate
-
-Accept USDT in a USD WooCommerce store through BoltUtil Hosted Checkout. Customers choose TRON, Ethereum, BNB Smart Chain, Polygon PoS, or Solana, then pay the exact amount shown by BoltUtil to a receiving wallet configured in their merchant account. The plugin verifies signed payment events and checks merchant-scoped payment status before completing orders. The merchant needs a LIVE BoltUtil API key, active Webhook, and receiving wallet. The BoltUtil free plan allows up to 30 newly created orders per server day; terms, privacy, and other pricing are linked in the plugin listing.
-
-Do not publish this copy as a WordPress.org availability announcement until the real-payment acceptance and directory approval are complete.
+Do not announce WordPress.org availability until the real-payment acceptance and directory approval are complete. Full GitHub release notes are maintained in [.github/RELEASE_NOTES.md](.github/RELEASE_NOTES.md).
