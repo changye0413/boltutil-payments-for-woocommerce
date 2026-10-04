@@ -20,7 +20,7 @@
                 }
                 return {
                     type: props.emitResponse.responseTypes.SUCCESS,
-                    meta: { paymentMethodData: { boltutil_network: network } },
+                    meta: { paymentMethodData: { boltutil_route: network } },
                 };
             } );
         }, [ network, onPaymentSetup ] );
@@ -35,10 +35,10 @@
                         el( 'input', { type: 'radio', name: 'boltutil-block-network', value: code, checked: network === code,
                             onChange: () => setNetwork( code ) } ),
                         el( 'span', { className: 'boltutil-network-art', 'aria-hidden': true },
-                            el( 'span', { className: 'boltutil-chain-badge network-' + code.toLowerCase() },
+                            el( 'span', { className: 'boltutil-chain-badge network-' + item.network.toLowerCase() },
                                 el( 'img', { src: item.icon || '', alt: '', loading: 'lazy' } ) ),
                             el( 'span', { className: 'boltutil-token-badge' },
-                                el( 'img', { src: settings.tokenIcon || '', alt: '', loading: 'lazy' } ) ) ),
+                                el( 'img', { src: item.tokenIcon || settings.tokenIcon || '', alt: '', loading: 'lazy' } ) ) ),
                         el( 'span', { className: 'boltutil-network-copy' },
                             el( 'strong', null, item.label ), el( 'small', null, item.short ) ),
                         el( 'span', { className: 'boltutil-network-arrow', 'aria-hidden': true }, '→' ),
