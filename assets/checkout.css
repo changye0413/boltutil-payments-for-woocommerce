@@ -164,6 +164,34 @@
     background: #fff;
 }
 
+/* Keep official paths, colors and corners intact; clear space belongs to the UI. */
+.boltutil-chain-badge.network-base {
+    border: 0;
+    background: #fff;
+}
+.boltutil-chain-badge.network-base img {
+    width: 50%;
+    height: 50%;
+    border-radius: 0;
+}
+.boltutil-chain-badge.network-bep20 {
+    border: 0;
+    background: #0b0e11;
+}
+.boltutil-chain-badge.network-bep20 img {
+    width: 72%;
+    height: 72%;
+    border-radius: 0;
+}
+.boltutil-chain-badge.network-polygon {
+    border: 0;
+    background: transparent;
+    overflow: visible;
+}
+.boltutil-chain-badge.network-polygon img {
+    border-radius: 0;
+}
+
 .boltutil-network-copy {
     display: grid;
     gap: 2px;
@@ -233,3 +261,17 @@
     .boltutil-network-art { margin-right: 10px; }
     .boltutil-network-selected { padding: 5px 7px; font-size: 11px; }
 }
+
+/* Coin selection is separate from network selection in both checkout modes. */
+.boltutil-token-fieldset { min-width:0; margin:0; padding:0; border:0; }
+.boltutil-token-fieldset legend { margin-bottom:12px; color:#111; font-size:15px; font-weight:800; }
+.boltutil-token-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.boltutil-payment-panel .boltutil-token-option { display:flex; align-items:center; gap:12px; margin:0; padding:14px 18px; border:1px solid #d8e0eb; border-radius:14px; background:#f8fafc; color:#172033; cursor:pointer; }
+.boltutil-token-option img { display:block; width:30px; height:30px; border-radius:50%; }
+.boltutil-token-option input { position:absolute; opacity:0; width:1px; height:1px; }
+.boltutil-token-option:has(input:checked) { border-color:#2563eb; background:#eaf2ff; box-shadow:0 0 0 2px rgba(37,99,235,.13); }
+.boltutil-token-option:has(input:focus-visible) { outline:3px solid #1d4ed8; outline-offset:3px; }
+.boltutil-payment-panel .boltutil-network-option[hidden], .boltutil-token-fieldset[hidden] { display:none !important; }
+.boltutil-chain-badge.network-solana { background:#000; border:0; }
+.boltutil-chain-badge.network-trc20, .boltutil-chain-badge.network-erc20 { background:#fff; border-color:#e5e7eb; }
+@media (prefers-reduced-motion:reduce) { .boltutil-network-option { transition:none !important; } }
