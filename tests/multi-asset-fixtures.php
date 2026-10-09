@@ -63,3 +63,15 @@ check('Bridged USDT'===BoltUtil_WC_Gateway::token_label('USDT','BASE'),'Base USD
 check('USDC'===BoltUtil_WC_Gateway::token_label('USDC','BASE'),'Base USDC stays native');
 $_POST=array('boltutil_route'=>'USDC:BASE');check('BASE'===$select->invoke($gateway)['network'],'Base route accepted');
 $GLOBALS['capabilities']=array('routes'=>array());check(array() === $gateway->available_routes(),'Inactive Base is not offered');
+
+$GLOBALS['capabilities']=array('routes'=>array());
+foreach(array('USDT','USDC') as $token) foreach(array_keys(BoltUtil_WC_Gateway::NETWORKS) as $network) {
+    $GLOBALS['capabilities']['routes'][]=array('token'=>$token,'network'=>$network);
+}
+$gateway->settings=array('tokens'=>array('USDT','USDC'),'networks'=>array_keys(BoltUtil_WC_Gateway::NETWORKS));
+check(11===count($gateway->available_routes()),'Six chains and two tokens expose exactly eleven supported combinations');
+check(!isset($gateway->available_routes()['USDC:TRC20']),'TRON USDC is excluded even if erroneously advertised by the service');
+$_POST=array('boltutil_route'=>'USDT:BASE','boltutil_token'=>'USDC');
+check(null===$select->invoke($gateway),'Mismatched submitted coin and route are rejected');
+$_POST=array('boltutil_route'=>'USDC:BASE','boltutil_token'=>'USDC');
+check('USDC'===$select->invoke($gateway)['token'],'Consistent coin and network selection accepted');
