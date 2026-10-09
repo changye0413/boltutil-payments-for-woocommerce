@@ -1,13 +1,13 @@
 # WordPress.org submission checklist
 
-This file is a WordPress.org submission gate for BoltUtil Payments for WooCommerce. It is not a claim that a real payment has passed. The current GitHub early release is **0.5.2**; WordPress.org submission remains gated on real-payment acceptance.
+This file is a WordPress.org submission gate for BoltUtil Payments for WooCommerce. It is not a claim that a real payment has passed. The current GitHub early release is **0.6.0**; WordPress.org submission remains gated on real-payment acceptance.
 
 ## Completed preparation
 
 - [x] The plugin ZIP has the required slug and matching main PHP filename, a GPLv2-or-later license, WordPress.org `readme.txt`, privacy and terms links, service disclosure, support route, installation steps, and explicit USD/stablecoin limitations.
 - [x] Supported USDT/USDC routes are explicitly listed, including Base native USDC, Bridged USDT and BEP20 Binance-Peg USDC. Only service-authorized routes with merchant receiving wallets are offered; upgrades retain USDT-only defaults.
 - [x] The candidate declares the tested WooCommerce **11.1** line and Cart and Checkout Blocks and HPOS compatibility. The live payment flow still needs acceptance below.
-- [x] The public package contains the BoltUtil-owned logo and attributed CC0 network/token SVGs and the original GPL Base illustration. WordPress.org icon and banner source files are separate from the installable ZIP.
+- [ ] Confirm WordPress.org-compatible redistribution permissions for the official Polygon, BNB Chain and Base SVGs included in 0.6.0. Source URLs and exact hashes are recorded; these assets must not be described as CC0 or BoltUtil-owned GPL artwork. WordPress.org icon and banner source files are separate from the installable ZIP.
 - [x] English is the source language. Eleven bundled translations parse. Merchant-written checkout labels remain controlled by the merchant and are not auto-translated.
 - [x] The build script rejects obvious live credentials and test-only origins. PHP syntax, JavaScript syntax, translation catalogs, the isolated signed Webhook fixture, ZIP integrity, and WordPress.org Readme Validator were checked locally. The Readme Validator still notes the missing WordPress.org `Contributors` field because the publisher account does not yet exist; screenshots and a donate link are optional listing enhancements.
 - [x] On the test store, 0.4.19 upgraded in place, stayed active, preserved the configured merchant credentials and five networks, and rendered all five options in Checkout Blocks and a draft Classic Checkout QA page. Changing the network kept one selected radio in each checkout type. No order or transfer was made in this smoke test. Plugin Check 2.1.0 reported **0 errors and 22 warnings**, the same count as 0.4.17. See the private release checklist for warning categories and test evidence.

@@ -4,7 +4,7 @@ assets/boltutil-official-mark.svg is the BoltUtil brand mark maintained in
 the BoltUtil frontend source. Copyright BoltUtil. This copy is distributed
 with the plugin under GPLv2 or later.
 
-The seven SVG files below are from spothq/cryptocurrency-icons, commit
+The five SVG files below are from spothq/cryptocurrency-icons, commit
 1a63530be6e374711a8554f31b17e4cb92c25fa5. That project's icon
 collection is released under CC0 1.0 Universal. The complete upstream
 license is included in CRYPTO-ICONS-CC0-LICENSE.txt. Source:
@@ -12,8 +12,6 @@ https://github.com/spothq/cryptocurrency-icons/tree/1a63530be6e374711a8554f31b17
 
   assets/chains/tron.svg       svg/color/trx.svg
   assets/chains/ethereum.svg   svg/color/eth.svg
-  assets/chains/bnb-chain.svg  svg/color/bnb.svg
-  assets/chains/polygon.svg    svg/color/matic.svg
   assets/chains/solana.svg     svg/color/sol.svg
   assets/tokens/usdt.svg       svg/color/usdt.svg
   assets/tokens/usdc.svg       svg/color/usdc.svg
@@ -24,5 +22,35 @@ does not imply endorsement by those networks or token issuers. CC0 covers
 the icon collection's copyright claims; trademark rights remain with their
 respective owners.
 
-assets/chains/base.svg is an original generic network illustration by BoltUtil,
-distributed under GPLv2 or later. It is not an official Base logo.
+Official brand assets (retrieved 2026-10-04)
+
+The following SVG files are unchanged copies supplied by the respective
+networks. Their geometry and colors have not been redrawn, mirrored or
+recolored. Display size and surrounding clear space are controlled by CSS.
+
+  assets/chains/polygon.svg
+    Official file: polygon-icon-primary-purple.svg
+    Brand guidelines: https://polygon.technology/brand-guidelines
+    Official kit: https://drive.google.com/drive/folders/1uMM-V7xo8X7DEKsutcJgf5L7ucDtInrQ
+    Download: https://drive.google.com/uc?export=download&id=1q_dQsaxYrMHiAXi9FsxtoDBou_tOwJiB
+
+  assets/chains/bnb-chain.svg
+    Official file: BNB Chain_Symbol_Yellow.svg
+    Brand guidelines: https://www.bnbchain.org/en/brand-guidelines
+    Download: https://www.bnbchain.org/images/brand-guidelines/svg/BNB%20Chain_Symbol_Yellow.svg
+
+  assets/chains/base.svg
+    Official file: 1_Base Brand Assets/The Square/Base_square_blue.svg
+    Brand guidelines: https://brand.base.org/core-identifiers
+    Download: https://brand.base.org/base-brand.zip
+
+Exact download URLs, upstream filenames and SHA-256 hashes are also recorded
+in assets/chains/official-sources.json. These three assets are NOT covered by
+the cryptocurrency-icons CC0 license or by BoltUtil's GPL license grant.
+Their rights and brand usage requirements remain with their owners. Public
+availability of a brand kit does not itself establish a GPL-compatible
+redistribution license. Confirm the required permissions before submission
+to WordPress.org. These logos identify supported payment networks only and
+do not imply partnership, sponsorship or endorsement.
+
+Local adaptations of the CC0 collection: Solana uses a black circular backing and green-to-purple bars; Ethereum uses a neutral backing and dark facets to match the BoltUtil website.

@@ -4,7 +4,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 0.5.2
+Stable tag: 0.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,18 @@ When BoltUtil verifies an EXPIRED, FAILED, or CANCELLED payment, the plugin mark
 Use the WordPress.org support forum for plugin setup questions. For BoltUtil account, API, wallet, or payment issues, email support@boltutil.com. Do not include API keys, Webhook secrets, private keys, or recovery phrases in a support request.
 
 == Changelog ==
+
+= 0.6.0 =
+* Let buyers choose USDT or USDC first, then show only eligible payment networks.
+* Preserve the selected network when switching coins where that combination is available.
+* Keep coin and network choices through classic checkout refreshes; validate routes server-side.
+* Restore the Solana black circular mark and gradient bars.
+
+= 0.5.3 =
+* Replace Polygon, BNB Chain and Base illustrations with unchanged SVGs from their official brand resources.
+* Preserve logo proportions and improve contrast and clear space in classic and block checkout.
+* Version network icon URLs so upgrades do not display cached legacy artwork.
+* Record official asset sources and distinguish their usage terms from CC0 artwork.
 
 = 0.5.2 =
 * Add service-enabled Base native USDC and Bridged USDT routes with explicit labels.
