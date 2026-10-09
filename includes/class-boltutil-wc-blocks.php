@@ -14,10 +14,11 @@ final class BoltUtil_WC_Blocks extends \Automattic\WooCommerce\Blocks\Payments\I
     }
 
     public function get_payment_method_script_handles() {
+        wp_register_script( 'boltutil-wc-routes', plugins_url( 'assets/routes.js', BOLTUTIL_WC_FILE ), array(), BOLTUTIL_WC_VERSION, true );
         wp_register_script(
             'boltutil-wc-blocks',
             plugins_url( 'assets/blocks.js', BOLTUTIL_WC_FILE ),
-            array( 'wp-element', 'wp-html-entities', 'wc-blocks-registry', 'wc-settings' ),
+            array( 'wp-element', 'wp-html-entities', 'wc-blocks-registry', 'wc-settings', 'boltutil-wc-routes' ),
             BOLTUTIL_WC_VERSION,
             true
         );
@@ -45,7 +46,9 @@ final class BoltUtil_WC_Blocks extends \Automattic\WooCommerce\Blocks\Payments\I
             'networks'    => $networks,
             'icon'        => plugins_url( 'assets/boltutil-official-mark.svg', BOLTUTIL_WC_FILE ),
             'tokenIcon'   => BoltUtil_WC_Gateway::token_icon_url(),
-            'networkLabel' => boltutil_wc_text( '选择币种和支付网络', __( 'Choose a stablecoin and payment network', 'boltutil-payments-for-woocommerce' ) ),
+            'tokenLabel' => boltutil_wc_text( '选择支付币种', __( 'Choose a stablecoin', 'boltutil-payments-for-woocommerce' ) ),
+            'tokenIcons' => array( 'USDT' => BoltUtil_WC_Gateway::token_icon_url( 'USDT' ), 'USDC' => BoltUtil_WC_Gateway::token_icon_url( 'USDC' ) ),
+            'networkLabel' => boltutil_wc_text( '选择支付网络', __( 'Choose a payment network', 'boltutil-payments-for-woocommerce' ) ),
             'selectedLabel' => boltutil_wc_text( '已选择', __( 'Selected', 'boltutil-payments-for-woocommerce' ) ),
             'redirectNotice' => boltutil_wc_text(
                 '下单后将跳转到 BoltUtil 收银台。请按收银台显示的准确金额和地址付款；链上确认后，订单状态会自动更新。',
