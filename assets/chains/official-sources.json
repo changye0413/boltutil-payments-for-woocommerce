@@ -1,0 +1,29 @@
+[
+  {
+    "file": "polygon.svg",
+    "download_url": "https://drive.google.com/uc?export=download&id=1q_dQsaxYrMHiAXi9FsxtoDBou_tOwJiB",
+    "upstream_file": "polygon-icon-primary-purple.svg",
+    "guidelines": "https://polygon.technology/brand-guidelines",
+    "retrieved_on": "2026-10-04",
+    "sha256": "0c061db0ab5934201d6b90a751d497a5bb5d47e4408e77f877071efbbb94068d",
+    "modification": "none"
+  },
+  {
+    "file": "bnb-chain.svg",
+    "download_url": "https://www.bnbchain.org/images/brand-guidelines/svg/BNB%20Chain_Symbol_Yellow.svg",
+    "upstream_file": "BNB Chain_Symbol_Yellow.svg",
+    "guidelines": "https://www.bnbchain.org/en/brand-guidelines",
+    "retrieved_on": "2026-10-04",
+    "sha256": "b8ff1ce0b5af2e2d9bcf5ec89fedd5224079f4f7267e306e23e8d691024f5eff",
+    "modification": "none"
+  },
+  {
+    "file": "base.svg",
+    "download_url": "https://brand.base.org/base-brand.zip",
+    "upstream_file": "1_Base Brand Assets/The Square/Base_square_blue.svg",
+    "guidelines": "https://brand.base.org/core-identifiers",
+    "retrieved_on": "2026-10-04",
+    "sha256": "b4f2b487011713f98481cc53c4ce095629b4876acbdbc2f0f3ad69a9688ba82e",
+    "modification": "none"
+  }
+]
