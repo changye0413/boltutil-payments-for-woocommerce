@@ -29,7 +29,7 @@ cp -R "$plugin_dir/includes" "$plugin_dir/assets" "$plugin_dir/languages" "$rele
 # runtime assets and Plugin Check rejects their trailing-tilde filenames.
 find "$release_dir/$release_slug/languages" -type f -name '*~' -delete
 
-# A public package may contain the pinned CC0 icons and original GPL network illustrations.
+# Asset provenance and official brand usage references are recorded in ASSETS-LICENSE.txt.
 if find "$release_dir/$release_slug/assets" -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \) | grep -q .; then
     printf 'Unlicensed raster asset found in release package.\n' >&2
     exit 1
