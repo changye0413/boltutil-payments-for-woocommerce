@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: boltutil-woocommerce.php:48
@@ -107,8 +107,8 @@ msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:48
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and "
-"verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests "
+"and verifies payment callbacks."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:49
@@ -161,8 +161,8 @@ msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:141
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys "
-"page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API "
+"Keys page. It identifies your merchant account."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:142
@@ -279,8 +279,7 @@ msgid "Customer places an order"
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:173
-msgid ""
-"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgid "The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:174
@@ -329,8 +328,8 @@ msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:193
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved "
-"secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. "
+"Saved secrets appear only as masked hints."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:206
@@ -392,4 +391,12 @@ msgstr ""
 #: includes/class-boltutil-wc-gateway.php:506
 #: includes/class-boltutil-wc-webhook.php:92
 msgid "BoltUtil confirmed this payment."
+msgstr ""
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a stablecoin"
+msgstr ""
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a payment network"
 msgstr ""

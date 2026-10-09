@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: ja\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: boltutil-woocommerce.php:45
@@ -106,8 +106,8 @@ msgstr "BoltUtil Webhook シークレット (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and"
-" verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests "
+"and verifies payment callbacks."
 msgstr "この販売者のアクティブな Webhook のシークレットを使用します。 API リクエストに署名し、支払いコールバックを検証します。"
 
 #: includes/class-boltutil-wc-gateway.php:48
@@ -156,8 +156,8 @@ msgstr "LIVE APIキーを作成する"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
-" page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API "
+"Keys page. It identifies your merchant account."
 msgstr "BoltUtil にサインインし、[API キー] ページで bt_live_ で始まるキーを作成します。販売アカウントを識別します。"
 
 #: includes/class-boltutil-wc-gateway.php:140
@@ -205,8 +205,8 @@ msgid ""
 "Enter the API key and Webhook secret for the same merchant below, select "
 "networks, enable the gateway, and save. Your store currency must be USD."
 msgstr ""
-"同じ販売者の API キーと Webhook シークレットを以下に入力し、ネットワークを選択し、ゲートウェイを有効にして保存します。ストア通貨は USD"
-" である必要があります。"
+"同じ販売者の API キーと Webhook シークレットを以下に入力し、ネットワークを選択し、ゲートウェイを有効にして保存します。ストア通貨は "
+"USD である必要があります。"
 
 #: includes/class-boltutil-wc-gateway.php:150
 msgid "This store’s Webhook URL"
@@ -285,8 +285,8 @@ msgstr "顧客が注文する"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
-" to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then "
+"goes to BoltUtil Checkout."
 msgstr "USD の注文の場合、顧客は BoltUtil USDT とネットワークを選択し、BoltUtil チェックアウトに進みます。"
 
 #: includes/class-boltutil-wc-gateway.php:172
@@ -295,8 +295,8 @@ msgstr "決済画面に表示された金額を支払う"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
-" expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, "
+"and expiry. The checkout amount is authoritative."
 msgstr ""
 "BoltUtil の決済画面には、正確な USDT 金額、受取アドレス、QR "
 "コード、有効期限が表示されます。支払いには決済画面に表示された金額を使用してください。"
@@ -338,7 +338,8 @@ msgid ""
 msgstr ""
 "通貨が USD のストアに限り、TRC20、ERC20、BEP20、Polygon、Solana 上の USDT に対応します。USD "
 "の注文合計の数値を USDT "
-"請求額の基準とし、このバージョンではリアルタイム為替レートを固定しません。オンチェーン送金は実際の支払いです。まず送金せずに注文作成とリダイレクトを確認してください。"
+"請求額の基準とし、このバージョンではリアルタイム為替レートを固定しません。オンチェーン送金は実際の支払いです。まず送金せずに注文作成とリダイレクトを確認"
+"してください。"
 
 #: includes/class-boltutil-wc-gateway.php:183
 msgid "Read BoltUtil API docs ↗"
@@ -346,8 +347,8 @@ msgstr "BoltUtil API ドキュメントを読む ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved"
-" secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. "
+"Saved secrets appear only as masked hints."
 msgstr "加盟店の認証情報を入力し、対応ネットワークを選択して保存します。保存済みの秘密情報はマスク表示のみです。"
 
 #: includes/class-boltutil-wc-gateway.php:204
@@ -434,10 +435,8 @@ msgstr ""
 "受け入れるネットワークごとに USDT / USDC 受信アドレスを追加してアクティブ化します。チェックアウトには、ここで許可され、アクティブな "
 "BoltUtil ウォレットもあるネットワークが表示されます。"
 
-msgid ""
-"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
-msgstr ""
-"USD の注文の場合、顧客は BoltUtil USDT / USDC とネットワークを選択し、BoltUtil チェックアウトに進みます。"
+msgid "The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgstr "USD の注文の場合、顧客は BoltUtil USDT / USDC とネットワークを選択し、BoltUtil チェックアウトに進みます。"
 
 msgid ""
 "Hosted Checkout shows the exact amount, asset, network, address, QR code, "
@@ -474,7 +473,16 @@ msgid ""
 "is locked. Always pay the exact asset, network and amount shown at checkout."
 msgstr ""
 "USD "
-"合計額をステーブルコイン請求額の数値基準として使用し、リアルタイムの為替レートは固定しません。支払い画面に表示される通貨、ネットワーク、正確な金額でお支払いください。"
+"合計額をステーブルコイン請求額の数値基準として使用し、リアルタイムの為替レートは固定しません。支払い画面に表示される通貨、ネットワーク、正確な金額でお支"
+"払いください。"
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a stablecoin"
+msgstr "ステーブルコインを選択"
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a payment network"
+msgstr "決済ネットワークを選択"
 
 #~ msgid "BoltUtil API origin"
 #~ msgstr "BoltUtil API の原点"

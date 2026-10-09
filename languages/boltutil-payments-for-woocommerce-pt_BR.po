@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: pt_BR\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: boltutil-woocommerce.php:45
@@ -106,11 +106,11 @@ msgstr "BoltUtil Segredo do webhook (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and"
-" verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests "
+"and verifies payment callbacks."
 msgstr ""
-"Use o segredo do Webhook ativo deste comerciante. Ele assina solicitações de"
-" API e verifica retornos de pagamento."
+"Use o segredo do Webhook ativo deste comerciante. Ele assina solicitações "
+"de API e verifica retornos de pagamento."
 
 #: includes/class-boltutil-wc-gateway.php:48
 msgid "Allowed USDT networks"
@@ -118,8 +118,7 @@ msgstr "Redes USDT permitidas"
 
 #: includes/class-boltutil-wc-gateway.php:48
 msgid "Live checkout also checks active BoltUtil settlement wallets."
-msgstr ""
-"O checkout ao vivo também verifica carteiras de liquidação BoltUtil ativas."
+msgstr "O checkout ao vivo também verifica carteiras de liquidação BoltUtil ativas."
 
 #: includes/class-boltutil-wc-gateway.php:64
 msgid "Choose a network, then pay USDT at BoltUtil Checkout."
@@ -153,8 +152,8 @@ msgid ""
 "Complete these steps in order. Never enter a wallet private key or recovery "
 "phrase in this plugin."
 msgstr ""
-"Conclua estas etapas em ordem. Nunca insira uma chave privada de carteira ou"
-" frase de recuperação neste plugin."
+"Conclua estas etapas em ordem. Nunca insira uma chave privada de carteira "
+"ou frase de recuperação neste plugin."
 
 #: includes/class-boltutil-wc-gateway.php:138
 msgid "Create a LIVE API key"
@@ -162,8 +161,8 @@ msgstr "Crie uma chave API AO VIVO"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
-" page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API "
+"Keys page. It identifies your merchant account."
 msgstr ""
 "Faça login em BoltUtil e crie uma chave começando com bt_live_ na página "
 "Chaves de API. Ele identifica sua conta de comerciante."
@@ -272,9 +271,9 @@ msgid ""
 "payment orders are rejected after the limit is reached. Review plans and "
 "upgrade options in BoltUtil."
 msgstr ""
-"Isso conta os pedidos BoltUtil criados hoje, e não os pagamentos concluídos."
-" Novas ordens de pagamento serão rejeitadas após o limite ser atingido. "
-"Revise os planos e opções de atualização em BoltUtil."
+"Isso conta os pedidos BoltUtil criados hoje, e não os pagamentos "
+"concluídos. Novas ordens de pagamento serão rejeitadas após o limite ser "
+"atingido. Revise os planos e opções de atualização em BoltUtil."
 
 #: includes/class-boltutil-wc-gateway.php:161
 msgid "View plans ↗"
@@ -285,8 +284,8 @@ msgid ""
 "These badges check local settings only. BoltUtil checks wallet availability "
 "during checkout."
 msgstr ""
-"Esses emblemas verificam apenas as configurações locais. BoltUtil verifica a"
-" disponibilidade da carteira durante a finalização da compra."
+"Esses emblemas verificam apenas as configurações locais. BoltUtil verifica "
+"a disponibilidade da carteira durante a finalização da compra."
 
 #: includes/class-boltutil-wc-gateway.php:169
 msgid "How it works after setup"
@@ -298,8 +297,8 @@ msgstr "O cliente faz um pedido"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
-" to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then "
+"goes to BoltUtil Checkout."
 msgstr ""
 "Para um pedido USD, o cliente escolhe BoltUtil USDT e uma rede e, em "
 "seguida, vai para o Checkout BoltUtil."
@@ -310,8 +309,8 @@ msgstr "Pague o valor exibido no checkout"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
-" expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, "
+"and expiry. The checkout amount is authoritative."
 msgstr ""
 "O checkout da BoltUtil mostra o valor exato em USDT, o endereço de "
 "recebimento, o código QR e o prazo de validade. Pague o valor exibido no "
@@ -340,8 +339,8 @@ msgid ""
 "actions in WooCommerce. Scheduled checks also run automatically."
 msgstr ""
 "Se um pedido permanecer suspenso, escolha Verificar novamente o pagamento "
-"BoltUtil em Ações do pedido em WooCommerce. As verificações agendadas também"
-" são executadas automaticamente."
+"BoltUtil em Ações do pedido em WooCommerce. As verificações agendadas "
+"também são executadas automaticamente."
 
 #: includes/class-boltutil-wc-gateway.php:179
 msgid "Current scope"
@@ -366,8 +365,8 @@ msgstr "Leia a documentação da API BoltUtil ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved"
-" secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. "
+"Saved secrets appear only as masked hints."
 msgstr ""
 "Insira as credenciais do comerciante, escolha as redes compatíveis e salve. "
 "Os segredos salvos são exibidos apenas de forma mascarada."
@@ -398,8 +397,7 @@ msgstr "Aguardando pagamento USDT confirmado de BoltUtil."
 
 #: includes/class-boltutil-wc-gateway.php:362
 msgid "BoltUtil payment could not be created. Please try again."
-msgstr ""
-"Não foi possível criar o pagamento BoltUtil. Por favor, tente novamente."
+msgstr "Não foi possível criar o pagamento BoltUtil. Por favor, tente novamente."
 
 #: includes/class-boltutil-wc-gateway.php:400
 msgid "Recheck BoltUtil payment"
@@ -460,8 +458,7 @@ msgstr ""
 "você aceitar. Checkout mostra redes permitidas aqui que também possuem "
 "carteiras BoltUtil ativas."
 
-msgid ""
-"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgid "The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
 msgstr ""
 "Para um pedido USD, o cliente escolhe BoltUtil USDT / USDC e uma rede e, em "
 "seguida, vai para o Checkout BoltUtil."
@@ -496,8 +493,8 @@ msgid ""
 "Only active network and asset combinations returned by BoltUtil are offered "
 "at checkout."
 msgstr ""
-"Somente combinações ativas de moeda e rede retornadas pelo BoltUtil aparecem"
-" no checkout."
+"Somente combinações ativas de moeda e rede retornadas pelo BoltUtil "
+"aparecem no checkout."
 
 msgid ""
 "USD totals are the numeric stablecoin invoice basis; no live exchange rate "
@@ -507,6 +504,14 @@ msgstr ""
 "da taxa de câmbio em tempo real. Pague a moeda, a rede e o valor exatos "
 "exibidos no checkout."
 
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a stablecoin"
+msgstr "Escolha uma stablecoin"
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a payment network"
+msgstr "Escolha uma rede de pagamento"
+
 #~ msgid "BoltUtil API origin"
 #~ msgstr "Origem da API BoltUtil"
 
@@ -514,5 +519,5 @@ msgstr ""
 #~ "LIVE payments only. Requires an enabled BoltUtil Payment API and active "
 #~ "settlement wallets."
 #~ msgstr ""
-#~ "Apenas pagamentos AO VIVO. Requer uma API de pagamento BoltUtil habilitada e"
-#~ " carteiras de liquidação ativas."
+#~ "Apenas pagamentos AO VIVO. Requer uma API de pagamento BoltUtil habilitada "
+#~ "e carteiras de liquidação ativas."

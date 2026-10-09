@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: es_ES\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: boltutil-woocommerce.php:45
@@ -83,8 +83,7 @@ msgstr "Título de pago"
 
 #: includes/class-boltutil-wc-gateway.php:42
 msgid "Merchant-defined label shown at checkout."
-msgstr ""
-"Etiqueta definida por el comerciante que se muestra al finalizar la compra."
+msgstr "Etiqueta definida por el comerciante que se muestra al finalizar la compra."
 
 #: includes/class-boltutil-wc-gateway.php:43
 msgid "Checkout description"
@@ -100,8 +99,7 @@ msgstr "Clave API BoltUtil (bt_live_)"
 
 #: includes/class-boltutil-wc-gateway.php:45
 msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
-msgstr ""
-"Utilice la clave LIVE API existente desde su panel de comerciante BoltUtil."
+msgstr "Utilice la clave LIVE API existente desde su panel de comerciante BoltUtil."
 
 #: includes/class-boltutil-wc-gateway.php:46
 msgid "BoltUtil Webhook secret (whsec_)"
@@ -109,8 +107,8 @@ msgstr "BoltUtil Secreto de webhook (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and"
-" verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests "
+"and verifies payment callbacks."
 msgstr ""
 "Utilice el secreto para el Webhook activo de este comerciante. Firma "
 "solicitudes de API y verifica las devoluciones de llamadas de pago."
@@ -167,8 +165,8 @@ msgstr "Crear una clave API EN VIVO"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
-" page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API "
+"Keys page. It identifies your merchant account."
 msgstr ""
 "Inicie sesión en BoltUtil y cree una clave que comience con bt_live_ en la "
 "página Claves API. Identifica su cuenta mercantil."
@@ -304,8 +302,8 @@ msgstr "El cliente hace un pedido"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
-" to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then "
+"goes to BoltUtil Checkout."
 msgstr ""
 "Para un pedido USD, el cliente elige BoltUtil USDT y una red, luego va a "
 "BoltUtil Pago."
@@ -316,8 +314,8 @@ msgstr "Paga el importe indicado en el pago"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
-" expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, "
+"and expiry. The checkout amount is authoritative."
 msgstr ""
 "La página de pago de BoltUtil muestra el importe exacto en USDT, la "
 "dirección de recepción, el código QR y la fecha de vencimiento. Paga el "
@@ -363,8 +361,8 @@ msgstr ""
 "Solo para tiendas con moneda USD que acepten USDT en TRC20, ERC20, BEP20, "
 "Polygon o Solana. El total numérico en USD sirve de base para la factura en "
 "USDT; esta versión no fija un tipo de cambio en tiempo real. Las "
-"transferencias en cadena son pagos reales: comprueba primero la creación del"
-" pedido y la redirección sin enviar fondos."
+"transferencias en cadena son pagos reales: comprueba primero la creación "
+"del pedido y la redirección sin enviar fondos."
 
 #: includes/class-boltutil-wc-gateway.php:183
 msgid "Read BoltUtil API docs ↗"
@@ -372,8 +370,8 @@ msgstr "Lea los documentos de la API BoltUtil ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved"
-" secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. "
+"Saved secrets appear only as masked hints."
 msgstr ""
 "Introduzca las credenciales del comerciante, elija las redes compatibles y "
 "guarde. Los secretos guardados solo se muestran de forma enmascarada."
@@ -465,8 +463,7 @@ msgstr ""
 "acepte. La compra muestra las redes permitidas aquí que también tienen "
 "billeteras BoltUtil activas."
 
-msgid ""
-"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgid "The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
 msgstr ""
 "Para un pedido USD, el cliente elige BoltUtil USDT / USDC y una red, luego "
 "va a BoltUtil Pago."
@@ -511,6 +508,14 @@ msgstr ""
 "El total en USD es la base numérica del importe en monedas estables; no se "
 "fija un tipo de cambio en tiempo real. Paga la moneda, la red y el importe "
 "exactos que indica la página de pago."
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a stablecoin"
+msgstr "Elige una stablecoin"
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a payment network"
+msgstr "Elige una red de pago"
 
 #~ msgid "BoltUtil API origin"
 #~ msgstr "Origen de la API BoltUtil"

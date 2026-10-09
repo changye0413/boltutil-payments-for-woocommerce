@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: tr_TR\n"
 "Language: tr_TR\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: boltutil-woocommerce.php:45
@@ -51,8 +51,8 @@ msgid ""
 "You will be redirected to BoltUtil Checkout. Pay the exact amount to the "
 "address shown there; the order updates after on-chain confirmation."
 msgstr ""
-"BoltUtil Checkout'a yönlendirileceksiniz. Tam tutarı orada gösterilen adrese"
-" ödeyin; Sipariş zincir içi onaydan sonra güncellenir."
+"BoltUtil Checkout'a yönlendirileceksiniz. Tam tutarı orada gösterilen "
+"adrese ödeyin; Sipariş zincir içi onaydan sonra güncellenir."
 
 #: includes/class-boltutil-wc-blocks.php:50
 #: includes/class-boltutil-wc-gateway.php:274
@@ -98,8 +98,7 @@ msgstr "BoltUtil API anahtarı (bt_live_)"
 
 #: includes/class-boltutil-wc-gateway.php:45
 msgid "Use the existing LIVE API key from your BoltUtil merchant dashboard."
-msgstr ""
-"BoltUtil satıcı kontrol panelinizdeki mevcut LIVE API anahtarını kullanın."
+msgstr "BoltUtil satıcı kontrol panelinizdeki mevcut LIVE API anahtarını kullanın."
 
 #: includes/class-boltutil-wc-gateway.php:46
 msgid "BoltUtil Webhook secret (whsec_)"
@@ -107,8 +106,8 @@ msgstr "BoltUtil Web kancası sırrı (whsec_)"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and"
-" verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests "
+"and verifies payment callbacks."
 msgstr ""
 "Bu satıcının etkin Web Kancasına ilişkin sırrı kullanın. API isteklerini "
 "imzalar ve ödeme geri aramalarını doğrular."
@@ -154,8 +153,8 @@ msgid ""
 "Complete these steps in order. Never enter a wallet private key or recovery "
 "phrase in this plugin."
 msgstr ""
-"Bu adımları sırasıyla tamamlayın. Bu eklentiye asla bir cüzdan özel anahtarı"
-" veya kurtarma ifadesi girmeyin."
+"Bu adımları sırasıyla tamamlayın. Bu eklentiye asla bir cüzdan özel "
+"anahtarı veya kurtarma ifadesi girmeyin."
 
 #: includes/class-boltutil-wc-gateway.php:138
 msgid "Create a LIVE API key"
@@ -163,8 +162,8 @@ msgstr "LIVE API anahtarı oluşturun"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
-" page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API "
+"Keys page. It identifies your merchant account."
 msgstr ""
 "BoltUtil'da oturum açın ve API Anahtarları sayfasında bt_live_ ile başlayan "
 "bir anahtar oluşturun. Satıcı hesabınızı tanımlar."
@@ -183,8 +182,8 @@ msgid ""
 "Checkout shows networks allowed here that also have active BoltUtil wallets."
 msgstr ""
 "Kabul ettiğiniz her ağ için bir USDT alma adresi ekleyin ve etkinleştirin. "
-"Ödeme, burada izin verilen ve aynı zamanda aktif BoltUtil cüzdanlarına sahip"
-" olan ağları gösterir."
+"Ödeme, burada izin verilen ve aynı zamanda aktif BoltUtil cüzdanlarına "
+"sahip olan ağları gösterir."
 
 #: includes/class-boltutil-wc-gateway.php:143
 msgid "Open Wallets"
@@ -299,8 +298,8 @@ msgstr "Müşteri sipariş verir"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
-" to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then "
+"goes to BoltUtil Checkout."
 msgstr ""
 "USD siparişi için müşteri BoltUtil USDT'yu ve bir ağı seçip BoltUtil Ödeme "
 "sayfasına gider."
@@ -311,11 +310,11 @@ msgstr "Ödeme sayfasında gösterilen tutarı ödeyin"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
-" expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, "
+"and expiry. The checkout amount is authoritative."
 msgstr ""
-"BoltUtil ödeme sayfası kesin USDT tutarını, alıcı adresini, QR kodunu ve son"
-" ödeme zamanını gösterir. Ödeme sayfasında gösterilen tutarı esas alın."
+"BoltUtil ödeme sayfası kesin USDT tutarını, alıcı adresini, QR kodunu ve "
+"son ödeme zamanını gösterir. Ödeme sayfasında gösterilen tutarı esas alın."
 
 #: includes/class-boltutil-wc-gateway.php:173
 msgid "Automatic update after confirmation"
@@ -354,8 +353,8 @@ msgid ""
 "live exchange rate. On-chain transfers are real payments, so check order "
 "creation and redirect without sending funds first."
 msgstr ""
-"Yalnızca para birimi USD olan mağazalar için TRC20, ERC20, BEP20, Polygon ve"
-" Solana ağlarında USDT ödemeleri desteklenir. Sayısal USD toplamı USDT "
+"Yalnızca para birimi USD olan mağazalar için TRC20, ERC20, BEP20, Polygon "
+"ve Solana ağlarında USDT ödemeleri desteklenir. Sayısal USD toplamı USDT "
 "faturasının temelidir; bu sürüm canlı döviz kurunu sabitlemez. Zincir "
 "üzerindeki transferler gerçek ödemelerdir; önce para göndermeden sipariş "
 "oluşturma ve yönlendirmeyi test edin."
@@ -366,8 +365,8 @@ msgstr "BoltUtil API belgelerini okuyun ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved"
-" secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. "
+"Saved secrets appear only as masked hints."
 msgstr ""
 "Satıcı kimlik bilgilerini girin, desteklenen ağları seçin ve kaydedin. "
 "Kayıtlı gizli anahtarlar yalnızca maskelenmiş olarak gösterilir."
@@ -459,8 +458,7 @@ msgstr ""
 "etkinleştirin. Ödeme, burada izin verilen ve aynı zamanda aktif BoltUtil "
 "cüzdanlarına sahip olan ağları gösterir."
 
-msgid ""
-"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgid "The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
 msgstr ""
 "USD siparişi için müşteri BoltUtil USDT / USDC'yu ve bir ağı seçip BoltUtil "
 "Ödeme sayfasına gider."
@@ -469,13 +467,12 @@ msgid ""
 "Hosted Checkout shows the exact amount, asset, network, address, QR code, "
 "and expiry."
 msgstr ""
-"BoltUtil ödeme sayfası kesin USDT / USDC tutarını, alıcı adresini, QR kodunu"
-" ve son ödeme zamanını gösterir. Ödeme sayfasında gösterilen tutarı esas "
-"alın."
+"BoltUtil ödeme sayfası kesin USDT / USDC tutarını, alıcı adresini, QR "
+"kodunu ve son ödeme zamanını gösterir. Ödeme sayfasında gösterilen tutarı "
+"esas alın."
 
 msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
-msgstr ""
-"Bir ağ seçin ve ardından BoltUtil Checkout'ta USDT / USDC ödemesini yapın."
+msgstr "Bir ağ seçin ve ardından BoltUtil Checkout'ta USDT / USDC ödemesini yapın."
 
 msgid "Pay with BoltUtil"
 msgstr "BoltUtil ile öde"
@@ -506,6 +503,14 @@ msgstr ""
 "USD toplamı stablecoin faturasının sayısal temelidir; anlık döviz kuru "
 "sabitlenmez. Ödeme sayfasında gösterilen varlık, ağ ve tam tutarı kullanın."
 
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a stablecoin"
+msgstr "Bir sabit coin seçin"
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a payment network"
+msgstr "Bir ödeme ağı seçin"
+
 #~ msgid "BoltUtil API origin"
 #~ msgstr "BoltUtil API kaynağı"
 
@@ -513,5 +518,5 @@ msgstr ""
 #~ "LIVE payments only. Requires an enabled BoltUtil Payment API and active "
 #~ "settlement wallets."
 #~ msgstr ""
-#~ "Yalnızca CANLI ödemeler. Etkinleştirilmiş bir BoltUtil Ödeme API'si ve etkin"
-#~ " ödeme cüzdanları gerektirir."
+#~ "Yalnızca CANLI ödemeler. Etkinleştirilmiş bir BoltUtil Ödeme API'si ve "
+#~ "etkin ödeme cüzdanları gerektirir."

@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Chinese (Simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -106,8 +106,8 @@ msgstr "BoltUtil Webhook 密钥（whsec_）"
 
 #: includes/class-boltutil-wc-gateway.php:47
 msgid ""
-"Use the secret for this merchant's active Webhook. It signs API requests and"
-" verifies payment callbacks."
+"Use the secret for this merchant's active Webhook. It signs API requests "
+"and verifies payment callbacks."
 msgstr "填写同一商户已启用 Webhook 的密钥。它用于签名 API 请求及验证支付回调。"
 
 #: includes/class-boltutil-wc-gateway.php:48
@@ -156,8 +156,8 @@ msgstr "创建 LIVE API Key"
 
 #: includes/class-boltutil-wc-gateway.php:139
 msgid ""
-"Sign in to BoltUtil and create a key beginning with bt_live_ on the API Keys"
-" page. It identifies your merchant account."
+"Sign in to BoltUtil and create a key beginning with bt_live_ on the API "
+"Keys page. It identifies your merchant account."
 msgstr "登录 BoltUtil，在「API 密钥」页面生成 bt_live_ 开头的密钥。它用于识别这家商户。"
 
 #: includes/class-boltutil-wc-gateway.php:140
@@ -255,8 +255,7 @@ msgid ""
 "This counts BoltUtil orders created today, not completed payments. New "
 "payment orders are rejected after the limit is reached. Review plans and "
 "upgrade options in BoltUtil."
-msgstr ""
-"这计算的是 BoltUtil 当日创建的订单数，不是成功付款数。达到上限后，新支付订单会被拒绝；请在 BoltUtil 查看套餐与升级选项。"
+msgstr "这计算的是 BoltUtil 当日创建的订单数，不是成功付款数。达到上限后，新支付订单会被拒绝；请在 BoltUtil 查看套餐与升级选项。"
 
 #: includes/class-boltutil-wc-gateway.php:161
 msgid "View plans ↗"
@@ -278,8 +277,8 @@ msgstr "顾客下单"
 
 #: includes/class-boltutil-wc-gateway.php:171
 msgid ""
-"For a USD order, the customer chooses BoltUtil USDT and a network, then goes"
-" to BoltUtil Checkout."
+"For a USD order, the customer chooses BoltUtil USDT and a network, then "
+"goes to BoltUtil Checkout."
 msgstr "顾客在 USD 订单中选择 BoltUtil USDT 及网络，随后跳转到 BoltUtil 收银台。"
 
 #: includes/class-boltutil-wc-gateway.php:172
@@ -288,8 +287,8 @@ msgstr "按收银台金额付款"
 
 #: includes/class-boltutil-wc-gateway.php:172
 msgid ""
-"Hosted Checkout shows the exact USDT amount, receiving address, QR code, and"
-" expiry. The checkout amount is authoritative."
+"Hosted Checkout shows the exact USDT amount, receiving address, QR code, "
+"and expiry. The checkout amount is authoritative."
 msgstr "收银台显示该笔订单的准确 USDT 金额、收款地址、二维码和到期时间。不要用 WooCommerce 订单金额代替收银台实际应付金额。"
 
 #: includes/class-boltutil-wc-gateway.php:173
@@ -310,8 +309,7 @@ msgstr "需要时手动同步"
 msgid ""
 "If an order remains on hold, choose Recheck BoltUtil payment under Order "
 "actions in WooCommerce. Scheduled checks also run automatically."
-msgstr ""
-"若订单长时间处于待付款状态，可在 WooCommerce 订单详情的「订单操作」中选择「同步 BoltUtil 支付状态」。插件也会定时自动查询。"
+msgstr "若订单长时间处于待付款状态，可在 WooCommerce 订单详情的「订单操作」中选择「同步 BoltUtil 支付状态」。插件也会定时自动查询。"
 
 #: includes/class-boltutil-wc-gateway.php:179
 msgid "Current scope"
@@ -333,8 +331,8 @@ msgstr "查看 BoltUtil API 文档 ↗"
 
 #: includes/class-boltutil-wc-gateway.php:191
 msgid ""
-"Enter your merchant credentials, choose supported networks, then save. Saved"
-" secrets appear only as masked hints."
+"Enter your merchant credentials, choose supported networks, then save. "
+"Saved secrets appear only as masked hints."
 msgstr "填写商户凭据、选择可用网络，然后保存更改。已保存的密钥仅显示脱敏摘要。"
 
 #: includes/class-boltutil-wc-gateway.php:204
@@ -419,15 +417,13 @@ msgstr "应付金额（USDT / USDC）"
 msgid "Add and activate a receiving wallet for each accepted network."
 msgstr "在「钱包」中为要接收的网络添加并启用 USDT / USDC 收款地址。结账时只显示插件允许且 BoltUtil 已启用钱包的网络。"
 
-msgid ""
-"The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
+msgid "The customer chooses a stablecoin and network, then opens BoltUtil Checkout."
 msgstr "顾客在 USD 订单中选择 BoltUtil USDT / USDC 及网络，随后跳转到 BoltUtil 收银台。"
 
 msgid ""
 "Hosted Checkout shows the exact amount, asset, network, address, QR code, "
 "and expiry."
-msgstr ""
-"收银台显示该笔订单的准确 USDT / USDC 金额、收款地址、二维码和到期时间。不要用 WooCommerce 订单金额代替收银台实际应付金额。"
+msgstr "收银台显示该笔订单的准确 USDT / USDC 金额、收款地址、二维码和到期时间。不要用 WooCommerce 订单金额代替收银台实际应付金额。"
 
 msgid "Choose a stablecoin and network, then pay at BoltUtil Checkout."
 msgstr "选择网络后，前往 BoltUtil 收银台支付 USDT / USDC。"
@@ -456,6 +452,14 @@ msgid ""
 "USD totals are the numeric stablecoin invoice basis; no live exchange rate "
 "is locked. Always pay the exact asset, network and amount shown at checkout."
 msgstr "仅支持 USD 店铺。USD 数字金额作为稳定币计价基础，不锁定实时汇率。请按收银台显示的币种、网络和准确金额付款。"
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a stablecoin"
+msgstr "选择稳定币"
+
+#: includes/class-boltutil-wc-gateway.php includes/class-boltutil-wc-blocks.php
+msgid "Choose a payment network"
+msgstr "选择付款网络"
 
 #~ msgid "BoltUtil API origin"
 #~ msgstr "BoltUtil API 地址"
