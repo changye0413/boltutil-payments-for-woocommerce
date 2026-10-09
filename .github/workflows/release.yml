@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       remove_superseded_releases:
-        description: 'After verifying v0.5.2, delete the v0.4.21 and v0.4.18 releases and ZIP assets (keep Git tags).'
+        description: 'After verifying v0.6.0, delete the superseded v0.5.2 release and ZIP assets (keep Git tags).'
         type: boolean
         required: false
         default: false
@@ -36,6 +36,7 @@ jobs:
           php tests/webhook-fixtures.php
           php tests/reconcile-schedule-fixtures.php
           php tests/multi-asset-fixtures.php
+          node tests/checkout-routes.cjs
       - name: Check version and package
         id: package
         shell: bash
@@ -89,8 +90,8 @@ jobs:
         run: |
           set -euo pipefail
           # One-time cleanup for this upgrade, only after the new ZIP was verified.
-          test "$VERSION" = '0.5.2'
-          for tag in v0.4.21 v0.4.18; do
+          test "$VERSION" = '0.6.0'
+          for tag in v0.5.2; do
             if gh release view "$tag" >/dev/null 2>&1; then
               gh release delete "$tag" --yes
             fi
