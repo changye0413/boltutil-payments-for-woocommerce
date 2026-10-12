@@ -18,7 +18,7 @@ Tải ZIP cài đặt v0.6.1 và tải lên trang plugin WordPress. Đặt tiề
 
 WordPress quyết định ngôn ngữ giao diện. Nhãn do người bán tự viết không được dịch tự động. Có hạn mức miễn phí mỗi ngày; gói đăng ký không giới hạn số đơn mỗi ngày. Xem quyền lợi và phí hiện hành trên website. Trả đúng số tiền ở checkout; phí mạng được tính riêng. Quay lại cửa hàng không chứng minh đã trả tiền: plugin kiểm tra chữ ký và trạng thái trước khi hoàn tất đơn.
 
-Xem demo miễn phí; mua sản phẩm nhỏ sử dụng tiền thật. Đây là bản phát hành GitHub sớm. Kiểm thử thanh toán thật và callback, cùng phê duyệt WordPress.org, vẫn chưa hoàn tất.
+Xem demo miễn phí; mua sản phẩm nhỏ sử dụng tiền thật. Plugin có trên GitHub và đã được gửi đến WordPress.org để xét duyệt.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
