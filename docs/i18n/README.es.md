@@ -18,7 +18,7 @@ Descarga el ZIP instalable de v0.6.1 y súbelo desde Plugins de WordPress. Confi
 
 WordPress selecciona el idioma de la interfaz. Las etiquetas escritas por el comerciante no se traducen automáticamente. Hay una cuota gratuita diaria y los planes de suscripción no tienen límite diario de pedidos; consulta las condiciones actuales en BoltUtil. Paga el importe exacto del checkout; las comisiones de red son independientes. Volver a la tienda no confirma el pago: el plugin verifica la firma y el estado antes de completar el pedido.
 
-La demo puede explorarse gratis; las compras pequeñas usan fondos reales. Es una versión temprana de GitHub. La aceptación de pagos reales y callbacks, y la aprobación de WordPress.org, siguen pendientes.
+La demo puede explorarse gratis; las compras pequeñas usan fondos reales. El plugin está disponible en GitHub y se ha enviado a WordPress.org para su revisión.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
