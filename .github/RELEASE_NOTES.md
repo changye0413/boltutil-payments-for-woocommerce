@@ -19,7 +19,7 @@ Install `boltutil-payments-for-woocommerce-0.6.1.zip` using WordPress Plugins �
 
 Requirements: WordPress 7.0+, PHP 7.4+, WooCommerce 11.1+, HTTPS, USD store currency and a configured BoltUtil merchant account. Base confirmation depends on L1 finality; exact completion time is not guaranteed. Network fees are separate.
 
-This remains an early release. Automated and synthetic callback tests pass, and the public demo checkout has been inspected. Real blockchain payment → production Webhook → WooCommerce fulfillment acceptance remains pending. WordPress.org approval is not claimed.
+The plugin is available on GitHub and installed on the public demo store. It has been submitted to WordPress.org and is awaiting directory review.
 
 ## 简体中文
 
@@ -27,4 +27,4 @@ v0.6.1 支持六条链、十一种 USDT／USDC 网络组合，包括 Base 原生
 
 本次更新包含：免费额度与订阅文案、真实演示截图、中英文横幅、十一种翻译介绍、运行翻译更新、图标许可整理、畸形回调事件 ID 处理及更多付款回归测试。原有订单、密钥和付款核验规则保持兼容。
 
-演示店：https://shop-test.boltutil.com/ 。浏览免费，购买使用真实资金。下载 ZIP 后通过 WordPress 插件上传入口安装，使用 `SHA256SUMS.txt` 校验。当前为早期版本；真实付款回调闭环验收及 WordPress.org 审核尚未完成。
+演示店：https://shop-test.boltutil.com/ 。浏览免费，购买使用真实资金。下载 ZIP 后通过 WordPress 插件上传入口安装，使用 `SHA256SUMS.txt` 校验。插件已提交 WordPress.org，正在等待目录审核。
