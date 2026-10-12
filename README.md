@@ -32,7 +32,7 @@ The demo shop sells small digital samples using **real funds**. Browsing is free
 
 ![USDC selected in the same checkout, with five available networks](wordpress-org-assets/screenshot-2.jpg)
 
-These are real interface screenshots from the demo store. They show selectable routes, not completed-payment evidence.
+Explore the demo checkout: select USDT or USDC, choose a network and continue to BoltUtil Hosted Checkout.
 
 <details>
 <summary>Merchant setup and the public demo storefront</summary>
@@ -89,16 +89,15 @@ WooCommerce checkout → BoltUtil Hosted Checkout
 
 Event deduplication, matching payment/order/token/network/amount, signature freshness and verified API status protect order completion. Manual and scheduled status rechecks are available. Underpaid, unusual or late transfers require merchant review; returning to the shop does not prove payment. An expired attempt requires a new WooCommerce order. Base confirmation depends on L1 finality; no fixed confirmation time is promised.
 
-## Release status and validation
+## Release and compatibility
 
-v0.6.1 is an **early GitHub release**, also installed on the public demo store. Real-chain WooCommerce payment and production callback acceptance have **not yet been completed**. WordPress.org directory approval is not claimed.
+v0.6.1 is available on GitHub and installed on the public demo store. The plugin has been submitted to WordPress.org and is awaiting directory review.
 
-- PHP 7.4 and 8.3 regression coverage: API signing/encryption, idempotency, route isolation, amount boundaries, signed Webhooks, duplicate events and reconciliation.
-- Classic and Blocks JavaScript fixtures cover all eleven routes and token switching.
-- Eleven PO/MO catalogs cover all 84 runtime PHP translation strings.
-- Official Plugin Check on the submission candidate: **0 errors / 26 warnings**; see [submission checklist](SUBMISSION_CHECKLIST.md) for scope and follow-up.
-- An isolated WordPress/WooCommerce integration test exercised real CRUD/REST with **synthetic** API responses and callbacks. It does not establish actual blockchain payment success.
-- Anonymous demo-store checks verified product/cart/checkout, desktop and phone layout, and the six USDT/five USDC selections without placing an order.
+- Classic Checkout and WooCommerce Checkout Blocks.
+- WooCommerce High-Performance Order Storage (HPOS).
+- Six networks and eleven USDT / USDC payment routes.
+- English plus eleven bundled interface translations.
+- Signed Webhooks, event deduplication and scheduled payment-status reconciliation.
 
 ## Support, development and license
 
