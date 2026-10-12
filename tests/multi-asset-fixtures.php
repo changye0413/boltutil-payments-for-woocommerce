@@ -5,21 +5,48 @@ define('MINUTE_IN_SECONDS', 60);
 class WC_Payment_Gateway {
     public $settings = array();
     public function get_option($name, $default) { return $this->settings[$name] ?? $default; }
+    public function get_return_url($order) { return 'https://store.example/thanks'; }
 }
 class BoltUtil_WC_API {
     public function __construct($settings) {}
     public function capabilities() { return $GLOBALS['capabilities']; }
+    public function create_payment($payload,$key) {
+        $GLOBALS['creates'][]=array($payload,$key);
+        if (!empty($GLOBALS['create_timeout'])) throw new RuntimeException('Synthetic timeout');
+        return $GLOBALS['payment'];
+    }
+    public function get_payment($id) { $GLOBALS['reads'][]=$id;return $GLOBALS['payment']; }
+    public function find_payment($external) { $GLOBALS['finds'][]=$external;return $GLOBALS['payment']; }
 }
 function get_transient($key) { return false; }
 function set_transient($key, $value, $seconds) {}
 function wp_json_encode($value) { return json_encode($value); }
 function sanitize_text_field($value) { return $value; }
 function wp_unslash($value) { return $value; }
+function home_url($path) { return 'https://store.example/'; }
+function wp_parse_url($url,$part) { return parse_url($url,$part); }
+function wp_http_validate_url($url) { return $url; }
+function wc_get_order($id) { return $GLOBALS['checkout_order']; }
+function wc_add_notice($message,$type) { $GLOBALS['notices'][]=$message; }
+function boltutil_wc_text($chinese,$english) { return $english; }
+function __($value,$domain) { return $value; }
 require __DIR__ . '/../includes/class-boltutil-wc-gateway.php';
 class Asset_Order {
     public $meta = array();
     public function get_meta($key, $single) { return $this->meta[$key] ?? ''; }
     public function get_total($context) { return '1.00'; }
+}
+class Checkout_Order extends Asset_Order {
+    public $currency='USD',$status='pending',$paid=false,$total='1.00';
+    public function get_id() { return 42; }
+    public function get_currency() { return $this->currency; }
+    public function get_total($context) { return $this->total; }
+    public function get_payment_method() { return 'boltutil_usdt'; }
+    public function is_paid() { return $this->paid; }
+    public function update_meta_data($key,$value) { $this->meta[$key]=$value; }
+    public function save() {}
+    public function has_status($status) { return $this->status===$status; }
+    public function update_status($status,$note) { $this->status=$status; }
 }
 function check($condition, $name) {
     if (!$condition) throw new RuntimeException($name);
@@ -75,3 +102,36 @@ $_POST=array('boltutil_route'=>'USDT:BASE','boltutil_token'=>'USDC');
 check(null===$select->invoke($gateway),'Mismatched submitted coin and route are rejected');
 $_POST=array('boltutil_route'=>'USDC:BASE','boltutil_token'=>'USDC');
 check('USDC'===$select->invoke($gateway)['token'],'Consistent coin and network selection accepted');
+
+// Exercise the actual create/redirect path for every route. Network calls are intercepted.
+$GLOBALS['creates']=array();$GLOBALS['reads']=array();$GLOBALS['finds']=array();
+foreach ($gateway->available_routes() as $route) {
+    $order=new Checkout_Order();$GLOBALS['checkout_order']=$order;
+    $_POST=array('boltutil_route'=>$route['token'].':'.$route['network'],'boltutil_token'=>$route['token']);
+    $external=BoltUtil_WC_Gateway::external_id($order);
+    $GLOBALS['payment']=array('paymentId'=>str_repeat('a',32),'externalOrderId'=>$external,'network'=>$route['network'],
+        'token'=>$route['token'],'invoiceCurrency'=>'USD','invoiceAmount'=>'1.00','amount'=>'1.001',
+        'status'=>'PENDING','checkoutUrl'=>'https://boltutil.com/en/checkout/'.str_repeat('a',32));
+    $result=$gateway->process_payment(42);
+    check('success'===$result['result'] && 'on-hold'===$order->status && !$order->paid,'Create and redirect without marking paid: '.$route['token'].':'.$route['network']);
+    check($route['token']===$order->meta['_boltutil_token'] && $route['network']===$order->meta['_boltutil_network'] && '1.001'===$order->meta['_boltutil_amount'],'Exact returned quote and selected route saved');
+    list($payload,$key)=end($GLOBALS['creates']);
+    check('1.00'===$payload['amount'] && $external===$payload['externalOrderId'] && $external===$key,'Invoice and idempotency key preserved');
+    $before=count($GLOBALS['creates']);$gateway->process_payment(42);
+    check($before===count($GLOBALS['creates']),'Retry uses saved payment instead of creating another');
+}
+$order=new Checkout_Order();$GLOBALS['checkout_order']=$order;$GLOBALS['create_timeout']=true;
+$result=$gateway->process_payment(42);$GLOBALS['create_timeout']=false;
+check('success'===$result['result'] && end($GLOBALS['finds'])===BoltUtil_WC_Gateway::external_id($order),'Timed-out create recovers only by the same external ID');
+$order=new Checkout_Order();$order->currency='EUR';$GLOBALS['checkout_order']=$order;$before=count($GLOBALS['creates']);
+check('failure'===$gateway->process_payment(42)['result'] && $before===count($GLOBALS['creates']),'Non-USD orders rejected before creating payment');
+foreach(array('0.99','0.01','1e0','1.0000001') as $total){
+    $order=new Checkout_Order();$order->total=$total;$GLOBALS['checkout_order']=$order;$before=count($GLOBALS['creates']);
+    check('failure'===$gateway->process_payment(42)['result'] && $before===count($GLOBALS['creates']),'Out-of-range invoice rejected: '.$total);
+}
+$order=new Checkout_Order();$GLOBALS['checkout_order']=$order;$GLOBALS['payment']['token']='UNKNOWN';
+check('failure'===$gateway->process_payment(42)['result'] && !$order->paid && empty($order->meta),'Mismatched service quote cannot redirect or bind an order');
+$GLOBALS['payment']['token']='USDC';$GLOBALS['payment']['status']='COMPLETED';
+check('failure'===$gateway->process_payment(42)['result'] && !$order->paid,'Unlinked completed payment cannot mark checkout paid');
+check(BoltUtil_WC_Gateway::decimal_equal('1.000001','01.000001') && !BoltUtil_WC_Gateway::decimal_equal('1.000001','1.000002'),'Decimal comparison keeps smallest supported difference');
+check(!BoltUtil_WC_Gateway::decimal_equal('1e0','1') && !BoltUtil_WC_Gateway::decimal_equal(array('1'),'1'),'Malformed monetary values rejected');
