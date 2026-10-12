@@ -16,10 +16,13 @@ for file in boltutil-woocommerce.php includes/*.php tests/*.php; do php -l "$fil
 php tests/webhook-fixtures.php
 php tests/reconcile-schedule-fixtures.php
 php tests/multi-asset-fixtures.php
+php tests/api-fixtures.php
+node tests/checkout-routes.cjs
 
 # Requires Node.js and gettext.
 for file in assets/*.js; do node --check "$file"; done
 for file in languages/*.po; do msgfmt --check -o /dev/null "$file"; done
+python3 tools/check-distribution.py
 bash tools/build-release.sh
 ```
 

@@ -3,8 +3,8 @@
  * Plugin Name: BoltUtil Payments for WooCommerce
  * Plugin URI: https://boltutil.com/woocommerce
  * Description: Accept USDT and USDC through BoltUtil hosted checkout on supported networks.
- * Version: 0.6.0
- * Requires at least: 6.5
+ * Version: 0.6.1
+ * Requires at least: 7.0
  * Requires Plugins: woocommerce
  * Requires PHP: 7.4
  * WC requires at least: 11.1
@@ -19,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BOLTUTIL_WC_VERSION', '0.6.0' );
+define( 'BOLTUTIL_WC_VERSION', '0.6.1' );
 define( 'BOLTUTIL_WC_FILE', __FILE__ );
 define( 'BOLTUTIL_WC_PATH', plugin_dir_path( __FILE__ ) );
 
