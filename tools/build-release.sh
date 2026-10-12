@@ -18,6 +18,7 @@ if [[ -z "$version" || "$version" != "$stable" ]]; then
     printf 'Plugin version and readme Stable tag must match.\n' >&2
     exit 1
 fi
+python3 "$plugin_dir/tools/check-distribution.py"
 
 release_dir="$(mktemp -d "${TMPDIR:-/tmp}/boltutil-wc-release.XXXXXX")"
 trap 'rm -rf "$release_dir"' EXIT
@@ -29,7 +30,7 @@ cp -R "$plugin_dir/includes" "$plugin_dir/assets" "$plugin_dir/languages" "$rele
 # runtime assets and Plugin Check rejects their trailing-tilde filenames.
 find "$release_dir/$release_slug/languages" -type f -name '*~' -delete
 
-# Asset provenance and official brand usage references are recorded in ASSETS-LICENSE.txt.
+# GPL/CC0 asset provenance is recorded in ASSETS-LICENSE.txt and sources.json.
 if find "$release_dir/$release_slug/assets" -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \) | grep -q .; then
     printf 'Unlicensed raster asset found in release package.\n' >&2
     exit 1
