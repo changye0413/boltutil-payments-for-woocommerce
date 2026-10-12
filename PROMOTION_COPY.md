@@ -12,7 +12,7 @@ Accept USDT and USDC in WooCommerce with BoltUtil. Customers choose a stablecoin
 
 Plugin v0.6.1 supports six networks and eleven token/network combinations, including native USDC and Bridged USDT on Base. It includes twelve interface languages and replaces fixed daily quota wording with the current daily allowance and subscription terms on the BoltUtil website.
 
-Try the public demo: https://shop-test.boltutil.com/ . Browsing is free; small digital purchases use real funds. Download: https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1 . This is an early release; real payment/callback acceptance and WordPress.org approval remain pending.
+Try the public demo: https://shop-test.boltutil.com/ . Browsing is free; small digital purchases use real funds. Download: https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1 . The plugin is available on GitHub and has been submitted to WordPress.org for directory review.
 
 ## 中文公告
 
@@ -20,7 +20,7 @@ Try the public demo: https://shop-test.boltutil.com/ . Browsing is free; small d
 
 插件 v0.6.1 支持六条链、十一种币种与网络组合，包含 Base 原生 USDC 和桥接 USDT，内置十二种界面语言。免费额度与订阅权益以官网最新说明为准，不再固定宣传每日订单数量。
 
-公开演示：https://shop-test.boltutil.com/ 。浏览免费，小额数字商品购买使用真实资金。下载：https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1 。当前为早期版本，真实付款回调闭环验收与 WordPress.org 审核仍待完成。
+公开演示：https://shop-test.boltutil.com/ 。浏览免费，小额数字商品购买使用真实资金。下载：https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1 。插件已提交 WordPress.org，正在等待目录审核。
 
 ## Publishing rules
 
