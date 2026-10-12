@@ -23,7 +23,8 @@ final class BoltUtil_WC_Webhook {
             return new WP_Error( 'boltutil_invalid_webhook', 'Invalid webhook headers.', array( 'status' => 401 ) );
         }
         $event = json_decode( $raw, true );
-        if ( ! is_array( $event ) || ! preg_match( '/^evt_[a-f0-9]{32}$/', $event['eventId'] ?? '' ) ||
+        if ( ! is_array( $event ) || ! is_string( $event['eventId'] ?? null ) ||
+            ! preg_match( '/^evt_[a-f0-9]{32}$/', $event['eventId'] ) ||
             ! in_array( $event['type'] ?? '', array( 'payment.completed', 'payment.expired', 'payment.underpaid', 'payment.overpaid' ), true ) ||
             ! isset( $event['data'] ) || ! is_array( $event['data'] ) ) {
             return new WP_Error( 'boltutil_invalid_webhook', 'Invalid webhook event.', array( 'status' => 400 ) );

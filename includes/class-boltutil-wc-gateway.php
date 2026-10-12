@@ -168,9 +168,9 @@ class BoltUtil_WC_Gateway extends WC_Payment_Gateway {
             $this->guide_status( $api_key_saved ? $this->guide_text( 'API Key 已保存', __( 'API key saved', 'boltutil-payments-for-woocommerce' ) ) : $this->guide_text( 'API Key 未保存', __( 'API key missing', 'boltutil-payments-for-woocommerce' ) ), $api_key_saved ) .
             $this->guide_status( $webhook_saved ? $this->guide_text( 'Webhook 密钥已保存', __( 'Webhook secret saved', 'boltutil-payments-for-woocommerce' ) ) : $this->guide_text( 'Webhook 密钥未保存', __( 'Webhook secret missing', 'boltutil-payments-for-woocommerce' ) ), $webhook_saved ) .
             $this->guide_status( $enabled ? $this->guide_text( '支付方式已启用', __( 'Gateway enabled', 'boltutil-payments-for-woocommerce' ) ) : $this->guide_text( '支付方式未启用', __( 'Gateway disabled', 'boltutil-payments-for-woocommerce' ) ), $enabled ) . '</div>' .
-            '<div class="boltutil-guide-quota"><strong>' . esc_html( $this->guide_text( '免费套餐：每日最多创建 30 个订单', __( 'Free plan: up to 30 orders created per day', 'boltutil-payments-for-woocommerce' ) ) ) . '</strong><p>' .
-            esc_html( $this->guide_text( '这计算的是 BoltUtil 当日创建的订单数，不是成功付款数。达到上限后，新支付订单会被拒绝；请在 BoltUtil 查看套餐与升级选项。',
-                __( 'This counts BoltUtil orders created today, not completed payments. New payment orders are rejected after the limit is reached. Review plans and upgrade options in BoltUtil.', 'boltutil-payments-for-woocommerce' ) ) ) .
+            '<div class="boltutil-guide-quota"><strong>' . esc_html( $this->guide_text( '每日免费额度 · 订阅不限每日订单数', __( 'Daily free allowance · Unlimited daily orders with a subscription', 'boltutil-payments-for-woocommerce' ) ) ) . '</strong><p>' .
+            esc_html( $this->guide_text( '每日提供免费订单额度，订阅套餐不限每日订单数。具体额度、套餐权益及费用以 BoltUtil 官网最新说明为准。',
+                __( 'A free order allowance is available each day. Subscription plans have no daily order limit. See the BoltUtil website for current allowances, plan benefits and fees.', 'boltutil-payments-for-woocommerce' ) ) ) .
             ' <a href="' . esc_url( 'https://boltutil.com/pricing' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $this->guide_text( '查看套餐 ↗', __( 'View plans ↗', 'boltutil-payments-for-woocommerce' ) ) ) . '</a></p></div>' .
             '<p class="boltutil-guide-small">' . esc_html( $this->guide_text( '状态只检查本店配置。钱包是否可用会在结账时由 BoltUtil API 核对。', __( 'These badges check local settings only. BoltUtil checks wallet availability during checkout.', 'boltutil-payments-for-woocommerce' ) ) ) . '</p>' .
             '</div></div></td></tr>';
