@@ -28,6 +28,7 @@ jobs:
           php tests/webhook-fixtures.php
           php tests/reconcile-schedule-fixtures.php
           php tests/multi-asset-fixtures.php
+          php tests/api-fixtures.php
 
   package:
     runs-on: ubuntu-latest
