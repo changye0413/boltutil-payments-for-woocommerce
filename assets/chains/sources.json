@@ -1,0 +1,65 @@
+[
+  {
+    "file": "assets/boltutil-official-mark.svg",
+    "license": "GPL-2.0-or-later",
+    "source": "BoltUtil original artwork",
+    "sha256": "f6faf43e696e0505406257828c6adb19eb5c670373812cd29ea8736b594f7073",
+    "modified": false
+  },
+  {
+    "file": "assets/chains/base.svg",
+    "license": "GPL-2.0-or-later",
+    "source": "BoltUtil original artwork",
+    "sha256": "0131a03379781b08cf291118b0a04ca5e0e2491f1f52fc7470cfd2b31475bbe8",
+    "modified": false
+  },
+  {
+    "file": "assets/chains/bnb-chain.svg",
+    "license": "CC0-1.0",
+    "source": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color/bnb.svg",
+    "sha256": "ce2befc91baa544c13b63d6c02a12cfcf84702a5ec29b650e358a8b4a96c4ce8",
+    "modified": false
+  },
+  {
+    "file": "assets/chains/ethereum.svg",
+    "license": "CC0-1.0",
+    "source": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color/eth.svg",
+    "sha256": "901a518d807faaeb38661eed7dab886a48aa23972d98d61348204297f7249d06",
+    "modified": true
+  },
+  {
+    "file": "assets/chains/polygon.svg",
+    "license": "CC0-1.0",
+    "source": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color/matic.svg",
+    "sha256": "479d03ee43daed6989b6debeff4ca7710411366fec06d9d7641f44710ea80117",
+    "modified": false
+  },
+  {
+    "file": "assets/chains/solana.svg",
+    "license": "CC0-1.0",
+    "source": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color/sol.svg",
+    "sha256": "a212001af60356c73d4679bb398a447fed7fd45461be531629578fd69fcf5ffa",
+    "modified": true
+  },
+  {
+    "file": "assets/chains/tron.svg",
+    "license": "CC0-1.0",
+    "source": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color/trx.svg",
+    "sha256": "5b6b648320b6e99b8e60d447271f753dc9989183e3a07f0300ee44d0743130f0",
+    "modified": false
+  },
+  {
+    "file": "assets/tokens/usdc.svg",
+    "license": "CC0-1.0",
+    "source": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color/usdc.svg",
+    "sha256": "7281e8cadfe9abc14e98b15b05cdc24cc24d68533a51e746141d4d98f2ca2bc8",
+    "modified": false
+  },
+  {
+    "file": "assets/tokens/usdt.svg",
+    "license": "CC0-1.0",
+    "source": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/1a63530be6e374711a8554f31b17e4cb92c25fa5/svg/color/usdt.svg",
+    "sha256": "cddba428a029844888b59bae59c6400ee684b0d51dfc490a4374eef6bb63ea16",
+    "modified": false
+  }
+]
