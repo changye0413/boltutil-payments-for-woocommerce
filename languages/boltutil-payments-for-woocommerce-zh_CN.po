@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: BoltUtil Payments for WooCommerce 0.4.11\n"
+"Project-Id-Version: BoltUtil Payments for WooCommerce 0.6.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-27 14:15+0800\n"
 "PO-Revision-Date: 2026-09-26 10:45+0800\n"
@@ -247,15 +247,12 @@ msgid "Gateway disabled"
 msgstr "支付方式未启用"
 
 #: includes/class-boltutil-wc-gateway.php:158
-msgid "Free plan: up to 30 orders created per day"
-msgstr "免费套餐：每日最多创建 30 个订单"
+msgid "Daily free allowance · Unlimited daily orders with a subscription"
+msgstr "每日免费额度 · 订阅不限每日订单数"
 
 #: includes/class-boltutil-wc-gateway.php:160
-msgid ""
-"This counts BoltUtil orders created today, not completed payments. New "
-"payment orders are rejected after the limit is reached. Review plans and "
-"upgrade options in BoltUtil."
-msgstr "这计算的是 BoltUtil 当日创建的订单数，不是成功付款数。达到上限后，新支付订单会被拒绝；请在 BoltUtil 查看套餐与升级选项。"
+msgid "A free order allowance is available each day. Subscription plans have no daily order limit. See the BoltUtil website for current allowances, plan benefits and fees."
+msgstr "每日提供免费订单额度，订阅套餐不限每日订单数。具体额度、套餐权益及费用以 BoltUtil 官网最新说明为准。"
 
 #: includes/class-boltutil-wc-gateway.php:161
 msgid "View plans ↗"

@@ -4,7 +4,7 @@
 # This file is distributed under the same license as the BoltUtil Payments for WooCommerce package.
 msgid ""
 msgstr ""
-"Project-Id-Version: BoltUtil Payments for WooCommerce 0.4.11\n"
+"Project-Id-Version: BoltUtil Payments for WooCommerce 0.6.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-27 14:15+0800\n"
 "PO-Revision-Date: 2026-09-26 11:22+0800\n"
@@ -251,17 +251,12 @@ msgid "Gateway disabled"
 msgstr "게이트웨이가 비활성화되었습니다."
 
 #: includes/class-boltutil-wc-gateway.php:158
-msgid "Free plan: up to 30 orders created per day"
-msgstr "무료 플랜: 하루 최대 30개 주문 생성"
+msgid "Daily free allowance · Unlimited daily orders with a subscription"
+msgstr "일일 무료 한도 · 구독 시 일일 주문 수 무제한"
 
 #: includes/class-boltutil-wc-gateway.php:160
-msgid ""
-"This counts BoltUtil orders created today, not completed payments. New "
-"payment orders are rejected after the limit is reached. Review plans and "
-"upgrade options in BoltUtil."
-msgstr ""
-"여기에는 완료된 결제가 아닌 오늘 생성된 BoltUtil 주문이 포함됩니다. 한도에 도달하면 새로운 결제 주문이 거부됩니다. "
-"BoltUtil에서 계획 및 업그레이드 옵션을 검토하세요."
+msgid "A free order allowance is available each day. Subscription plans have no daily order limit. See the BoltUtil website for current allowances, plan benefits and fees."
+msgstr "매일 무료 주문 한도가 제공됩니다. 구독 요금제에는 일일 주문 수 제한이 없습니다. 최신 한도, 요금제 혜택 및 요금은 BoltUtil 웹사이트에서 확인하세요."
 
 #: includes/class-boltutil-wc-gateway.php:161
 msgid "View plans ↗"

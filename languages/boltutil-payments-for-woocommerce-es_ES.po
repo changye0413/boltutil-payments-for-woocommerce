@@ -4,7 +4,7 @@
 # This file is distributed under the same license as the BoltUtil Payments for WooCommerce package.
 msgid ""
 msgstr ""
-"Project-Id-Version: BoltUtil Payments for WooCommerce 0.4.11\n"
+"Project-Id-Version: BoltUtil Payments for WooCommerce 0.6.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-27 14:15+0800\n"
 "PO-Revision-Date: 2026-09-26 11:22+0800\n"
@@ -267,18 +267,12 @@ msgid "Gateway disabled"
 msgstr "Puerta de enlace deshabilitada"
 
 #: includes/class-boltutil-wc-gateway.php:158
-msgid "Free plan: up to 30 orders created per day"
-msgstr "Plan gratuito: hasta 30 pedidos creados por día"
+msgid "Daily free allowance · Unlimited daily orders with a subscription"
+msgstr "Cupo gratuito diario · Pedidos diarios ilimitados con una suscripción"
 
 #: includes/class-boltutil-wc-gateway.php:160
-msgid ""
-"This counts BoltUtil orders created today, not completed payments. New "
-"payment orders are rejected after the limit is reached. Review plans and "
-"upgrade options in BoltUtil."
-msgstr ""
-"Esto cuenta los pedidos BoltUtil creados hoy, no los pagos completados. Las "
-"nuevas órdenes de pago se rechazan una vez alcanzado el límite. Revise los "
-"planes y las opciones de actualización en BoltUtil."
+msgid "A free order allowance is available each day. Subscription plans have no daily order limit. See the BoltUtil website for current allowances, plan benefits and fees."
+msgstr "Hay un cupo gratuito de pedidos cada día. Los planes de suscripción no tienen límite diario de pedidos. Consulta los cupos, ventajas y tarifas actuales en el sitio web de BoltUtil."
 
 #: includes/class-boltutil-wc-gateway.php:161
 msgid "View plans ↗"

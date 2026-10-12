@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BoltUtil Payments for WooCommerce 0.5.0\n"
+"Project-Id-Version: BoltUtil Payments for WooCommerce 0.6.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-04 11:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -250,14 +250,11 @@ msgid "Gateway disabled"
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:160
-msgid "Free plan: up to 30 orders created per day"
+msgid "Daily free allowance · Unlimited daily orders with a subscription"
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:162
-msgid ""
-"This counts BoltUtil orders created today, not completed payments. New "
-"payment orders are rejected after the limit is reached. Review plans and "
-"upgrade options in BoltUtil."
+msgid "A free order allowance is available each day. Subscription plans have no daily order limit. See the BoltUtil website for current allowances, plan benefits and fees."
 msgstr ""
 
 #: includes/class-boltutil-wc-gateway.php:163
