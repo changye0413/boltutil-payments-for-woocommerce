@@ -18,7 +18,7 @@ Baixe o ZIP instalável da v0.6.1 e envie-o pela página de plugins do WordPress
 
 O WordPress define o idioma da interface. Textos personalizados do lojista não são traduzidos automaticamente. Há uma franquia gratuita diária, e as assinaturas não têm limite diário de pedidos; consulte os benefícios e custos atuais no site. Use o valor exato do checkout; as taxas de rede são separadas. Retornar à loja não comprova o pagamento: o plugin verifica a assinatura e o status antes de concluir o pedido.
 
-A navegação na demo é gratuita; pequenas compras usam fundos reais. Esta é uma versão inicial no GitHub. A validação de pagamento real e callback e a aprovação no WordPress.org continuam pendentes.
+A navegação na demo é gratuita; pequenas compras usam fundos reais. O plugin está disponível no GitHub e foi enviado ao WordPress.org para análise.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
