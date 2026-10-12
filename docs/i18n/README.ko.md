@@ -18,7 +18,7 @@ v0.6.1 설치 ZIP을 내려받아 WordPress 플러그인 업로드 화면에서 
 
 플러그인 언어는 WordPress 로케일을 따릅니다. 판매자가 직접 입력한 문구는 자동 번역되지 않습니다. 매일 무료 할당량이 제공되며 구독에는 일일 주문 수 제한이 없습니다. 최신 혜택과 비용은 공식 사이트를 확인하세요. 결제 화면의 정확한 금액을 송금해야 하며 네트워크 수수료는 별도입니다. 상점으로 돌아온 것만으로 결제가 완료되지 않으며 서명과 결제 상태를 검증합니다.
 
-데모 탐색은 무료지만 소액 구매에는 실제 자금이 사용됩니다. 현재 초기 GitHub 릴리스이며 실제 송금 및 콜백 검증과 WordPress.org 승인은 아직 완료되지 않았습니다.
+데모 탐색은 무료지만 소액 구매에는 실제 자금이 사용됩니다. 플러그인은 GitHub에서 다운로드할 수 있으며 WordPress.org에 심사를 신청했습니다.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
