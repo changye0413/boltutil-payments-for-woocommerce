@@ -18,7 +18,7 @@
 
 WordPress 决定插件界面语言，商户自行填写的结账名称不会自动翻译。每天有免费额度，订阅不限每日订单数，权益及费用以官网为准。必须按收银台准确金额付款，网络费用另计。返回商店不代表付款成功；插件核验签名回调及付款状态后才更新订单。
 
-演示店可免费浏览，小额购买使用真实资金。当前是早期 GitHub 版本，真实付款回调闭环验收和 WordPress.org 审核尚未完成。
+演示店可免费浏览，小额购买使用真实资金。插件可通过 GitHub 下载，已提交 WordPress.org，正在等待目录审核。
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
