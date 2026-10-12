@@ -18,7 +18,7 @@ v0.6.1 kurulum ZIP dosyasını indirip WordPress eklenti yükleme sayfasında y�
 
 Arayüz dili WordPress tarafından belirlenir. Satıcının özel metinleri otomatik çevrilmez. Günlük ücretsiz kota vardır; aboneliklerde günlük sipariş sınırı yoktur. Güncel haklar ve ücretler web sitesindedir. Checkout üzerindeki kesin tutarı ödeyin; ağ ücretleri ayrıdır. Mağazaya dönmek ödeme kanıtı değildir: eklenti imzayı ve ödeme durumunu doğrular.
 
-Demo ücretsiz gezilebilir; küçük satın alımlar gerçek para kullanır. Bu erken bir GitHub sürümüdür. Gerçek ödeme ve callback kabul testi ile WordPress.org onayı henüz tamamlanmamıştır.
+Demo ücretsiz gezilebilir; küçük satın alımlar gerçek para kullanır. Eklenti GitHub üzerinde mevcuttur ve inceleme için WordPress.org’a gönderilmiştir.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
