@@ -18,10 +18,20 @@ v0.6.1 kurulum ZIP dosyasını indirip WordPress eklenti yükleme sayfasında y�
 
 Arayüz dili WordPress tarafından belirlenir. Satıcının özel metinleri otomatik çevrilmez. Günlük ücretsiz kota vardır; aboneliklerde günlük sipariş sınırı yoktur. Güncel haklar ve ücretler web sitesindedir. Checkout üzerindeki kesin tutarı ödeyin; ağ ücretleri ayrıdır. Mağazaya dönmek ödeme kanıtı değildir: eklenti imzayı ve ödeme durumunu doğrular.
 
-Demo ücretsiz gezilebilir; küçük satın alımlar gerçek para kullanır. Eklenti GitHub üzerinde mevcuttur ve inceleme için WordPress.org’a gönderilmiştir.
+Demo ücretsiz gezilebilir; küçük satın alımlar gerçek para kullanır. WordPress.org eklenti dizininde yayımlandı.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
 [Full setup and payment contract](../../README.md#configure-in-five-steps) · [Language guide](../I18N.md) · [Security](../../SECURITY.md)
 
 ![USDC checkout preview](../../wordpress-org-assets/screenshot-2.jpg)
+
+[WordPress.org](https://wordpress.org/plugins/boltutil-payments-for-woocommerce/)
+
+## Cüzdan ödemesi ve manuel transfer
+
+![Cüzdan ödemesi önizlemesi](../../wordpress-org-assets/screenshot-5.jpg)
+
+![Manuel transfer önizlemesi](../../wordpress-org-assets/screenshot-6.jpg)
+
+Görseller demo verileri kullanır. Adres ve QR kod ödeme için kullanılamaz. Cüzdan kullanılabilirliği ağa ve cihaza bağlıdır.

@@ -18,10 +18,20 @@ Descarga el ZIP instalable de v0.6.1 y súbelo desde Plugins de WordPress. Confi
 
 WordPress selecciona el idioma de la interfaz. Las etiquetas escritas por el comerciante no se traducen automáticamente. Hay una cuota gratuita diaria y los planes de suscripción no tienen límite diario de pedidos; consulta las condiciones actuales en BoltUtil. Paga el importe exacto del checkout; las comisiones de red son independientes. Volver a la tienda no confirma el pago: el plugin verifica la firma y el estado antes de completar el pedido.
 
-La demo puede explorarse gratis; las compras pequeñas usan fondos reales. El plugin está disponible en GitHub y se ha enviado a WordPress.org para su revisión.
+La demo puede explorarse gratis; las compras pequeñas usan fondos reales. Disponible en el directorio de plugins de WordPress.org.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
 [Full setup and payment contract](../../README.md#configure-in-five-steps) · [Language guide](../I18N.md) · [Security](../../SECURITY.md)
 
 ![USDC checkout preview](../../wordpress-org-assets/screenshot-2.jpg)
+
+[WordPress.org](https://wordpress.org/plugins/boltutil-payments-for-woocommerce/)
+
+## Pago con cartera y transferencia manual
+
+![Vista previa del pago con cartera](../../wordpress-org-assets/screenshot-5.jpg)
+
+![Vista previa de transferencia manual](../../wordpress-org-assets/screenshot-6.jpg)
+
+Las vistas del checkout usan datos de demostración. La dirección y el QR no permiten pagar. La disponibilidad de carteras depende de la red y el dispositivo.

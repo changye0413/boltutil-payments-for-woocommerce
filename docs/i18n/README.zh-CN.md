@@ -18,10 +18,20 @@
 
 WordPress 决定插件界面语言，商户自行填写的结账名称不会自动翻译。每天有免费额度，订阅不限每日订单数，权益及费用以官网为准。必须按收银台准确金额付款，网络费用另计。返回商店不代表付款成功；插件核验签名回调及付款状态后才更新订单。
 
-演示店可免费浏览，小额购买使用真实资金。插件可通过 GitHub 下载，已提交 WordPress.org，正在等待目录审核。
+演示店可免费浏览，小额购买使用真实资金。 已在 WordPress.org 插件目录发布。
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
 [Full setup and payment contract](../../README.md#configure-in-five-steps) · [Language guide](../I18N.md) · [Security](../../SECURITY.md)
 
 ![USDC checkout preview](../../wordpress-org-assets/screenshot-2.jpg)
+
+[WordPress.org](https://wordpress.org/plugins/boltutil-payments-for-woocommerce/)
+
+## 钱包快捷支付与手动转账
+
+![钱包支付收银台预览](../../wordpress-org-assets/screenshot-5.jpg)
+
+![手动转账收银台预览](../../wordpress-org-assets/screenshot-6.jpg)
+
+收银台图片为演示数据，地址和二维码不可用于付款。钱包可用性取决于网络与设备。

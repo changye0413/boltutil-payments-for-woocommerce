@@ -18,10 +18,20 @@
 
 Язык интерфейса задаёт WordPress. Собственные тексты продавца автоматически не переводятся. Есть ежедневная бесплатная квота; подписки не ограничивают число заказов в день. Актуальные условия и стоимость указаны на сайте. Переводите точную сумму из checkout; комиссии сети оплачиваются отдельно. Возврат в магазин не подтверждает оплату: плагин проверяет подпись и статус платежа.
 
-Просмотр демо бесплатен, покупки используют реальные средства. Плагин доступен на GitHub и отправлен на проверку в WordPress.org.
+Просмотр демо бесплатен, покупки используют реальные средства. Опубликован в каталоге плагинов WordPress.org.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
 [Full setup and payment contract](../../README.md#configure-in-five-steps) · [Language guide](../I18N.md) · [Security](../../SECURITY.md)
 
 ![USDC checkout preview](../../wordpress-org-assets/screenshot-2.jpg)
+
+[WordPress.org](https://wordpress.org/plugins/boltutil-payments-for-woocommerce/)
+
+## Оплата кошельком и ручной перевод
+
+![Предпросмотр оплаты кошельком](../../wordpress-org-assets/screenshot-5.jpg)
+
+![Предпросмотр ручного перевода](../../wordpress-org-assets/screenshot-6.jpg)
+
+Изображения используют демонстрационные данные. Адрес и QR-код не предназначены для оплаты. Доступность кошельков зависит от сети и устройства.

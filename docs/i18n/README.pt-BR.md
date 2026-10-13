@@ -18,10 +18,20 @@ Baixe o ZIP instalável da v0.6.1 e envie-o pela página de plugins do WordPress
 
 O WordPress define o idioma da interface. Textos personalizados do lojista não são traduzidos automaticamente. Há uma franquia gratuita diária, e as assinaturas não têm limite diário de pedidos; consulte os benefícios e custos atuais no site. Use o valor exato do checkout; as taxas de rede são separadas. Retornar à loja não comprova o pagamento: o plugin verifica a assinatura e o status antes de concluir o pedido.
 
-A navegação na demo é gratuita; pequenas compras usam fundos reais. O plugin está disponível no GitHub e foi enviado ao WordPress.org para análise.
+A navegação na demo é gratuita; pequenas compras usam fundos reais. Disponível no diretório de plugins do WordPress.org.
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
 [Full setup and payment contract](../../README.md#configure-in-five-steps) · [Language guide](../I18N.md) · [Security](../../SECURITY.md)
 
 ![USDC checkout preview](../../wordpress-org-assets/screenshot-2.jpg)
+
+[WordPress.org](https://wordpress.org/plugins/boltutil-payments-for-woocommerce/)
+
+## Pagamento com carteira e transferência manual
+
+![Prévia do pagamento com carteira](../../wordpress-org-assets/screenshot-5.jpg)
+
+![Prévia de transferência manual](../../wordpress-org-assets/screenshot-6.jpg)
+
+As imagens usam dados de demonstração. O endereço e o QR não permitem pagamentos. A disponibilidade depende da rede e do dispositivo.

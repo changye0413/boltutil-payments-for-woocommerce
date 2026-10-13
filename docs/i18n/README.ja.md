@@ -18,10 +18,20 @@ v0.6.1 のインストール用 ZIP を WordPress のプラグインアップロ
 
 表示言語は WordPress のロケールに従います。加盟店が入力した独自の文言は自動翻訳されません。毎日の無料枠があり、サブスクリプションでは1日あたりの注文数制限がありません。最新の条件・料金は公式サイトをご確認ください。決済画面の正確な金額を支払い、ネットワーク手数料は別途負担します。店舗へのリダイレクトだけでは支払済みにならず、署名と決済状態を検証します。
 
-デモの閲覧は無料ですが、少額の購入には実際の資金を使用します。プラグインは GitHub からダウンロードでき、WordPress.org に審査を申請しています。
+デモの閲覧は無料ですが、少額の購入には実際の資金を使用します。 WordPress.org のプラグインディレクトリで公開済みです。
 
 [Download v0.6.1](https://github.com/changye0413/boltutil-payments-for-woocommerce/releases/tag/v0.6.1) · [Live demo](https://shop-test.boltutil.com/) · [Integration guide](https://boltutil.com/woocommerce) · [Pricing](https://boltutil.com/pricing)
 
 [Full setup and payment contract](../../README.md#configure-in-five-steps) · [Language guide](../I18N.md) · [Security](../../SECURITY.md)
 
 ![USDC checkout preview](../../wordpress-org-assets/screenshot-2.jpg)
+
+[WordPress.org](https://wordpress.org/plugins/boltutil-payments-for-woocommerce/)
+
+## ウォレット決済と手動送金
+
+![ウォレット決済のプレビュー](../../wordpress-org-assets/screenshot-5.jpg)
+
+![手動送金のプレビュー](../../wordpress-org-assets/screenshot-6.jpg)
+
+画像はデモデータを使用しています。表示されたアドレスと QR コードで支払うことはできません。利用できるウォレットはネットワークと端末によって異なります。
