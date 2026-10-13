@@ -1,13 +1,16 @@
 # WordPress.org listing artwork
 
-These files belong in the **top-level `assets/` directory of the assigned WordPress.org SVN repository**, not in the plugin ZIP or under `trunk/assets/`.
+The same rounded banners and six screenshots are published on GitHub and WordPress.org (SVN revision 3743593). [Public plugin listing](https://wordpress.org/plugins/boltutil-payments-for-woocommerce/).
 
-`brand-mark-source.png` is the existing BoltUtil-owned bolt silhouette copied from the frontend's `public/logo.png`. BoltUtil releases its directory artwork under GPLv2 or later for use with this plugin.
+Banner sizes: 1544 × 500 and 772 × 250. Rounded transparent corners retain the approved BoltUtil / USDT / USDC artwork, without a version label. Image Gen edited the outer outline of the selected banner; PNG exports preserve alpha. All screenshots are 1280 × 1060 with a shared presentation frame. Original interface proportions are preserved.
 
-The banner selected on 2026-10-13 uses AI-generated artwork with BoltUtil, USDT / USDC, six networks, wallet payment and manual transfer. It has no version label. Default and `zh_CN` filenames currently share the same selected English artwork; translated README text remains separate. Sizes are 1544 × 500 and 772 × 250 pixels.
+1. USDT payment selection, six available networks.
+2. USDC payment selection, five eligible networks.
+3. Merchant setup guide; credentials excluded.
+4. Updated demo store with test-only products.
+5. Wallet-payment cashier preview, Ethereum / USDT and nine wallets.
+6. Manual-transfer cashier preview, Ethereum / USDT and demonstration QR code.
 
-The approved banner assets are published in GitHub and WordPress.org SVN revision 3742959. Public listing: https://wordpress.org/plugins/boltutil-payments-for-woocommerce/. This assets-only update did not change the published 0.6.1 code or tag. Directory/CDN caches may refresh after the commit.
+Screenshots 1–4 are interface captures. Cashier previews 5–6 use illustrative demo data; their address and QR code cannot be used to pay. No secrets, personal customer details or live order tokens are included. Brand names identify integrations and do not imply endorsement. BoltUtil releases its directory artwork under GPLv2 or later.
 
-`tools/build-directory-assets.py` produces the earlier programmatic banner and icons. Do not overwrite these selected banners with its output; preserve them when regenerating icons. Filenames and dimensions follow the [WordPress.org plugin asset specification](https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/).
-
-Four `screenshot-*.jpg` images are real interface captures from the public demo store and merchant setup guide. They omit credential fields, personal account details and bearer tokens. The storefront includes AI-generated digital artwork; no physical shipping is claimed. Brand names and interface imagery identify integrations and do not imply endorsement.
+These files belong in the top-level SVN assets directory, outside trunk and tags. Keep the required dimensions and matching readme captions. [WordPress.org asset rules](https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/). Preserve these selected banners when regenerating older programmatic artwork.
